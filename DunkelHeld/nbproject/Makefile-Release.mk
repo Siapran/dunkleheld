@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/939751984/Game.o \
 	${OBJECTDIR}/_ext/939751984/GameLevel.o \
 	${OBJECTDIR}/Prop.o \
+	${OBJECTDIR}/src/GameObject.o \
 	${OBJECTDIR}/src/Tile.o \
 	${OBJECTDIR}/src/TileMap.o \
 	${OBJECTDIR}/src/TileSet.o \
@@ -86,6 +87,11 @@ ${OBJECTDIR}/Prop.o: Prop.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Prop.o Prop.cpp
+
+${OBJECTDIR}/src/GameObject.o: src/GameObject.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameObject.o src/GameObject.cpp
 
 ${OBJECTDIR}/src/Tile.o: src/Tile.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

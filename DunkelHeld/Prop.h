@@ -11,20 +11,21 @@
 #include <SFML/Graphics.hpp>
 #include <map>
 #include <vector>
+#include "src/tinyXML/tinyxml.h"
+#include "src/GameObject.h"
 
-class Prop : public sf::Drawable, public sf::Transformable {
+class Prop : public GameObject, public sf::Drawable {
 public:
 
-    Prop();
-    Prop(const Prop& orig);
+    Prop(const char* fileName);
+    Prop(const Prop& orig, TiXmlElement);
     virtual ~Prop();
 
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
+    
+    
 private:
-
-    std::string m_name;
-    sf::Vector2f m_center;
 
     sf::Time m_frameTime; // temps entre chaque frame
     std::vector<sf::Sprite> m_frames; // liste de frames

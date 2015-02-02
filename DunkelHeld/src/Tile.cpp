@@ -63,8 +63,6 @@ int Tile::getGid() const {
 
 void Tile::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     //    std::cout << "DEBUG " << m_gid << std::endl;
-    states.transform *= getTransform(); // getTransform() is defined by sf::Transformable
-    //    states.texture = m_texture;
     target.draw(m_vertices, states);
 
     for (const sf::FloatRect &hitbox : m_hitBoxes) {
