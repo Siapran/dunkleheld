@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <prop name="switch" file="switch.png">
 
-	<hitbox xcenter="7" ycenter="11" x1="0" y1="7" x2="14" y2="13" />
+	<hitbox x="0" y="7" width="14" height="8" />
 
 	<frames xoff="0" yoff="0" xsize="16" ysize="16">
 		<frame id="0" x="0" y="0" t="100" />
