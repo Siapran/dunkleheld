@@ -66,11 +66,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/donker_held
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/dunkelheld
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/donker_held: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/dunkelheld: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/donker_held ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/dunkelheld ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/_ext/939751984/Game.o: /home/siapran/Programming/C++/SFML/Donker\ Held/src/Game.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/939751984
@@ -133,7 +133,7 @@ ${OBJECTDIR}/src/tinyXML/tinyxmlparser.o: src/tinyXML/tinyxmlparser.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/donker_held
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/dunkelheld
 
 # Subprojects
 .clean-subprojects:
