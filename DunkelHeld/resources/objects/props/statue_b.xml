@@ -33,6 +33,12 @@
 		<action name="statue_b_off" state="off">
 			<animation> 1 0 </animation>
 		</action>
+		<action name="statue_b_red" state="red">
+			<animation> 1 0 3 4 </animation>
+		</action>
+		<action name="statue_b_green" state="green">
+			<animation> 1 0 5 6 </animation>
+		</action>
 	</state>
 
 	<state name="red">
@@ -41,6 +47,12 @@
 		<action name="statue_b_off" state="off">
 			<animation> 3 0 </animation>
 		</action>
+		<action name="statue_b_blue" state="blue">
+			<animation> 3 0 1 2 </animation>
+		</action>
+		<action name="statue_b_green" state="green">
+			<animation> 3 0 5 6 </animation>
+		</action>
 	</state>
 
 	<state name="green">
@@ -48,6 +60,12 @@
 		<animation> 6 </animation>
 		<action name="statue_b_off" state="off">
 			<animation> 5 0 </animation>
+		</action>
+		<action name="statue_b_blue" state="blue">
+			<animation> 5 0 1 2 </animation>
+		</action>
+		<action name="statue_b_red" state="red">
+			<animation> 5 0 3 4 </animation>
 		</action>
 	</state>
 
