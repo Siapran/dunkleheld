@@ -11,6 +11,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>/home/siapran/Programming/C++/SFML/Donker Held/src/tinyXML</sourceRootElem>
+                <sourceRootElem>nbproject</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
