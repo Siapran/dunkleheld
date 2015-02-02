@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<prop name="switch" file="switch.png">
+<prop name="pressure_plate" file="prassure_plate.png">
 
 	<hitbox xcenter="7" ycenter="11" x1="0" y1="7" x2="14" y2="13" />
 
@@ -13,15 +13,15 @@
 	<state name="off">
 		<description lang="fr">On dirait une plaque de pression. Elle n'est pas actionnée.</description>
 		<animation> 0 </animation>
-		<action name="switch_on" state="on" use="true">
-			<animation> 0 1 2 </animation>
+		<action name="pressure_plate_on" state="on">
+			<animation> 1 2 </animation>
 		</action>
 	</state>
 	<state name="on">
 		<description lang="fr">On dirait une plaque de pression. Elle est actionnée. Que va-t-il se passer ?</description>
 		<animation> 2 </animation>
-		<action name="switch_off" state="off" use="true">
-			<animation> 2 1 0 </animation>
+		<action name="pressure_plate_off" state="off">
+			<animation> 1 0 </animation>
 		</action>
 	</state>
 
