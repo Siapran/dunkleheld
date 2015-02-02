@@ -15,9 +15,9 @@ public:
     virtual ~GameObject();
 
     
-    void update(std::vector<std::string>& events);
+    virtual void update(std::vector<std::string>& events);
     
-private:
+protected:
 
     std::string m_name;
     std::vector<GameObject> m_children;

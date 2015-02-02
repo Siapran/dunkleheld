@@ -20,10 +20,11 @@ int main(int argc, char** argv) {
     TileSet tileSet("resources/tilesets/temple.xml");
     //    GameLevel level("resources/levels/test.tmx", tileSet);
     cout << argv[1] << endl;
-    if (argc != 2) {
-        exit(-1);
+    string levelName = "resources/levels/bare/test.tmx";
+    if (argc == 2) {
+        levelName = argv[1];
     }
-    GameLevel level(argv[1], tileSet);
+    GameLevel level(levelName.c_str(), tileSet);
 
 
     sf::RenderWindow window(sf::VideoMode(480, 480), "Donker Held", sf::Style::Titlebar | sf::Style::Close);
