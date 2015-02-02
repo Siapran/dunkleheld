@@ -1,26 +1,28 @@
 <?xml version="1.0" ?>
 <prop name="button" file="button.png">
 
-	<hitbox xcenter="8" ycenter="8" x1="0" y1="0" x2="16" y2="14" />
+	<hitbox x="0" y="0" width="16" height="14" />
 
 	<properties solid="true" action="true" description="true" />
 
-	<frames xoff="0" yoff="0" xsize="16" ysize="16">
-		<frame id="0" x="0" y="0" t="100" />
-		<frame id="1" x="1" y="0" t="100" />
-		<frame id="2" x="2" y="0" t="100" />
-		<frame id="3" x="3" y="0" t="100" />
+	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
+		<frame id="0" x="0" y="0"/>
+		<frame id="1" x="1" y="0"/>
+		<frame id="2" x="2" y="0"/>
+		<frame id="3" x="3" y="0"/>
 	</frames>
 
 	<state name="off">
-		<description lang="fr">Un bouton qui fait "clic", il n'est pas enfoncé.</description>
+		<description lang="fr">Un bouton bizzare, il n'est pas enfoncé.</description>
 		<animation> 0 </animation>
 		<action name="button_on" state="on" use="true">
+			<description lang="fr">Appuyer</description>
 			<animation> 1 2 3 </animation>
 		</action>
 	</state>
+
 	<state name="on">
-		<description lang="fr">Un bouton qui fait "clic", il est enfoncé.</description>
+		<description lang="fr">Un bouton bizzare, il est enfoncé.</description>
 		<animation> 3 </animation>
 		<action name="button_off" state="off">
 			<animation> 2 1 0 </animation>

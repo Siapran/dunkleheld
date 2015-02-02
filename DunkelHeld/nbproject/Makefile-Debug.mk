@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/939751984/Game.o \
 	${OBJECTDIR}/_ext/939751984/GameLevel.o \
+	${OBJECTDIR}/Prop.o \
 	${OBJECTDIR}/src/Tile.o \
 	${OBJECTDIR}/src/TileMap.o \
 	${OBJECTDIR}/src/TileSet.o \
@@ -80,6 +81,11 @@ ${OBJECTDIR}/_ext/939751984/GameLevel.o: /home/siapran/Programming/C++/SFML/Donk
 	${MKDIR} -p ${OBJECTDIR}/_ext/939751984
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/939751984/GameLevel.o /home/siapran/Programming/C++/SFML/Donker\ Held/src/GameLevel.cpp
+
+${OBJECTDIR}/Prop.o: Prop.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Prop.o Prop.cpp
 
 ${OBJECTDIR}/src/Tile.o: src/Tile.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

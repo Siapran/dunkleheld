@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
-<prop name="statue_b" file="statue_b.png">
+<prop name="statue_a" file="statue_a.png">
 
-	<hitbox x="8" y="27" width="16" height="16" />
+	<hitbox x="6" y="17" width="20" height="19" />
+	<hitbox x="12" y="36" width="8" height="5" />
 
 	<frames xoff="0" yoff="0" xsize="32" ysize="48" t="100">
 		<frame id="0" x="0" y="0"/>
@@ -14,57 +15,57 @@
 	</frames>
 
 	<state name="off">
-		<description lang="fr">Etrange statue ... Tiens, une petite cavitée réside au centre de sa tête.</description>
+		<description lang="fr">On sens une aura s'en dégager. Que faut-il faire ?</description>
 		<animation> 0 </animation>
-		<action name="statue_b_blue" state="blue">
+		<action name="statue_a_blue" state="blue">
 			<animation> 1 2 </animation>
 		</action>
-		<action name="statue_b_red" state="red">
+		<action name="statue_a_red" state="red">
 			<animation> 3 4 </animation>
 		</action>
-		<action name="statue_b_green" state="green">
+		<action name="statue_a_green" state="green">
 			<animation> 5 6 </animation>
 		</action>
 	</state>
 
 	<state name="blue">
-		<description lang="fr">Etrange statue ... L'oeil est allumé en bleu.</description>
+		<description lang="fr"> ... Les yeux sont allumés en bleu ... rassurant </description>
 		<animation> 2 </animation>
-		<action name="statue_b_off" state="off">
+		<action name="statue_a_off" state="off">
 			<animation> 1 0 </animation>
 		</action>
-		<action name="statue_b_red" state="red">
+		<action name="statue_a_red" state="red">
 			<animation> 1 0 3 4 </animation>
 		</action>
-		<action name="statue_b_green" state="green">
+		<action name="statue_a_green" state="green">
 			<animation> 1 0 5 6 </animation>
 		</action>
 	</state>
 
 	<state name="red">
-		<description lang="fr">Etrange statue ... L'oeil est allumé en rouge.</description>
+		<description lang="fr"> ... Les yeux sont allumés en rouge ... inquiétant</description>
 		<animation> 4 </animation>
-		<action name="statue_b_off" state="off">
+		<action name="statue_a_off" state="off">
 			<animation> 3 0 </animation>
 		</action>
-		<action name="statue_b_blue" state="blue">
+		<action name="statue_a_blue" state="blue">
 			<animation> 3 0 1 2 </animation>
 		</action>
-		<action name="statue_b_green" state="green">
+		<action name="statue_a_green" state="green">
 			<animation> 3 0 5 6 </animation>
 		</action>
 	</state>
 
 	<state name="green">
-		<description lang="fr">Etrange statue ... L'oeil est allumé en vert.</description>
+		<description lang="fr"> ... Les yeux sont allumés en vert ... </description>
 		<animation> 6 </animation>
-		<action name="statue_b_off" state="off">
+		<action name="statue_a_off" state="off">
 			<animation> 5 0 </animation>
 		</action>
-		<action name="statue_b_blue" state="blue">
+		<action name="statue_a_blue" state="blue">
 			<animation> 5 0 1 2 </animation>
 		</action>
-		<action name="statue_b_red" state="red">
+		<action name="statue_a_red" state="red">
 			<animation> 5 0 3 4 </animation>
 		</action>
 	</state>

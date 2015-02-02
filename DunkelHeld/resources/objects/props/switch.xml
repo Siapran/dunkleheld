@@ -3,20 +3,21 @@
 
 	<hitbox x="0" y="7" width="14" height="8" />
 
-	<frames xoff="0" yoff="0" xsize="16" ysize="16">
-		<frame id="0" x="0" y="0" t="100" />
-		<frame id="1" x="1" y="0" t="100" />
-		<frame id="2" x="2" y="0" t="100" />
-		<frame id="3" x="3" y="0" t="100" />
-		<frame id="4" x="4" y="0" t="100" />
-		<frame id="5" x="5" y="0" t="100" />
-		<frame id="6" x="6" y="0" t="100" />
+	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
+		<frame id="0" x="0" y="0"/>
+		<frame id="1" x="1" y="0"/>
+		<frame id="2" x="2" y="0"/>
+		<frame id="3" x="3" y="0"/>
+		<frame id="4" x="4" y="0"/>
+		<frame id="5" x="5" y="0"/>
+		<frame id="6" x="6" y="0"/>
 	</frames>
 
 	<state name="on">
 		<description lang="fr">On dirait une sorte de levier. Il est positionné sur une lumière bleue.</description>
 		<animation> 0 </animation>
 		<action name="switch_off" state="off" use="true">
+			<description lang="fr">Actionner</description>
 			<animation> 1 2 3 4 5 6 </animation>
 		</action>
 	</state>
@@ -24,6 +25,7 @@
 		<description lang="fr">On dirait une sorte de levier. Il est positionné sur une lumière rouge.</description>
 		<animation> 6 </animation>
 		<action name="switch_on" state="on" use="true">
+			<description lang="fr">Actionner</description>
 			<animation> 5 4 3 2 1 0 </animation>
 		</action>
 	</state>
