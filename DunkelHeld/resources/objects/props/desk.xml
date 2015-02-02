@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<prop name="desk" file="desk.png">
+
+	<!-- pour le bureau (pas pour les objets dessu) -->
+	<hitbox x="2" y="7" width="27" height="8" />
+
+	<frames xoff="0" yoff="0" xsize="32" ysize="16">
+		<frame id="0" x="0" y="0" t="100" />
+	</frames>
+
+	<state name="onlyone">
+		<description lang="fr">Un bureau bien rangé. Si seulement le mien était comme ça.</description>
+		<animation> 0 </animation>
+	</state>
+
+</prop>

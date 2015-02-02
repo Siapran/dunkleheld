@@ -22,6 +22,7 @@
 		</float>
 		<action name="piedestal_red" state="red" />
 	</state>
+	
 	<state name="red">
 		<description lang="fr">Le piédestal, privé du cristal, a pris des teintes rouges.</description>
 		<animation> 4 5 6 6 5 </animation>
