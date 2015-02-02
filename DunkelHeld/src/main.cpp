@@ -18,15 +18,20 @@ using namespace std;
 int main(int argc, char** argv) {
 
     TileSet tileSet("resources/tilesets/temple.xml");
-    GameLevel level("resources/levels/test.tmx", tileSet);
+    //    GameLevel level("resources/levels/test.tmx", tileSet);
+    cout << argv[1] << endl;
+    if (argc != 2) {
+        exit(-1);
+    }
+    GameLevel level(argv[1], tileSet);
 
-    
+
     sf::RenderWindow window(sf::VideoMode(480, 480), "Donker Held", sf::Style::Titlebar | sf::Style::Close);
     sf::View view(sf::FloatRect(0, 0, 240, 240));
     window.setView(view);
 
-    
-    
+
+
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {

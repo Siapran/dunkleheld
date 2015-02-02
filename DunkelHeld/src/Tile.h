@@ -10,7 +10,7 @@
 
 #include <SFML/Graphics.hpp>
 
-class Tile : public sf::Drawable, public sf::Transformable {
+class Tile : public sf::Drawable {
 public:
 
     Tile(
@@ -35,7 +35,6 @@ private:
 
     sf::VertexArray m_vertices;
     sf::Texture *m_texture;
-
 };
 
 #endif	/* TILE_H */
