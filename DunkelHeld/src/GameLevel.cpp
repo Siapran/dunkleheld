@@ -7,6 +7,8 @@
 
 #include "GameLevel.h"
 #include "tinyXML/tinyxml.h"
+#include "Paintable.h"
+#include <SFML/Graphics.hpp>
 
 #include <stdio.h>
 #include <iostream>
@@ -24,16 +26,42 @@ GameLevel::~GameLevel() {
 }
 
 void GameLevel::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+    sf::Clock timer;
+
     states.transform *= getTransform();
     states.texture = m_tileSet.getTileSheet();
-    for (int i = 0; i < m_size.y; ++i) {
-        auto &row = m_tileMap[i];
-        for (int j = 0; j < m_size.x; ++j) {
-            auto tile = row[j];
+
+    // on crée un vecteur pour contenir tout ce qu'on va peindre.
+    std::vector<Paintable *> paintables;
+    paintables.reserve(m_size.x * m_size.y + m_objects.size());
+
+    auto cp_it = paintables.begin();
+    for (auto &row : m_tileMap)
+        for (auto &tile : row)
             if (tile != nullptr)
-                tile->draw(target, states);
-        }
+                paintables.push_back(tile);
+    for (auto &pair : m_objects) {
+        Paintable *paintable = dynamic_cast<Paintable*> (pair.second);
+        if (paintable)
+            paintables.push_back(paintable);
     }
+
+    std::sort(paintables.begin(), paintables.end(), [](Paintable * a, Paintable * b) -> bool {
+        return a->getDepth() < b->getDepth();
+    });
+
+    for (auto &paintable : paintables)
+        paintable->draw(target, states);
+
+    std::cout << timer.restart().asMicroseconds() << std::endl;
+    //    for (int i = 0; i < m_size.y; ++i) {
+    //        auto &row = m_tileMap[i];
+    //        for (int j = 0; j < m_size.x; ++j) {
+    //            auto tile = row[j];
+    //            if (tile != nullptr)
+    //                tile->draw(target, states);
+    //        }
+    //    }
 }
 
 void GameLevel::loadFromXml(const char* fileName) {
@@ -72,4 +100,16 @@ void GameLevel::loadFromXml(const char* fileName) {
             std::cout << std::endl;
         }
     }
+}
+
+void GameLevel::addListener(std::string target, GameObject* listener) {
+
+}
+
+void GameLevel::removeListener(std::string target, GameObject* listener) {
+
+}
+
+void GameLevel::broadCastEvent(std::string source, std::string event) {
+
 }

@@ -12,6 +12,10 @@
 
 using namespace std;
 
+float getFPS(const sf::Time& time) {
+    return (1000000.0f / time.asMicroseconds());
+}
+
 /*
  * 
  */
@@ -19,7 +23,7 @@ int main(int argc, char** argv) {
 
     TileSet tileSet("resources/tilesets/temple.xml");
     //    GameLevel level("resources/levels/test.tmx", tileSet);
-    cout << argv[1] << endl;
+    //    cout << argv[1] << endl;
     string levelName = "resources/levels/bare/test.tmx";
     if (argc == 2) {
         levelName = argv[1];
@@ -31,7 +35,7 @@ int main(int argc, char** argv) {
     sf::View view(sf::FloatRect(0, 0, 240, 240));
     window.setView(view);
 
-
+    sf::Clock timer;
 
     while (window.isOpen()) {
         sf::Event event;
@@ -41,6 +45,7 @@ int main(int argc, char** argv) {
         }
         window.clear(sf::Color(0x91, 0xb0, 0x9a));
         window.draw(level);
+//        std::cout << getFPS(timer.restart()) << std::endl;
         window.display();
     }
 

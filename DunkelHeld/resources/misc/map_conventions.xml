@@ -1,23 +1,21 @@
 <prop name="spike" id="42" x="13" y="69" state="off">
-	<condition expression="switch#1.state == on ^ switch#2.state == on">
+	<trigger expression="switch#1.state == on ^ switch#2.state == on">
 		<then>
 			<action target="spike#42" value="spikes_on" />
 		</then>
 		<else>
 			<action target="spike#42" value="spikes_off" />
 		</else>
-	</condition>
+	</trigger>
 </prop>
 
-<object name="" id="0" x="13" y="69" width="" state="off">
-	<use name="eye_place">
-		<description lang="fr">Placer l'oeil sur la statue.</description>
-	</use>
-</object>
+<use name="eye_place">
+	<description lang="fr">Placer l'oeil sur la statue.</description>
+</use>
 
-<condition />
+<trigger />
 <use actor="golem" />
-<collide />
+<oncollide />
 <examine />
 
 <setvar scope="local|global" target="hasTorch" value="">

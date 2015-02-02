@@ -21,6 +21,12 @@ Tile::Tile(int gid, sf::Vector2f position, sf::Texture *texture, sf::FloatRect &
     m_vertices[2].texCoords = sf::Vector2f(texCoords.left + texCoords.width, texCoords.top + texCoords.height);
     m_vertices[3].texCoords = sf::Vector2f(texCoords.left + texCoords.width, texCoords.top);
 
+    depth = 0;
+    for (const sf::FloatRect &box : m_hitBoxes)
+        if (box.top + box.height > depth)
+            depth = box.top + box.height;
+    dirty = false;
+    
 }
 
 Tile::Tile(Tile *orig, sf::Vector2f position)
@@ -36,6 +42,13 @@ Tile::Tile(Tile *orig, sf::Vector2f position)
         box.top = box.top - m_position.y + position.y;
     }
     m_position = position;
+    
+    depth = 0;
+    for (const sf::FloatRect &box : m_hitBoxes)
+        if (box.top + box.height > depth)
+            depth = box.top + box.height;
+    dirty = false;
+    
 }
 
 Tile::~Tile() {
@@ -65,12 +78,17 @@ void Tile::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     //    std::cout << "DEBUG " << m_gid << std::endl;
     target.draw(m_vertices, states);
 
-    for (const sf::FloatRect &hitbox : m_hitBoxes) {
-        sf::RectangleShape box(sf::Vector2f(hitbox.width, hitbox.height));
-        box.move(hitbox.left, hitbox.top);
-        box.setFillColor(sf::Color(255, 0, 0, 64));
-        box.setOutlineColor(sf::Color::Red);
-        box.setOutlineThickness(0.5);
-        target.draw(box);
-    }
+//    for (const sf::FloatRect &hitbox : m_hitBoxes) {
+//        sf::RectangleShape box(sf::Vector2f(hitbox.width, hitbox.height));
+//        box.move(hitbox.left, hitbox.top);
+//        box.setFillColor(sf::Color(255, 0, 0, 64));
+//        box.setOutlineColor(sf::Color::Red);
+//        box.setOutlineThickness(0.5);
+//        target.draw(box);
+//    }
+}
+
+float Tile::getDepth() {
+    // on ne déplace pas un tile donc depth est constant
+    return depth;
 }

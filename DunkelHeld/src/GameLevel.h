@@ -12,7 +12,10 @@
 #include "Tile.h"
 #include "TileSet.h"
 
-using std::vector;
+#include <vector>
+#include "Tile.h"
+#include "TileSet.h"
+#include "GameObject.h"
 
 class GameLevel : public sf::Drawable, public sf::Transformable {
 public:
@@ -20,17 +23,23 @@ public:
     GameLevel(const char *fileName, TileSet &tileSet);
     virtual ~GameLevel();
 
-
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
+    void broadCastEvent(std::string source, std::string event);
+
+    void addListener(std::string target, GameObject *listener);
+    void removeListener(std::string target, GameObject *listener);
 
 private:
 
     void loadFromXml(const char *fileName);
 
-    vector<vector<Tile *> > m_tileMap;
+    std::vector<std::vector<Tile *> > m_tileMap;
     TileSet &m_tileSet;
     sf::Vector2i m_size;
 
+    std::multimap<std::string, GameObject *> m_listeners;
+    std::map<std::string, GameObject *> m_objects;
 };
 
 #endif	/* GAMELEVEL_H */
