@@ -249,16 +249,12 @@
 		<prop name="pebbles"	x="112"	y="96"	width="16"	height="16"/>
 		<prop name="pebbles"	x="16"	y="128"	width="16"	height="16"/>
 
-		<prop name="writings" x="176" y="112" width="16" height="16">
-			<examine>
-				<description lang="fr">Les écritures sont trop abimées par le temps pour etre lues.</descripion>
-			</examine>
-		</prop>
+		<examine name="writings" x="176" y="112" width="16" height="16">
+			<description lang="fr">Les écritures sont trop abimées par le temps pour etre lues.</descripion>
+		</examine>
 
-		<prop name="writings" x="16" y="112" width="16" height="16">
-			<examine>
-				<description lang="fr">Les écritures sont trop abimées par le temps pour etre lues.</descripion>
-			</examine>
-		</prop>
+		<examine name="writings" x="16" y="112" width="16" height="16">
+			<description lang="fr">Les écritures sont trop abimées par le temps pour etre lues.</descripion>
+		</examine>
 	</objectgroup>
 </map>
