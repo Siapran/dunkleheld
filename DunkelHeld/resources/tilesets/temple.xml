@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<tileset firstgid="1" name="temple" tilewidth="16" tileheight="16">
+	<image source="resources/tilesets/tiles.png" width="96" height="144"/>
+
+	<tile gid="1"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="2"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="3"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="4"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="5"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="6"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+
+	<tile gid="7"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="8"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="9"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="10"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="11"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="12"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+
+	<tile gid="13"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="14"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="15"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="16"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+	<tile gid="17">  </tile>
+	<tile gid="18"> <box x1="4" y1="0" x2="16" y2="16" /> </tile>
+
+	<tile gid="19"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="20"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="21">  </tile>
+	<tile gid="22"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+	<tile gid="23">  </tile>
+	<tile gid="24"> <box x1="4" y1="0" x2="16" y2="16" /> </tile>
+
+	<tile gid="25"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="26"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="27"> <box x1="4" y1="4" x2="12" y2="12" /> </tile>
+	<tile gid="28"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+	<tile gid="29"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+	<tile gid="30">  </tile>
+
+	<tile gid="31"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+	<tile gid="32"> <box x1="4" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="33">  </tile>
+	<tile gid="34">  </tile>
+	<tile gid="35"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="36"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+
+	<tile gid="37"> <box x1="4" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="38"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+	<tile gid="39"> <box x1="4" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="40"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+	<tile gid="41"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="42"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+
+	<tile gid="43"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="44"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="45"> <box x1="4" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="46"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+	<tile gid="47"> <box x1="4" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="48"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+
+	<tile gid="49"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="50"> <box x1="0" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="51"> <box x1="4" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="52"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+	<tile gid="53"> <box x1="4" y1="0" x2="16" y2="16" /> </tile>
+	<tile gid="54"> <box x1="0" y1="0" x2="12" y2="16" /> </tile>
+
+</tileset>
