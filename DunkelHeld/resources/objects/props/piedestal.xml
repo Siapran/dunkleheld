@@ -3,15 +3,15 @@
 
 	<hitbox xcenter="8" ycenter="10" />
 
-	<frames xoff="0" yoff="0" xsize="16" ysize="16">
-		<frame id="0" x="0" y="0" t="100" />
-		<frame id="1" x="1" y="0" t="100" />
-		<frame id="2" x="2" y="0" t="100" />
-		<frame id="3" x="3" y="0" t="200" />
-		<frame id="4" x="0" y="1" t="100" />
-		<frame id="5" x="1" y="1" t="100" />
-		<frame id="6" x="2" y="1" t="100" />
-		<frame id="7" x="3" y="1" t="200" />
+	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
+		<frame id="0" x="0" y="0"/>
+		<frame id="1" x="1" y="0"/>
+		<frame id="2" x="2" y="0"/>
+		<frame id="3" x="3" y="0"/>
+		<frame id="4" x="0" y="1"/>
+		<frame id="5" x="1" y="1"/>
+		<frame id="6" x="2" y="1"/>
+		<frame id="7" x="3" y="1"/>
 	</frames>
 
 	<state name="blue">
@@ -22,6 +22,7 @@
 		</float>
 		<action name="piedestal_red" state="red" />
 	</state>
+	
 	<state name="red">
 		<description lang="fr">Le piédestal, privé du cristal, a pris des teintes rouges.</description>
 		<animation> 4 5 6 6 5 </animation>
