@@ -13,15 +13,15 @@
 	<state name="off">
 		<description lang="fr">Des pieux, faisons attention.</description>
 		<animation> 0 </animation>
-		<action name="statue_a_blue" state="blue">
-			<animation> 1 2 3 </animation>
+		<action name="spikes_on" state="on">
+			<animation> 1 </animation>
 		</action>
 	</state>
 	
 	<state name="on">
 		<description lang="fr">Des pieux, faisons attention.</description>
-		<animation> 3 </animation>
-		<action name="statue_a_blue" state="blue">
+		<animation> 2 3 </animation>
+		<action name="spikes_off" state="off">
 			<animation> 2 1 0 </animation>
 		</action>
 	</state>
