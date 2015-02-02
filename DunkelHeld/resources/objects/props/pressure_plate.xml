@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<prop name="switch" file="switch.png">
+
+	<hitbox xcenter="7" ycenter="11" x1="0" y1="7" x2="14" y2="13" />
+
+	<frames xoff="0" yoff="0" xsize="16" ysize="16">
+		<frame id="0" x="0" y="0" t="100" />
+		<frame id="1" x="1" y="0" t="100" />
+		<frame id="2" x="2" y="0" t="100" />
+		<!-- <frame id="3" x="3" y="0" t="100" /> -->
+	</frames>
+
+	<state name="off">
+		<description lang="fr">On dirait une plaque de pression. Elle n'est pas actionnée.</description>
+		<animation> 0 </animation>
+		<action name="switch_on" state="on" use="true">
+			<animation> 0 1 2 </animation>
+		</action>
+	</state>
+	<state name="on">
+		<description lang="fr">On dirait une plaque de pression. Elle est actionnée. Que va-t-il se passer ?</description>
+		<animation> 2 </animation>
+		<action name="switch_off" state="off" use="true">
+			<animation> 2 1 0 </animation>
+		</action>
+	</state>
+
+</prop>
