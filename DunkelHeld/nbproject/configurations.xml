@@ -95,14 +95,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="Prop.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Prop.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/Frame.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/Frame.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="src/Tile.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Tile.h" ex="false" tool="3" flavor2="0">

@@ -36,21 +36,20 @@ TileSet::TileSet(const char* fileName) {
             tileNode != nullptr;
             tileNode = tileNode->NextSiblingElement("tile")) {
 
-        // on récupère le gid et on en déduit les coordonnées de texture
-        int gid;
-        tileNode->Attribute("gid", &gid);
+        // on récupère le id et on en déduit les coordonnées de texture
+        int id;
+        tileNode->Attribute("id", &id);
 
-        int width = m_sheetSize.x / m_tileSize.x;
-        int height = m_sheetSize.y / m_tileSize.y;
-        int gnum = gid - 1;
+        int g_width = m_sheetSize.x / m_tileSize.x;
+        //        int g_height = m_sheetSize.y / m_tileSize.y;
 
         sf::FloatRect texCoords(
-                gnum % width * m_tileSize.x,
-                gnum / width * m_tileSize.y,
+                id % g_width * m_tileSize.x,
+                id / g_width * m_tileSize.y,
                 m_tileSize.x, m_tileSize.y);
 
         // on crée le tile
-        Tile *tile = new Tile(gid, sf::Vector2f(0, 0), &m_tileSheet, texCoords);
+        Tile *tile = new Tile(id + 1, sf::Vector2f(0, 0), &m_tileSheet, texCoords);
 
         sf::IntRect hitBox;
         // on explore les hitBox tant qu'on en trouve
@@ -60,19 +59,19 @@ TileSet::TileSet(const char* fileName) {
                 boxNode = boxNode->NextSiblingElement("box")) {
 
             // on ajoute la hitbox
-            int x1, x2, y1, y2;
-            boxNode->Attribute("x1", &x1);
-            boxNode->Attribute("y1", &y1);
-            boxNode->Attribute("x2", &x2);
-            boxNode->Attribute("y2", &y2);
-            tile->addHitBox(sf::FloatRect(x1, y1, x2 - x1, y2 - y1));
+            int x, width, y, height;
+            boxNode->Attribute("x", &x);
+            boxNode->Attribute("y", &y);
+            boxNode->Attribute("width", &width);
+            boxNode->Attribute("height", &height);
+            tile->addHitBox(sf::FloatRect(x, y, width, height));
         }
 
-        if (this->size() <= gid) {
-            this->resize(gid + 1);
+        if (this->size() <= id + 1) {
+            this->resize(id + 2);
         }
 
-        this->at(gid) = tile;
+        this->at(id + 1) = tile;
 
     }
 
