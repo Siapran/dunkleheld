@@ -258,21 +258,22 @@
 			</trigger></prop>
 		<prop name="pylon"			x="64"	y="128"	width="16"	height="16"/>
 
-		<prop name="switch"			x="16"	y="192"	width="16"	height="16"/>
+		<prop name="switch"			x="16"	y="192"	width="16"	height="16" state="off" />
 
 		<prop name="pressure_plate"	x="24"	y="40"	width="16"	height="16"	id="1">
 			<trigger exp="pressure_plate#1:pressure_plate_on">
-				<setvar scope="global" target="lv2_room1_press1" value="pressure_plate#1.state == on" />
+				<setvar scope="local" target="lv2_room1_press1" value="pressure_plate#1.state == on" />
 			</trigger></prop>
 		<prop name="pressure_plate"	x="24"	y="120"	width="16"	height="16"	id="2">
 			<trigger exp="pressure_plate#2:pressure_plate_on">
-				<setvar scope="global" target="lv2_room1_press2" value="pressure_plate#2.state == on" />
+				<setvar scope="local" target="lv2_room1_press2" value="pressure_plate#2.state == on" />
+				<setvar scope="local" target="lv2_room1_solved" value="(lv2_room1_press1 & lv2_room1_press2)" />
 			</trigger></prop>
 
 		<prop name="golemspawn"		x="112"	y="48"	width="112"	height="16"/>
 
 		<prop name="spikes"			x="96"	y="208"	width="16"	height="16">
-			<trigger exp="!(has_crystal) | (lv2_room1_press1 & lv2_room1_press2)">
+			<trigger exp="!(has_crystal) | (lv2_room1_solved)">
 				<then>
 					<action target="spikes" value="spikes_off" />
 				</then>
