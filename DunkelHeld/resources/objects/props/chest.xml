@@ -3,6 +3,8 @@
 
 	<hitbox x="0" y="8" width="14" height="8" />
 
+	<properties action="true" description="true" ground="false" solid="true"/>
+
 	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
 		<frame id="0" x="0" y="0"/>
 		<frame id="1" x="1" y="0"/>
