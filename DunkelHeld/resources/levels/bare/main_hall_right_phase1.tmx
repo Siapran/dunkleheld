@@ -107,9 +107,9 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="18"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
+   <tile gid="45"/>
+   <tile gid="5"/>
+   <tile gid="5"/>
    <tile gid="5"/>
    <tile gid="5"/>
    <tile gid="46"/>
@@ -122,9 +122,9 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="18"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
+   <tile gid="51"/>
+   <tile gid="11"/>
+   <tile gid="11"/>
    <tile gid="11"/>
    <tile gid="11"/>
    <tile gid="52"/>
@@ -137,9 +137,9 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="18"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -152,9 +152,9 @@
    <tile gid="0"/>
    <tile gid="21"/>
    <tile gid="0"/>
-   <tile gid="18"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -167,9 +167,9 @@
    <tile gid="0"/>
    <tile gid="27"/>
    <tile gid="0"/>
-   <tile gid="18"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
+   <tile gid="33"/>
+   <tile gid="23"/>
+   <tile gid="23"/>
    <tile gid="23"/>
    <tile gid="23"/>
    <tile gid="34"/>
@@ -182,7 +182,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="18"/>
+   <tile gid="39"/>
    <tile gid="8"/>
    <tile gid="8"/>
    <tile gid="8"/>
@@ -247,5 +247,7 @@
   <object name="pebbles" x="48" y="176" width="16" height="16"/>
   <object name="pebbles" x="16" y="144" width="16" height="16"/>
   <object name="pebbles" x="128" y="96" width="16" height="16"/>
+  <object name="spikes" x="208" y="128" width="16" height="48"/>
+  <object name="button" x="224" y="144" width="16" height="16"/>
  </objectgroup>
 </map>
