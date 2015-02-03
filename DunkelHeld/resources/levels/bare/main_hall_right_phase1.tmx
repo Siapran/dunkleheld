@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="15" tilewidth="16" tileheight="16" nextobjectid="17">
+<map version="1.0" orientation="orthogonal" width="16" height="15" tilewidth="16" tileheight="16">
  <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16">
   <image source="../../tilesets/tiles.png" width="96" height="144"/>
  </tileset>
@@ -247,22 +247,24 @@
    <tile gid="8"/>
   </data>
  </layer>
- <objectgroup name="Objects">
-  <object id="1" name="Blue" x="80" y="192" width="16" height="16"/>
-  <object id="2" name="Green" x="112" y="192" width="16" height="16"/>
-  <object id="3" name="Red" x="144" y="192" width="16" height="16"/>
-  <object id="4" name="Lever 1" x="80" y="176" width="16" height="16"/>
-  <object id="5" name="Lever 2" x="112" y="176" width="16" height="16"/>
-  <object id="6" name="Lever 3" x="144" y="176" width="16" height="16"/>
-  <object id="7" name="l'intrus devra résoudre cette énigme s'il souhaite revoir le ciel" x="112" y="80" width="16" height="16"/>
-  <object id="8" name="Statue" x="48" y="96" width="32" height="32"/>
-  <object id="9" name="Statue" x="160" y="96" width="32" height="32"/>
-  <object id="10" name="pebbles" x="176" y="176" width="16" height="16"/>
-  <object id="11" name="pebbles" x="96" y="112" width="16" height="16"/>
-  <object id="12" name="pebbles" x="48" y="176" width="16" height="16"/>
-  <object id="13" name="pebbles" x="16" y="144" width="16" height="16"/>
-  <object id="14" name="pebbles" x="144" y="128" width="16" height="16"/>
-  <object id="15" name="spikes" x="208" y="144" width="16" height="48"/>
-  <object id="16" name="button" x="224" y="160" width="16" height="16"/>
+ <objectgroup name="Objects" width="0" height="0">
+  <object name="Blue" x="80" y="192" width="16" height="16"/>
+  <object name="Green" x="112" y="192" width="16" height="16"/>
+  <object name="Red" x="144" y="192" width="16" height="16"/>
+  <object name="Lever 1" x="80" y="176" width="16" height="16"/>
+  <object name="Lever 2" x="112" y="176" width="16" height="16"/>
+  <object name="Lever 3" x="144" y="176" width="16" height="16"/>
+  <object name="l'intrus devra résoudre cette énigme s'il souhaite revoir le ciel" x="112" y="80" width="16" height="16"/>
+  <object name="Statue" x="48" y="96" width="32" height="32"/>
+  <object name="Statue" x="160" y="96" width="32" height="32"/>
+  <object name="pebbles" x="176" y="176" width="16" height="16"/>
+  <object name="pebbles" x="96" y="112" width="16" height="16"/>
+  <object name="pebbles" x="48" y="176" width="16" height="16"/>
+  <object name="pebbles" x="16" y="144" width="16" height="16"/>
+  <object name="pebbles" x="144" y="128" width="16" height="16"/>
+  <object name="spikes" x="208" y="144" width="16" height="48"/>
+  <object name="button" x="224" y="160" width="16" height="16"/>
+  <object name="light" x="128" y="96" width="16" height="16"/>
+  <object name="light" x="96" y="96" width="16" height="16"/>
  </objectgroup>
 </map>
