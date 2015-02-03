@@ -238,14 +238,14 @@
 		<prop name="statue_a"	x="48"	y="96"	width="32"	height="32" id="1" state="on" />
 
 		<prop name="statue_a"	x="128"	y="96"	width="32"	height="32" id="2">
-			<condition expression="statue_a#1.state == on">
+			<trigger expression="statue_a#1.state == on">
 				<then>
 					<action target="statue_a#2" value="statue_a_on" />
 				</then>
 				<else>
 					<action target="statue_a#2" value="statue_a_on" />
 				</else>
-			</condition>
+			</trigger>
 		</prop>
 		<prop name="door"		x="80"	y="64"	width="48"	height="32"/>
 		<prop name="desk"		x="128"	y="176"	width="32"	height="16"/>
