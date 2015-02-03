@@ -266,7 +266,7 @@
 		<object name="pebbles" x="144" y="128" width="16" height="16" state="frame2"/>
 		<object name="spikes" x="208" y="144" width="16" height="16" state="on"/>
 		<object name="spikes" x="208" y="160" width="16" height="16" state="on"/>
-		<object name="spikes" x="208" y="1176" width="16" height="16" state="on"/>
+		<object name="spikes" x="208" y="176" width="16" height="16" state="on"/>
 		<object name="button" x="224" y="160" width="16" height="16" state="off"/>
 		<object name="cube_big" x="128" y="96" width="16" height="16" state="blue"/>
 		<object name="cube_big" x="96" y="96" width="16" height="16" state="blue"/>
