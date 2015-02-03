@@ -23,37 +23,44 @@ GameLevel::GameLevel(const char *fileName, TileSet &tileSet)
 }
 
 GameLevel::~GameLevel() {
+    for (auto& object : m_objects)
+        delete object.second;
 }
 
 void GameLevel::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    sf::Clock timer;
+    //    sf::Clock timer;
 
     states.transform *= getTransform();
     states.texture = m_tileSet.getTileSheet();
 
     // on crée un vecteur pour contenir tout ce qu'on va peindre.
     std::vector<Paintable *> paintables;
+    // vector::reserve alloue la place nécessaire mais ne change pas la taille du vector
+    // on perd en mémoire... mais on gagne en vitesse!
     paintables.reserve(m_size.x * m_size.y + m_objects.size());
 
-    auto cp_it = paintables.begin();
     for (auto &row : m_tileMap)
         for (auto &tile : row)
-            if (tile != nullptr)
+            if (tile != nullptr) // on n'ajoute pas les tiles vides
                 paintables.push_back(tile);
     for (auto &pair : m_objects) {
         Paintable *paintable = dynamic_cast<Paintable*> (pair.second);
-        if (paintable)
+        if (paintable) // on n'ajoute que les objets peignables
             paintables.push_back(paintable);
     }
 
+    // on trie les entités à peindre pour peindre les entités derrièrre en premier
     std::sort(paintables.begin(), paintables.end(), [](Paintable * a, Paintable * b) -> bool {
+        // on trie par ordre décroissant de distance à la caméra
         return a->getDepth() < b->getDepth();
     });
 
+    // on peint les entités dans le bon ordre
     for (auto &paintable : paintables)
         paintable->draw(target, states);
 
-    std::cout << timer.restart().asMicroseconds() << std::endl;
+    //    std::cout << timer.restart().asMicroseconds() << std::endl;
+
     //    for (int i = 0; i < m_size.y; ++i) {
     //        auto &row = m_tileMap[i];
     //        for (int j = 0; j < m_size.x; ++j) {
@@ -91,8 +98,8 @@ void GameLevel::loadFromXml(const char* fileName) {
 
                 auto tile = m_tileSet[gid];
                 m_tileMap[i][j] = ((tile == nullptr)
-                        ? tile
-                        : new Tile(tile, sf::Vector2f(j * 16, i * 16)));
+                        ? nullptr // tile vide
+                        : new Tile(tile, sf::Vector2f(j * 16, i * 16))); // copie du tile
 
                 std::cout << gid << "\t";
                 tileMapIterator = tileMapIterator->NextSiblingElement("tile");

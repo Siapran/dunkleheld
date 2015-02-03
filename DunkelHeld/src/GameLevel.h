@@ -40,6 +40,8 @@ private:
 
     std::multimap<std::string, GameObject *> m_listeners;
     std::map<std::string, GameObject *> m_objects;
+    
+    
 };
 
 #endif	/* GAMELEVEL_H */
