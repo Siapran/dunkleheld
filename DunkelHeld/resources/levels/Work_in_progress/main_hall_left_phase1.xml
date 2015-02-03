@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="15" height="15" tilewidth="16" tileheight="16">
+   <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16">
+      <image source="../../tilesets/tiles.png" width="96" height="144"/>
+   </tileset>
+   <layer name="Tiles" width="15" height="15">
+      <data>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="4"/>
+         <tile gid="5"/>
+         <tile gid="35"/>
+         <tile gid="5"/>
+         <tile gid="35"/>
+         <tile gid="5"/>
+         <tile gid="35"/>
+         <tile gid="5"/>
+         <tile gid="35"/>
+         <tile gid="5"/>
+         <tile gid="6"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="10"/>
+         <tile gid="11"/>
+         <tile gid="41"/>
+         <tile gid="11"/>
+         <tile gid="41"/>
+         <tile gid="11"/>
+         <tile gid="41"/>
+         <tile gid="11"/>
+         <tile gid="41"/>
+         <tile gid="11"/>
+         <tile gid="12"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="16"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="18"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="16"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="18"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="16"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="18"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="16"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="18"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="16"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="18"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="16"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="45"/>
+         <tile gid="5"/>
+         <tile gid="5"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="16"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="51"/>
+         <tile gid="11"/>
+         <tile gid="11"/>
+         <tile gid="4"/>
+         <tile gid="5"/>
+         <tile gid="46"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="10"/>
+         <tile gid="50"/>
+         <tile gid="52"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="16"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="33"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="16"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="0"/>
+         <tile gid="39"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="22"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="23"/>
+         <tile gid="24"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+         <tile gid="8"/>
+      </data>
+   </layer>
+   <objectgroup name="props" width="0" height="0">
+      <prop name="switch"  x="64"   y="160"  width="16"  height="16" id="1"/>
+      <prop name="switch"  x="96"   y="160"  width="16"  height="16" id="2"/>
+      <prop name="switch"  x="128"  y="160"  width="16"  height="16" id="3"/>
+      <prop name="switch"  x="160"  y="160"  width="16"  height="16" id="4"/>
+
+      <use name="switch" x="112" y="32" width="16" height="16" id="5">
+         <description lang="fr">On entend un bruit sourd au loin ... une porte ?</descripion>
+      </use>
+
+      <examine name="writings" x="16" y="160" width="16" height="16">
+         <description lang="fr">Trouve le bon chemin pour reveler la lumière divine.</descripion>
+      </examine>
+
+      <prop name="spikes"  x="48"   y="48"   width="16"  height="16" id="11"/>
+      <prop name="spikes"  x="64"   y="48"   width="16"  height="16" id="12"/>
+      <prop name="spikes"  x="80"   y="48"   width="16"  height="16" id="13"/>
+      <prop name="spikes"  x="96"   y="48"   width="16"  height="16" id="14"/>
+      <prop name="spikes"  x="112"  y="48"   width="16"  height="16" id="15"/>
+      <prop name="spikes"  x="128"  y="48"   width="16"  height="16" id="16"/>
+      <prop name="spikes"  x="144"  y="48"   width="16"  height="16" id="17"/>
+      <prop name="spikes"  x="160"  y="48"   width="16"  height="16" id="18"/>
+      <prop name="spikes"  x="176"  y="48"   width="16"  height="16" id="19"/>
+      <prop name="spikes"  x="176"  y="64"   width="16"  height="16" id="20"/>
+      <prop name="spikes"  x="160"  y="64"   width="16"  height="16" id="21"/>
+      <prop name="spikes"  x="144"  y="64"   width="16"  height="16" id="22"/>
+      <prop name="spikes"  x="128"  y="64"   width="16"  height="16" id="23"/>
+      <prop name="spikes"  x="112"  y="64"   width="16"  height="16" id="24"/>
+      <prop name="spikes"  x="96"   y="64"   width="16"  height="16" id="25"/>
+      <prop name="spikes"  x="80"   y="64"   width="16"  height="16" id="26"/>
+      <prop name="spikes"  x="64"   y="64"   width="16"  height="16" id="27"/>
+      <prop name="spikes"  x="48"   y="64"   width="16"  height="16" id="28"/>
+      <prop name="spikes"  x="48"   y="80"   width="16"  height="16" id="29"/>
+      <prop name="spikes"  x="64"   y="80"   width="16"  height="16" id="30"/>
+      <prop name="spikes"  x="80"   y="80"   width="16"  height="16" id="31"/>
+      <prop name="spikes"  x="96"   y="80"   width="16"  height="16" id="32"/>
+      <prop name="spikes"  x="112"  y="80"   width="16"  height="16" id="33"/>
+      <prop name="spikes"  x="128"  y="80"   width="16"  height="16" id="34"/>
+      <prop name="spikes"  x="144"  y="80"   width="16"  height="16" id="35"/>
+      <prop name="spikes"  x="160"  y="80"   width="16"  height="16" id="36"/>
+      <prop name="spikes"  x="176"  y="80"   width="16"  height="16" id="37"/>
+      <prop name="spikes"  x="176"  y="96"   width="16"  height="16" id="38"/>
+      <prop name="spikes"  x="144"  y="96"   width="16"  height="16" id="39"/>
+      <prop name="spikes"  x="160"  y="96"   width="16"  height="16" id="40"/>
+      <prop name="spikes"  x="128"  y="96"   width="16"  height="16" id="41"/>
+      <prop name="spikes"  x="112"  y="96"   width="16"  height="16" id="42"/>
+      <prop name="spikes"  x="96"   y="96"   width="16"  height="16" id="43"/>
+      <prop name="spikes"  x="80"   y="96"   width="16"  height="16" id="44"/>
+      <prop name="spikes"  x="64"   y="96"   width="16"  height="16" id="45"/>
+      <prop name="spikes"  x="48"   y="96"   width="16"  height="16" id="46"/>
+      <prop name="spikes"  x="48" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="64" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="80" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="96" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="112" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="144" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="128" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="160" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="176" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="176" y="128" width="16" height="16"/>
+      <prop name="spikes"  x="160" y="128" width="16" height="16"/>
+      <prop name="spikes"  x="144" y="128" width="16" height="16"/>
+      <prop name="spikes"  x="128" y="128" width="16" height="16"/>
+      <prop name="spikes"  x="112" y="128" width="16" height="16"/>
+      <prop name="spikes"  x="96" y="128" width="16" height="16"/>
+      <prop name="spikes"  x="80" y="128" width="16" height="16"/>
+      <prop name="spikes"  x="64" y="128" width="16" height="16"/>
+      <prop name="spikes"  x="48" y="128" width="16" height="16"/>
+      <prop name="Light" x="96" y="32" width="16" height="16"/>
+      <prop name="Light" x="128" y="32" width="16" height="16"/>
+      <prop name="Light" x="16" y="192" width="16" height="16"/>
+      <prop name="pebbles" x="48" y="144" width="16" height="16"/>
+      <prop name="pebbles" x="80" y="176" width="16" height="16"/>
+      <prop name="pebbles" x="128" y="192" width="16" height="16"/>
+      <prop name="pebbles" x="208" y="144" width="16" height="16"/>
+      <prop name="pebbles" x="160" y="32" width="16" height="16"/>
+      <prop name="pebbles" x="48" y="32" width="16" height="16"/>
+   </objectgroup>
+</map>
