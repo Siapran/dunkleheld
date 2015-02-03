@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<prop name="door" file="door.png" >
+
+	<hitbox xcenter="26" ycenter="16" />
+
+	<properties action="false" description="true" ground="false" solid="true"/>
+
+	<frames xoff="0" yoff="0" xsize="48" ysize="32" t="100">
+		<frame id="0" x="0" y="0"/>
+		<frame id="1" x="1" y="0"/>
+		<frame id="2" x="2" y="0"/>
+		<frame id="3" x="3" y="0"/>
+		<frame id="4" x="4" y="0"/>
+		<frame id="5" x="5" y="0"/>
+	</frames>
+
+	<state name="close">
+		<description lang="fr">Ce mur est orné d'un bas relief de crâne. Il vous observe silencieusement, comme si il attendait quelque chose de vous.</description>
+		<animation> 0 </animation>
+
+		<hitbox x="0" y="0" width="48" height="32" />
+
+		<action name="door_open" state="open">
+			<animation> 1 2 3 4 5 </animation>
+		</action>
+	</state>
+
+	<state name="open">
+		<properties ground="true" solid="false"/>
+		<description lang="fr">Le mur est ouvert, vous invitant à explorer les profondeurs du temple.</description>
+		<animation> 5 </animation>
+
+		<hitbox x="0" y="0" width="16" height="32" />
+		<hitbox x="32" y="0" width="16" height="32" />
+
+		<action name="door_close" state="closed">
+			<animation> 4 3 2 1 0 </animation>
+		</action>
+	</state>
+
+</prop>

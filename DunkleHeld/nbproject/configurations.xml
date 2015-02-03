@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>src/Actor.h</itemPath>
+      <itemPath>src/AnimatedSprite.h</itemPath>
+      <itemPath>src/Animation.h</itemPath>
+      <itemPath>src/Controller.h</itemPath>
+      <itemPath>src/Game.h</itemPath>
+      <itemPath>src/GameLevel.h</itemPath>
+      <itemPath>src/GameObject.h</itemPath>
+      <itemPath>src/Paintable.h</itemPath>
+      <itemPath>src/Professor.h</itemPath>
+      <itemPath>src/Prop.h</itemPath>
+      <itemPath>src/Tile.h</itemPath>
+      <itemPath>src/TileMap.h</itemPath>
+      <itemPath>src/TileSet.h</itemPath>
+      <itemPath>src/Trigger.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f1" displayName="lib" projectFiles="true">
+      <itemPath>src/tinyXML/tinystr.cpp</itemPath>
+      <itemPath>src/tinyXML/tinystr.h</itemPath>
+      <itemPath>src/tinyXML/tinyxml.cpp</itemPath>
+      <itemPath>src/tinyXML/tinyxml.h</itemPath>
+      <itemPath>src/tinyXML/tinyxmlerror.cpp</itemPath>
+      <itemPath>src/tinyXML/tinyxmlparser.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="nbproject" displayName="nbproject" projectFiles="true">
+      <logicalFolder name="private" displayName="private" projectFiles="true">
+        <itemPath>nbproject/private/Makefile-variables.mk</itemPath>
+        <itemPath>nbproject/private/configurations.xml</itemPath>
+        <itemPath>nbproject/private/launcher.properties</itemPath>
+        <itemPath>nbproject/private/private.xml</itemPath>
+      </logicalFolder>
+      <itemPath>nbproject/Makefile-Debug.mk</itemPath>
+      <itemPath>nbproject/Makefile-Release.mk</itemPath>
+      <itemPath>nbproject/Makefile-impl.mk</itemPath>
+      <itemPath>nbproject/Makefile-variables.mk</itemPath>
+      <itemPath>nbproject/Package-Debug.bash</itemPath>
+      <itemPath>nbproject/Package-Release.bash</itemPath>
+      <itemPath>nbproject/configurations.xml</itemPath>
+      <itemPath>nbproject/project.xml</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>src/Actor.cpp</itemPath>
+      <itemPath>src/AnimatedSprite.cpp</itemPath>
+      <itemPath>src/Animation.cpp</itemPath>
+      <itemPath>src/Controller.cpp</itemPath>
+      <itemPath>src/Game.cpp</itemPath>
+      <itemPath>src/GameLevel.cpp</itemPath>
+      <itemPath>src/GameObject.cpp</itemPath>
+      <itemPath>src/Paintable.cpp</itemPath>
+      <itemPath>src/Professor.cpp</itemPath>
+      <itemPath>src/Prop.cpp</itemPath>
+      <itemPath>src/Tile.cpp</itemPath>
+      <itemPath>src/TileMap.cpp</itemPath>
+      <itemPath>src/TileSet.cpp</itemPath>
+      <itemPath>src/Trigger.cpp</itemPath>
+      <itemPath>src/main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>/home/siapran/Programming/C++/SFML/Donker Held/src/tinyXML</Elem>
+    <Elem>nbproject</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerOptionItem>`pkg-config --libs sfml-all`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="nbproject/Makefile-Debug.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Makefile-Release.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Makefile-impl.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Makefile-variables.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Package-Debug.bash" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Package-Release.bash" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/configurations.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/private/Makefile-variables.mk"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="nbproject/private/configurations.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="nbproject/private/launcher.properties"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="nbproject/private/private.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/project.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Actor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Actor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/AnimatedSprite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/AnimatedSprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Animation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Animation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Controller.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Controller.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/GameLevel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameLevel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Paintable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Paintable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Professor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Professor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Prop.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Prop.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Tile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Tile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/TileMap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TileMap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/TileSet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TileSet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Trigger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Trigger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinystr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinystr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinyxml.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinyxml.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinyxmlerror.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinyxmlparser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="nbproject/Makefile-Debug.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Makefile-Release.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Makefile-impl.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Makefile-variables.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Package-Debug.bash" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/Package-Release.bash" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/configurations.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/private/Makefile-variables.mk"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="nbproject/private/configurations.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="nbproject/private/launcher.properties"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="nbproject/private/private.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/project.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Actor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Actor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/AnimatedSprite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/AnimatedSprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Animation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Animation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Controller.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Controller.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/GameLevel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameLevel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Paintable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Paintable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Professor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Professor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Prop.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Prop.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Tile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Tile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/TileMap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TileMap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/TileSet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TileSet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Trigger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Trigger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinystr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinystr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinyxml.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinyxml.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinyxmlerror.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tinyXML/tinyxmlparser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<prop name="crate_pile" file="crate_pile.png">
+
+	<hitbox x="3" y="6" width="10" height="10" />
+
+	<properties action="false" description="true" ground="false" solid="true"/>
+
+	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
+		<frame id="0" x="0" y="0"/>
+		<frame id="1" x="1" y="0"/>
+		<frame id="2" x="2" y="0"/>
+	</frames>
+
+	<state name="crate1">
+		<description lang="fr">Des explorateurs ont amené ça là.</description>
+		<animation> 0 </animation>
+	</state>
+
+	<state name="crate2">
+		<properties action="true"/>
+		<description lang="fr">Des explorateurs ont amené ça là ... Une lanterne est posée dessus.</description>
+		<animation> 1 </animation>
+		<action name="crate_take_lantern" state="crate1" use="true" >
+			<description lang="fr">Prendre</description>
+			<animation> 0 </animation>
+		</action>
+	</state>
+
+	<state name="crate3">
+		<properties action="true"/>
+		<description lang="fr">Des explorateurs ont amené ça là ... C'est quoi ça ?</description>
+		<animation> 2 </animation>
+		<action name="crate_take_eye" state="crate1" use="true" >
+			<description lang="fr">Prendre</description>
+			<animation> 0 </animation>
+		</action>
+	</state>
+
+</prop>

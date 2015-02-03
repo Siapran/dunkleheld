@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<tileset firstgid="1" name="temple" tilewidth="16" tileheight="16">
+	<image source="resources/tilesets/tiles.png" width="96" height="144"/>
+
+	<tile id="0" ground="true">
+		<box x="0" y="1" width="16" height="15"/>
+	</tile>
+	<tile id="1" ground="true">
+		<box x="0" y="1" width="16" height="15"/>
+	</tile>
+	<tile id="2" ground="true">
+		<box x="0" y="1" width="15" height="15"/>
+	</tile>
+	<tile id="3">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="4">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="5">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+
+	<tile id="6" ground="true">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="7">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="8" ground="true">
+		<box x="0" y="0" width="15" height="16"/>
+	</tile>
+	<tile id="9">
+		<box x="0" y="0" width="9" height="16"/>
+		<box x="6" y="9" width="6" height="6"/>
+		<box x="0" y="0" width="16" height="14"/>
+	</tile>
+	<tile id="10">
+		<box x="0" y="0" width="16" height="14"/>
+	</tile>
+	<tile id="11">
+		<box x="0" y="0" width="16" height="14"/>
+		<box x="4" y="9" width="6" height="6"/>
+		<box x="7" y="0" width="9" height="16"/>
+	</tile>
+
+	<tile id="12" ground="true">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="13" ground="true">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="14" ground="true">
+		<box x="0" y="0" width="15" height="16"/>
+	</tile>
+	<tile id="15">
+		<box x="0" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="16" />
+	<tile id="17">
+		<box x="7" y="0" width="9" height="16"/>
+	</tile>
+
+	<tile id="18" ground="true">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="19" ground="true">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="20" />
+	<tile id="21">
+		<box x="0" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="22" />
+	<tile id="23">
+		<box x="7" y="0" width="9" height="16"/>
+	</tile>
+
+	<tile id="24" ground="true">
+		<box x="0" y="0" width="15" height="16"/>
+		<box x="0" y="1" width="16" height="15"/>
+	</tile>
+	<tile id="25" ground="true">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="26">
+		<box x="4" y="4" width="8" height="8"/>
+	</tile>
+	<tile id="27">
+		<box x="0" y="0" width="8" height="16"/>
+	</tile>
+	<tile id="28">
+		<box x="0" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="29">
+	</tile>
+
+	<tile id="30">
+		<box x="0" y="0" width="9" height="16"/>
+		<box x="4" y="3" width="8" height="8"/>
+	</tile>
+	<tile id="31">
+		<box x="4" y="3" width="8" height="8"/>
+		<box x="7" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="32" />
+	<tile id="33" />
+	<tile id="34">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+	<tile id="35">
+		<box x="0" y="0" width="16" height="16"/>
+	</tile>
+
+	<tile id="36">
+		<box x="4" y="3" width="8" height="8"/>
+		<box x="7" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="37">
+		<box x="4" y="3" width="8" height="8"/>
+		<box x="0" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="38">
+		<box x="7" y="0" width="9" height="16"/>
+		<box x="4" y="3" width="8" height="8"/>
+	</tile>
+	<tile id="39">
+		<box x="0" y="0" width="9" height="16"/>
+		<box x="4" y="3" width="8" height="8"/>
+	</tile>
+	<tile id="40">
+		<box x="0" y="0" width="16" height="14"/>
+		<box x="4" y="7" width="8" height="8"/>
+	</tile>
+	<tile id="41">
+		<box x="0" y="0" width="16" height="14"/>
+		<box x="3" y="8" width="10" height="7"/>
+	</tile>
+
+	<tile id="42">
+		<box x="0" y="0" width="16" height="14"/>
+		<box x="4" y="7" width="8" height="8"/>
+		<box x="0" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="43">
+		<box x="0" y="0" width="16" height="14"/>
+		<box x="4" y="7" width="8" height="8"/>
+		<box x="7" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="44">
+		<box x="7" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="45">
+		<box x="0" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="46">
+		<box x="7" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="47">
+		<box x="0" y="0" width="9" height="16"/>
+	</tile>
+	
+	<tile id="48">
+		<box x="0" y="0" width="16" height="14"/>
+	</tile>
+	<tile id="49">
+		<box x="0" y="0" width="16" height="14"/>
+	</tile>
+	<tile id="50">
+		<box x="4" y="7" width="8" height="8"/>
+		<box x="7" y="0" width="9" height="14"/>
+	</tile>
+	<tile id="51">
+		<box x="4" y="7" width="8" height="8"/>
+		<box x="0" y="0" width="9" height="14"/>
+	</tile>
+	<tile id="52">
+		<box x="4" y="3" width="8" height="8"/>
+		<box x="7" y="0" width="9" height="16"/>
+	</tile>
+	<tile id="53">
+		<box x="0" y="0" width="9" height="16"/>
+		<box x="4" y="3" width="8" height="8"/>
+	</tile>
+
+</tileset>

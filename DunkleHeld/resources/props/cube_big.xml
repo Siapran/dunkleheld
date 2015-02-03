@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<prop name="cube_big" file="cube_big.png">
+
+	<hitbox x="4" y="7" width="8" height="8" />
+
+	<properties action="false" description="true" ground="false" solid="true"/>
+
+	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
+		<frame id="0" x="0" y="0"/>
+		<frame id="1" x="1" y="0"/>
+		<frame id="2" x="2" y="0"/>
+		<frame id="3" x="3" y="0"/>
+		<frame id="4" x="4" y="0"/>
+		<frame id="5" x="5" y="0"/>
+		<frame id="6" x="6" y="0"/>
+	</frames>
+
+	<state name="off">
+		<description lang="fr">Un indice ? ...</description>
+		<animation> 0 </animation>
+		<action name="cube_big_blue" state="blue">
+			<animation> 1 2 </animation>
+		</action>
+		<action name="cube_big_red" state="red">
+			<animation> 3 4 </animation>
+		</action>
+		<action name="cube_big_green" state="green">
+			<animation> 5 6 </animation>
+		</action>
+	</state>
+
+	<state name="blue">
+		<description lang="fr"> ... Une lumière bleu émane de ce bloc ... rassurant </description>
+		<animation> 2 </animation>
+		<action name="cube_big_off" state="off">
+			<animation> 1 0 </animation>
+		</action>
+		<action name="cube_big_red" state="red">
+			<animation> 1 0 3 4 </animation>
+		</action>
+		<action name="cube_big_green" state="green">
+			<animation> 1 0 5 6 </animation>
+		</action>
+	</state>
+
+	<state name="red">
+		<description lang="fr"> ... Une lumière rouge émane de ce bloc ... inquiétant</description>
+		<animation> 4 </animation>
+		<action name="cube_big_off" state="off">
+			<animation> 3 0 </animation>
+		</action>
+		<action name="cube_big_blue" state="blue">
+			<animation> 3 0 1 2 </animation>
+		</action>
+		<action name="cube_big_green" state="green">
+			<animation> 3 0 5 6 </animation>
+		</action>
+	</state>
+
+	<state name="green">
+		<description lang="fr"> ... Une lumière verte émane de ce bloc ... ??</description>
+		<animation> 6 </animation>
+		<action name="cube_big_off" state="off">
+			<animation> 5 0 </animation>
+		</action>
+		<action name="cube_big_blue" state="blue">
+			<animation> 5 0 1 2 </animation>
+		</action>
+		<action name="cube_big_red" state="red">
+			<animation> 5 0 3 4 </animation>
+		</action>
+	</state>
+
+</prop>
