@@ -246,6 +246,8 @@
          <description lang="fr">Trouve le bon chemin pour reveler la lumière divine.</descripion>
       </examine>
 
+      <!------------------------------------------ spike grid ------------------------------------------>
+      <!-- line 1 -->
       <prop name="spikes"  x="48"   y="48"   width="16"  height="16" id="11"  state="on"/>
       <prop name="spikes"  x="64"   y="48"   width="16"  height="16" id="12"  state="on"/>
       <prop name="spikes"  x="80"   y="48"   width="16"  height="16" id="13"  state="on"/>
@@ -258,65 +260,13 @@
             <else>
                <action target="spikes#15" value="spikes_on" />
             </else>
-         </trigger>
-      </prop>
+         </trigger></prop>
       <prop name="spikes"  x="128"  y="48"   width="16"  height="16" id="16"  state="on"/>
       <prop name="spikes"  x="144"  y="48"   width="16"  height="16" id="17"  state="on"/>
       <prop name="spikes"  x="160"  y="48"   width="16"  height="16" id="18"  state="on"/>
       <prop name="spikes"  x="176"  y="48"   width="16"  height="16" id="19"  state="on"/>
-
-      <prop name="spikes"  x="176"  y="64"   width="16"  height="16" id="29"  state="on"/>
-      <prop name="spikes"  x="160"  y="64"   width="16"  height="16" id="28"  state="on"/>
-      <prop name="spikes"  x="144"  y="64"   width="16"  height="16" id="27">
-         <trigger exp="switch#4.state == on">
-            <then>
-               <action target="spikes#27" value="spikes_off" />
-            </then>
-            <else>
-               <action target="spikes#27" value="spikes_on" />
-            </else>
-         </trigger>
-      </prop>
-      <prop name="spikes"  x="128"  y="64"   width="16"  height="16" id="26">
-         <trigger exp="switch#4.state == on">
-            <then>
-               <action target="spikes#26" value="spikes_off" />
-            </then>
-            <else>
-               <action target="spikes#26" value="spikes_on" />
-            </else>
-         </trigger>
-      </prop>
-      <prop name="spikes"  x="112"  y="64"   width="16"  height="16" id="25">
-         <trigger exp="((switch#1.state == on) ^ (switch#2.state == on))">
-            <then>
-               <action target="spikes#25" value="spikes_off" />
-            </then>
-            <else>
-               <action target="spikes#25" value="spikes_on" />
-            </else>
-         </trigger>
-      </prop>
-      <prop name="spikes"  x="96"   y="64"   width="16"  height="16" id="24">
-         <trigger exp="((switch#1.state == on) ^ (switch#2.state == on))">
-            <then>
-               <action target="spikes#24" value="spikes_off" />
-            </then>
-            <else>
-               <action target="spikes#24" value="spikes_on" />
-            </else>
-         </trigger>
-      </prop>
-      <prop name="spikes"  x="80"   y="64"   width="16"  height="16" id="23">
-         <trigger exp="switch#2.state == on">
-            <then>
-               <action target="spikes#23" value="spikes_off" />
-            </then>
-            <else>
-               <action target="spikes#23" value="spikes_on" />
-            </else>
-         </trigger>
-      </prop>
+      <!-- line 2 -->
+      <prop name="spikes"  x="48"   y="64"   width="16"  height="16" id="21"  state="on"/>
       <prop name="spikes"  x="64"   y="64"   width="16"  height="16" id="22">
          <trigger exp="((switch#4.state == on) ^ (switch#3.state == on))">
             <then>
@@ -325,10 +275,56 @@
             <else>
                <action target="spikes#22" value="spikes_off" />
             </else>
-         </trigger>
-      </prop>
-      <prop name="spikes"  x="48"   y="64"   width="16"  height="16" id="21"  state="on"/>
-
+         </trigger></prop>
+      <prop name="spikes"  x="80"   y="64"   width="16"  height="16" id="23">
+         <trigger exp="switch#2.state == on">
+            <then>
+               <action target="spikes#23" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#23" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="96"   y="64"   width="16"  height="16" id="24">
+         <trigger exp="((switch#1.state == on) ^ (switch#2.state == on))">
+            <then>
+               <action target="spikes#24" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#24" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="112"  y="64"   width="16"  height="16" id="25">
+         <trigger exp="((switch#1.state == on) ^ (switch#2.state == on))">
+            <then>
+               <action target="spikes#25" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#25" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="128"  y="64"   width="16"  height="16" id="26">
+         <trigger exp="switch#4.state == on">
+            <then>
+               <action target="spikes#26" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#26" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="144"  y="64"   width="16"  height="16" id="27">
+         <trigger exp="switch#4.state == on">
+            <then>
+               <action target="spikes#27" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#27" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="160"  y="64"   width="16"  height="16" id="28"  state="on"/>
+      <prop name="spikes"  x="176"  y="64"   width="16"  height="16" id="29"  state="on"/>
+      
+      <!-- line 3 -->
       <prop name="spikes"  x="48"   y="80"   width="16"  height="16" id="31"  state="on"/>
       <prop name="spikes"  x="64"   y="80"   width="16"  height="16" id="32">
          <trigger exp="(switch#1.state == on) ^ (switch#2.state == on)">
@@ -338,16 +334,23 @@
             <else>
                <action target="spikes#32" value="spikes_on" />
             </else>
-         </trigger>
-      </prop>
+         </trigger></prop>
       <prop name="spikes"  x="80"   y="80"   width="16"  height="16" id="33"  state="on"/>
       <prop name="spikes"  x="96"   y="80"   width="16"  height="16" id="34"  state="on"/>
-      <prop name="spikes"  x="112"  y="80"   width="16"  height="16" id="35"/>
-      <prop name="spikes"  x="128"  y="80"   width="16"  height="16" id="36"/>
+      <prop name="spikes"  x="112"  y="80"   width="16"  height="16" id="35">
+         <trigger exp="((switch#4.state == on) ^ (switch#3.state == on))">
+            <then>
+               <action target="spikes#22" value="spikes_on" />
+            </then>
+            <else>
+               <action target="spikes#22" value="spikes_off" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="128"  y="80"   width="16"  height="16" id="36"  state="on"/>
       <prop name="spikes"  x="144"  y="80"   width="16"  height="16" id="37"/>
       <prop name="spikes"  x="160"  y="80"   width="16"  height="16" id="38"/>
       <prop name="spikes"  x="176"  y="80"   width="16"  height="16" id="39"/>
-
+      <!-- line 4 -->
       <prop name="spikes"  x="176"  y="96"   width="16"  height="16" id="49"/>
       <prop name="spikes"  x="144"  y="96"   width="16"  height="16" id="47"/>
       <prop name="spikes"  x="160"  y="96"   width="16"  height="16" id="48"/>
@@ -357,7 +360,7 @@
       <prop name="spikes"  x="80"   y="96"   width="16"  height="16" id="43"/>
       <prop name="spikes"  x="64"   y="96"   width="16"  height="16" id="42"/>
       <prop name="spikes"  x="48"   y="96"   width="16"  height="16" id="41"/>
-
+      <!-- line 5 -->
       <prop name="spikes"  x="48"   y="112"  width="16"  height="16" id="51"/>
       <prop name="spikes"  x="64"   y="112"  width="16"  height="16" id="52"/>
       <prop name="spikes"  x="80"   y="112"  width="16"  height="16" id="53"/>
@@ -367,7 +370,7 @@
       <prop name="spikes"  x="128"  y="112"  width="16"  height="16" id="57"/>
       <prop name="spikes"  x="160"  y="112"  width="16"  height="16" id="58"/>
       <prop name="spikes"  x="176"  y="112"  width="16"  height="16" id="59"/>
-
+      <!-- line 6 -->
       <prop name="spikes"  x="176"  y="128"  width="16"  height="16" id="69"/>
       <prop name="spikes"  x="160"  y="128"  width="16"  height="16" id="68"/>
       <prop name="spikes"  x="144"  y="128"  width="16"  height="16" id="67"/>
