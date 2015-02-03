@@ -234,11 +234,29 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<prop name="statue_b" x="160" y="112" width="32" height="32" state="blue"/>
+		<prop name="statue_b" x="160" y="112" width="32" height="32" state="blue">
+		<trigger exp="has_crystal">
+				<then>
+					<action target="statue_b" value="statue_b_red" />
+				</then>
+				<else>
+					<action target="statue_b" value="statue_b_blue" />
+				</else>
+			</trigger>
+		</prop>
 		<prop name="statue_b" x="32" y="96" width="32" height="32" state="blue"/>
 		<prop name="statue_b" x="96" y="64" width="32" height="32" state="blue"/>
 
-		<prop name="spikes" x="128" y="208" width="16" height="16" state="off"/>
+		<prop name="spikes" x="128" y="208" width="16" height="16" state="off">
+			<trigger exp="has_crystal">
+				<then>
+					<action target="spikes" value="spikes_on" />
+				</then>
+				<else>
+					<action target="spikes" value="spikes_off" />
+				</else>
+			</trigger>
+		</prop>
 		<prop name="spikes" x="144" y="208" width="16" height="16" state="off"/>
 
 		<prop name="lever" x="80" y="192" width="16" height="16" state="off"/>
