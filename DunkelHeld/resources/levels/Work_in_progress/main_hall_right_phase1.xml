@@ -247,28 +247,41 @@
 			<tile gid="8"/>
 		</data>
 	</layer>
-	<objectgroup name="Objects" width="0" height="0">
-		<object name="cube_big" x="80" y="192" width="16" height="16" state="blue"/>
-		<object name="cube_big" x="112" y="192" width="16" height="16" state="green"/>
-		<object name="cube_big" x="144" y="192" width="16" height="16" state="red"/>
-		<object name="switch" x="80" y="176" width="16" height="16" id="1" state="off"/>
-		<object name="switch" x="112" y="176" width="16" height="16" id="2" state="off"/>
-		<object name="switch" x="144" y="176" width="16" height="16" id="3" state="off"/>
-		<examine name="writings" x="112" y="80" width="16" height="16">
-			<description lang="fr">l'intrus devra résoudre cette énigme s'il souhaite revoir le ciel.</descripion>
+	<objectgroup name="props" width="0" height="0">
+		<prop name="cube_big"	x="80"	y="192"	width="16"	height="16"	state="blue"/>
+		<prop name="cube_big"	x="112"	y="192"	width="16"	height="16"	state="green"/>
+		<prop name="cube_big"	x="144"	y="192"	width="16"	height="16"	state="red"/>
+
+		<prop name="switch"		x="80"	y="176"	width="16"	height="16"	id="1"	state="off">
+			<trigger exp="switch#1:switch_on">
+				<setvar scope="global" target="cyan1" value="switch#1.state == on" />
+			</trigger></prop>
+		<prop name="switch"		x="112"	y="176"	width="16"	height="16"	id="2"	state="off">
+			<trigger exp="switch#2:switch_on">
+				<setvar scope="global" target="cyan1" value="switch#2.state == on" />
+			</trigger></prop>
+		<prop name="switch"		x="144"	y="176"	width="16"	height="16"	id="3"	state="off"/>
+
+		<examine name="writings"	x="112"	y="80"	width="16"	height="16">
+			<description lang="fr">L'intrus devra résoudre cette énigme s'il souhaite revoir le ciel.</descripion>
 		</examine>
-		<object name="statue_a" x="48" y="96" width="32" height="32" state="blue"/>
-		<object name="statue_a" x="160" y="96" width="32" height="32" state="blue"/>
-		<object name="pebbles" x="176" y="176" width="16" height="16" state="frame1"/>
-		<object name="pebbles" x="96" y="112" width="16" height="16" state="frame3"/>
-		<object name="pebbles" x="48" y="176" width="16" height="16" state="frame1"/>
-		<object name="pebbles" x="16" y="144" width="16" height="16" state="frame0"/>
-		<object name="pebbles" x="144" y="128" width="16" height="16" state="frame2"/>
-		<object name="spikes" x="208" y="144" width="16" height="16" state="on"/>
-		<object name="spikes" x="208" y="160" width="16" height="16" state="on"/>
-		<object name="spikes" x="208" y="176" width="16" height="16" state="on"/>
-		<object name="button" x="224" y="160" width="16" height="16" state="off"/>
-		<object name="cube_big" x="128" y="96" width="16" height="16" state="blue"/>
-		<object name="cube_big" x="96" y="96" width="16" height="16" state="blue"/>
+
+		<prop name="statue_a"	x="48"	y="96"	width="32"	height="32"	state="blue"/>
+		<prop name="statue_a"	x="160"	y="96"	width="32"	height="32"	state="blue"/>
+
+		<prop name="pebbles"	x="176"	y="176"	width="16"	height="16"	state="frame1"/>
+		<prop name="pebbles"	x="96"	y="112"	width="16"	height="16"	state="frame3"/>
+		<prop name="pebbles"	x="48"	y="176"	width="16"	height="16"	state="frame1"/>
+		<prop name="pebbles"	x="16"	y="144"	width="16"	height="16"	state="frame0"/>
+		<prop name="pebbles"	x="144"	y="128"	width="16"	height="16"	state="frame2"/>
+
+		<prop name="spikes"		x="208" y="144" width="16"	height="16" state="on"/>
+		<prop name="spikes"		x="208" y="160" width="16"	height="16" state="on"/>
+		<prop name="spikes"		x="208" y="176" width="16"	height="16" state="on"/>
+
+		<prop name="button"		x="224" y="160" width="16"	height="16" state="off"/>
+
+		<prop name="cube_big"	x="128"	y="96"	width="16"	height="16" state="blue"/>
+		<prop name="cube_big"	x="96"	y="96"	width="16"	height="16" state="blue"/>
 	</objectgroup>
 </map>
