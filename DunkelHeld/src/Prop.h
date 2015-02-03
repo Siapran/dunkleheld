@@ -11,20 +11,25 @@
 #include <SFML/Graphics.hpp>
 #include <map>
 #include <vector>
-#include "src/tinyXML/tinyxml.h"
-#include "src/GameObject.h"
+#include "tinyXML/tinyxml.h"
+#include "GameObject.h"
+#include "Paintable.h"
 
-class Prop : public GameObject, public sf::Drawable {
+struct PropState;
+struct PropAction;
+
+class Prop : public GameObject, public Paintable {
 public:
 
     Prop(const char* fileName);
-    Prop(const Prop& orig, TiXmlElement);
-    virtual ~Prop();
+    Prop(GameLevel *level, const Prop& orig, TiXmlElement);
 
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+    virtual float getDepth();
 
-    
-    
+    virtual void update(std::vector<std::string>& events);
+
+
 private:
 
     sf::Time m_frameTime; // temps entre chaque frame
@@ -32,7 +37,7 @@ private:
     sf::Texture *m_texture;
 
     std::map<std::string, PropState> m_states; // nom état -> état
-
+    std::string m_currentState; // état actuel
 };
 
 struct PropState {

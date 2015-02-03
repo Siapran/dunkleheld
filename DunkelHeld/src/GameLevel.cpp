@@ -7,6 +7,8 @@
 
 #include "GameLevel.h"
 #include "tinyXML/tinyxml.h"
+#include "Paintable.h"
+#include <SFML/Graphics.hpp>
 
 #include <stdio.h>
 #include <iostream>
@@ -21,19 +23,52 @@ GameLevel::GameLevel(const char *fileName, TileSet &tileSet)
 }
 
 GameLevel::~GameLevel() {
+    for (auto& object : m_objects)
+        delete object.second;
 }
 
 void GameLevel::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+    //    sf::Clock timer;
+
     states.transform *= getTransform();
     states.texture = m_tileSet.getTileSheet();
-    for (int i = 0; i < m_size.y; ++i) {
-        auto &row = m_tileMap[i];
-        for (int j = 0; j < m_size.x; ++j) {
-            auto tile = row[j];
-            if (tile != nullptr)
-                tile->draw(target, states);
-        }
+
+    // on crée un vecteur pour contenir tout ce qu'on va peindre.
+    std::vector<Paintable *> paintables;
+    // vector::reserve alloue la place nécessaire mais ne change pas la taille du vector
+    // on perd en mémoire... mais on gagne en vitesse!
+    paintables.reserve(m_size.x * m_size.y + m_objects.size());
+
+    for (auto &row : m_tileMap)
+        for (auto &tile : row)
+            if (tile != nullptr) // on n'ajoute pas les tiles vides
+                paintables.push_back(tile);
+    for (auto &pair : m_objects) {
+        Paintable *paintable = dynamic_cast<Paintable*> (pair.second);
+        if (paintable) // on n'ajoute que les objets peignables
+            paintables.push_back(paintable);
     }
+
+    // on trie les entités à peindre pour peindre les entités derrièrre en premier
+    std::sort(paintables.begin(), paintables.end(), [](Paintable * a, Paintable * b) -> bool {
+        // on trie par ordre décroissant de distance à la caméra
+        return a->getDepth() < b->getDepth();
+    });
+
+    // on peint les entités dans le bon ordre
+    for (auto &paintable : paintables)
+        paintable->draw(target, states);
+
+    //    std::cout << timer.restart().asMicroseconds() << std::endl;
+
+    //    for (int i = 0; i < m_size.y; ++i) {
+    //        auto &row = m_tileMap[i];
+    //        for (int j = 0; j < m_size.x; ++j) {
+    //            auto tile = row[j];
+    //            if (tile != nullptr)
+    //                tile->draw(target, states);
+    //        }
+    //    }
 }
 
 void GameLevel::loadFromXml(const char* fileName) {
@@ -63,8 +98,8 @@ void GameLevel::loadFromXml(const char* fileName) {
 
                 auto tile = m_tileSet[gid];
                 m_tileMap[i][j] = ((tile == nullptr)
-                        ? tile
-                        : new Tile(tile, sf::Vector2f(j * 16, i * 16)));
+                        ? nullptr // tile vide
+                        : new Tile(tile, sf::Vector2f(j * 16, i * 16))); // copie du tile
 
                 std::cout << gid << "\t";
                 tileMapIterator = tileMapIterator->NextSiblingElement("tile");
@@ -72,4 +107,16 @@ void GameLevel::loadFromXml(const char* fileName) {
             std::cout << std::endl;
         }
     }
+}
+
+void GameLevel::addListener(std::string target, GameObject* listener) {
+
+}
+
+void GameLevel::removeListener(std::string target, GameObject* listener) {
+
+}
+
+void GameLevel::broadCastEvent(std::string source, std::string event) {
+
 }

@@ -10,7 +10,9 @@
 
 #include <SFML/Graphics.hpp>
 
-class Tile : public sf::Drawable {
+#include "Paintable.h"
+
+class Tile : public Paintable {
 public:
 
     Tile(
@@ -26,6 +28,7 @@ public:
     int getGid() const;
     
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+    virtual float getDepth();
 
 private:
 

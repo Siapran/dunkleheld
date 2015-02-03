@@ -51,7 +51,6 @@ TileSet::TileSet(const char* fileName) {
         // on crée le tile
         Tile *tile = new Tile(id + 1, sf::Vector2f(0, 0), &m_tileSheet, texCoords);
 
-        sf::IntRect hitBox;
         // on explore les hitBox tant qu'on en trouve
         for (
                 TiXmlElement *boxNode = tileNode->FirstChildElement("box");
