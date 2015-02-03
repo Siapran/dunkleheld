@@ -340,26 +340,66 @@
       <prop name="spikes"  x="112"  y="80"   width="16"  height="16" id="35">
          <trigger exp="((switch#4.state == on) ^ (switch#3.state == on))">
             <then>
-               <action target="spikes#22" value="spikes_on" />
+               <action target="spikes#35" value="spikes_off" />
             </then>
             <else>
-               <action target="spikes#22" value="spikes_off" />
+               <action target="spikes#35" value="spikes_on" />
             </else>
          </trigger></prop>
       <prop name="spikes"  x="128"  y="80"   width="16"  height="16" id="36"  state="on"/>
-      <prop name="spikes"  x="144"  y="80"   width="16"  height="16" id="37"/>
-      <prop name="spikes"  x="160"  y="80"   width="16"  height="16" id="38"/>
-      <prop name="spikes"  x="176"  y="80"   width="16"  height="16" id="39"/>
+      <prop name="spikes"  x="144"  y="80"   width="16"  height="16" id="37">
+         <trigger exp="switch#4.state == on">
+            <then>
+               <action target="spikes#37" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#37" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="160"  y="80"   width="16"  height="16" id="38"  state="on"/>
+      <prop name="spikes"  x="176"  y="80"   width="16"  height="16" id="39"  state="on"/>
       <!-- line 4 -->
-      <prop name="spikes"  x="176"  y="96"   width="16"  height="16" id="49"/>
-      <prop name="spikes"  x="144"  y="96"   width="16"  height="16" id="47"/>
-      <prop name="spikes"  x="160"  y="96"   width="16"  height="16" id="48"/>
-      <prop name="spikes"  x="128"  y="96"   width="16"  height="16" id="46"/>
-      <prop name="spikes"  x="112"  y="96"   width="16"  height="16" id="45"/>
-      <prop name="spikes"  x="96"   y="96"   width="16"  height="16" id="44"/>
-      <prop name="spikes"  x="80"   y="96"   width="16"  height="16" id="43"/>
-      <prop name="spikes"  x="64"   y="96"   width="16"  height="16" id="42"/>
-      <prop name="spikes"  x="48"   y="96"   width="16"  height="16" id="41"/>
+      <prop name="spikes"  x="48"   y="96"   width="16"  height="16" id="41"  state="on"/>
+      <prop name="spikes"  x="64"   y="96"   width="16"  height="16" id="42">
+         <trigger exp="((switch#1.state == on) ^ (switch#4.state == on))">
+            <then>
+               <action target="spikes#42" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#42" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="80"   y="96"   width="16"  height="16" id="43"  state="on"/>
+      <prop name="spikes"  x="96"   y="96"   width="16"  height="16" id="44"  state="on"/>
+      <prop name="spikes"  x="112"  y="96"   width="16"  height="16" id="45">
+         <trigger exp="((switch#3.state == on) ^ (switch#4.state == on))">
+            <then>
+               <action target="spikes#45" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#45" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="128"  y="96"   width="16"  height="16" id="46">
+         <trigger exp="switch#3.state == on">
+            <then>
+               <action target="spikes#46" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#46" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="144"  y="96"   width="16"  height="16" id="47">
+         <trigger exp="switch#2.state == on">
+            <then>
+               <action target="spikes#47" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#47" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="160"  y="96"   width="16"  height="16" id="48"  state="on"/>
+      <prop name="spikes"  x="176"  y="96"   width="16"  height="16" id="49"  state="on"/>
       <!-- line 5 -->
       <prop name="spikes"  x="48"   y="112"  width="16"  height="16" id="51"/>
       <prop name="spikes"  x="64"   y="112"  width="16"  height="16" id="52"/>
