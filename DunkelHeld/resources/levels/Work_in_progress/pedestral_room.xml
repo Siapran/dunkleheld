@@ -3,7 +3,7 @@
 	<tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16">
 		<image source="../../tilesets/tiles.png" width="96" height="144"/>
 	</tileset>
-	<layer name="Tiles" width="15" height="15">
+	<layer name="Tiles" width="14" height="15">
 		<data>
 			<tile gid="8"/>
 			<tile gid="8"/>
@@ -232,14 +232,18 @@
 			<tile gid="0"/>
 		</data>
 	</layer>
-	<objectgroup name="Objects" width="0" height="0">
-		<object name="pedestral" x="104" y="72" width="16" height="16"/>
-		<object name="golem-inactive" x="32" y="96" width="32" height="32"/>
-		<object name="golem_willactivate" x="160" y="96" width="32" height="32"/>
-		<object name="pebbles" x="64" y="96" width="16" height="16" />
-		<object name="pebbles" x="80" y="112" width="16" height="16"/>
-		<object name="pebbles" x="128" y="96" width="16" height="16"/>
-		<object name="pebbles" x="128" y="112" width="16" height="16"/>
-		<object name="pebbles" x="112" y="144" width="16" height="16"/>
+	<objectgroup name="props" width="0" height="0">
+
+		<prop name="pedestral" x="104" y="72" width="16" height="16" state="blue"/>
+		
+		<!-- <object name="golem-inactive" x="32" y="96" width="32" height="32"/>
+		<object name="golem_willactivate" x="160" y="96" width="32" height="32"/> -->
+
+		<prop name="pebbles" x="64" y="96" width="16" height="16" state="frame3"/>
+		<prop name="pebbles" x="80" y="112" width="16" height="16" state="frame1"/>
+		<prop name="pebbles" x="128" y="96" width="16" height="16" state="frame0"/>
+		<prop name="pebbles" x="128" y="112" width="16" height="16" state="frame2"/>
+		<prop name="pebbles" x="112" y="144" width="16" height="16" state="frame0"/>
+
 	</objectgroup>
 </map>

@@ -232,17 +232,25 @@
 			<tile gid="8"/>
 		</data>
 	</layer>
-	<objectgroup name="Objects" width="0" height="0">
-		<object name="spikes" x="96" y="64" width="32" height="96"/>
-		<object name="golemappear" x="112" y="32" width="16" height="32"/>
-		<object name="Ne pas jeter de squelettes dans ce trou" x="16" y="80" width="16" height="16"/>
-		<object name="pebbles" x="16" y="144" width="16" height="16"/>
-		<object name="pebbles" x="32" y="192" width="16" height="16"/>
-		<object name="pebbles" x="160" y="160" width="16" height="16"/>
-		<object name="pebbles" x="192" y="176" width="16" height="16"/>
-		<object name="pebbles" x="176" y="48" width="16" height="16"/>
-		<object name="pebbles" x="208" y="32" width="16" height="16"/>
-		<object name="pebbles" x="48" y="48" width="16" height="16"/>
-		<object name="pebbles" x="64" y="112" width="16" height="16"/>
+	<objectgroup name="props" width="0" height="0">
+
+		<prop name="spikes" x="96" y="64" width="16" height="96" state="off"/>
+		<prop name="spikes" x="112" y="64" width="16" height="96" state="off"/>
+
+		<prop name="golemappear" x="112" y="32" width="16" height="32"/>
+
+		<examine name="writings" x="16" y="80" width="16" height="16">
+			<description lang="fr">Ne pas jeter de squelettes dans ce trou.</descripion>
+		</examine>
+
+		<prop name="pebbles" x="16" y="144" width="16" height="16" state="frame1"/>
+		<prop name="pebbles" x="32" y="192" width="16" height="16" state="frame3"/>
+		<prop name="pebbles" x="160" y="160" width="16" height="16" state="frame2"/>
+		<prop name="pebbles" x="192" y="176" width="16" height="16" state="frame0"/>
+		<prop name="pebbles" x="176" y="48" width="16" height="16" state="frame0"/>
+		<prop name="pebbles" x="208" y="32" width="16" height="16" state="frame1"/>
+		<prop name="pebbles" x="48" y="48" width="16" height="16" state="frame3"/>
+		<prop name="pebbles" x="64" y="112" width="16" height="16" state="frame1"/>
+
 	</objectgroup>
 </map>
