@@ -233,19 +233,24 @@
 		</data>
 	</layer>
 	<objectgroup name="Objects" width="0" height="0">
-		<object name="statue_a" x="64" y="64" width="32" height="32" state="blue"/>
-		<object name="statue_a" x="144" y="64" width="32" height="32" state="blue"/>
-		<object name="door" x="96" y="32" width="48" height="32" state="open"/>
-		<object name="desk" x="144" y="144" width="32" height="16" state="onlyone"/>
-		<object name="crate" x="64" y="144" width="16" height="16" state="crate1"/>
-		<object name="crate" x="64" y="160" width="16" height="16" state="crate2"/>
-		<object name="pebbles" x="80" y="112" width="16" height="16" state="frame3"/>
-		<object name="pebbles" x="176" y="96" width="16" height="16" state="frame1"/>
-		<object name="pebbles" x="144" y="112" width="16" height="16" state="frame0"/>
-		<object name="pebbles" x="128" y="160" width="16" height="16" state="frame1"/>
-		<object name="pebbles" x="96" y="80" width="16" height="16" state="frame1"/>
-		<object name="pebbles" x="128" y="64" width="16" height="16" state="frame2"/>
-		<object name="pebbles" x="32" y="96" width="16" height="16" state="frame2"/>
+		<object name="statue_a"	x="64"	y="64"	width="32"	height="32"	state="blue"/>
+		<object name="statue_a"	x="144"	y="64"	width="32"	height="32"	state="blue"/>
+
+		<object name="door"		x="96"	y="32"	width="48"	height="32"	state="open"/>
+
+		<object name="desk"		x="144"	y="144"	width="32"	height="16"	state="onlyone"/>
+
+		<object name="crate"	x="64"	y="144"	width="16"	height="16"	state="crate1"/>
+		<object name="crate"	x="64"	y="160"	width="16"	height="16"	state="crate2"/>
+
+		<object name="pebbles"	x="80"	y="112"	width="16"	height="16"	state="frame3"/>
+		<object name="pebbles"	x="176"	y="96"	width="16"	height="16"	state="frame1"/>
+		<object name="pebbles"	x="144"	y="112"	width="16"	height="16"	state="frame0"/>
+		<object name="pebbles"	x="128"	y="160"	width="16"	height="16"	state="frame1"/>
+		<object name="pebbles"	x="96"	y="80"	width="16"	height="16"	state="frame1"/>
+		<object name="pebbles"	x="128"	y="64"	width="16"	height="16"	state="frame2"/>
+		<object name="pebbles"	x="32"	y="96"	width="16"	height="16"	state="frame2"/>
+
 		<examine name="writings" x="192" y="80" width="16" height="16">
 			<description lang="fr">Les écritures sont trop abimées par le temps pour etre lues.</descripion>
 		</examine>
