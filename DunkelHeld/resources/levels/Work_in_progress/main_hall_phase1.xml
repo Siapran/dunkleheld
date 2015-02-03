@@ -234,17 +234,17 @@
 	</layer>
 	<objectgroup name="Objects" width="0" height="0">
 		<object name="door" x="96" y="0" width="48" height="32"/>
-		<object name="pebbles" x="160" y="192" width="16" height="16"/>
-		<object name="pebbles" x="176" y="112" width="16" height="16"/>
-		<object name="pebbles" x="64" y="96" width="16" height="16"/>
-		<object name="pebbles" x="64" y="176" width="16" height="16"/>
-		<object name="pebbles" x="80" y="192" width="16" height="16"/>
-		<object name="spikes" x="48" y="112" width="32" height="16"/>
-		<object name="chest" x="32" y="32" width="16" height="16"/>
-		<object name="spikes" x="80" y="64" width="16" height="32"/>
-		<object name="spikes" x="208" y="144" width="16" height="48"/>
-		<object name="pebbles" x="176" y="48" width="16" height="16"/>
-		<object name="pebbles" x="128" y="48" width="16" height="16"/>
+		<object name="pebbles" x="160" y="192" width="16" height="16" state="frame1"/>
+		<object name="pebbles" x="176" y="112" width="16" height="16" state="frame3"/>
+		<object name="pebbles" x="64" y="96" width="16" height="16" state="frame0"/>
+		<object name="pebbles" x="64" y="176" width="16" height="16" state="frame2"/>
+		<object name="pebbles" x="80" y="192" width="16" height="16" state="frame2"/>
+		<object name="spikes" x="48" y="112" width="32" height="16" state="on"/>
+		<object name="chest" x="32" y="32" width="16" height="16" state="close"/>
+		<object name="spikes" x="80" y="64" width="16" height="32" state="on"/>
+		<object name="spikes" x="208" y="144" width="16" height="48" state="on"/>
+		<object name="pebbles" x="176" y="48" width="16" height="16" state="frame0"/>
+		<object name="pebbles" x="128" y="48" width="16" height="16" state="frame3"/>
 		<examine name="writings" x="112" y="160" width="16" height="16">
 			<description lang="fr">La voie se liberera en temps de grand besoin.</descripion>
 		</examine>
