@@ -13,9 +13,11 @@
 #include <SFML/Graphics.hpp>
 
 #include "tinyXML/tinyxml.h"
+//#include "Actor.h"
 //#include "GameLevel.h"
 
 class GameLevel;
+class Actor;
 
 class GameObject {
 public:
@@ -26,6 +28,9 @@ public:
     void listen(std::string target);
     void ignore(std::string target);
 
+    virtual void use(Actor *user);
+    virtual void examine();
+    
     void addChild(GameObject *child);
 
 protected:

@@ -10,6 +10,7 @@
       <itemPath>src/GameLevel.h</itemPath>
       <itemPath>src/GameObject.h</itemPath>
       <itemPath>src/Paintable.h</itemPath>
+      <itemPath>src/Professor.h</itemPath>
       <itemPath>src/Prop.h</itemPath>
       <itemPath>src/Tile.h</itemPath>
       <itemPath>src/TileMap.h</itemPath>
@@ -53,6 +54,7 @@
       <itemPath>src/GameLevel.cpp</itemPath>
       <itemPath>src/GameObject.cpp</itemPath>
       <itemPath>src/Paintable.cpp</itemPath>
+      <itemPath>src/Professor.cpp</itemPath>
       <itemPath>src/Prop.cpp</itemPath>
       <itemPath>src/Tile.cpp</itemPath>
       <itemPath>src/TileMap.cpp</itemPath>
@@ -156,6 +158,10 @@
       <item path="src/Paintable.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Paintable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Professor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Professor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/Prop.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -268,6 +274,10 @@
       <item path="src/Paintable.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Paintable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Professor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Professor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/Prop.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -41,6 +41,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/GameLevel.o \
 	${OBJECTDIR}/src/GameObject.o \
 	${OBJECTDIR}/src/Paintable.o \
+	${OBJECTDIR}/src/Professor.o \
 	${OBJECTDIR}/src/Prop.o \
 	${OBJECTDIR}/src/Tile.o \
 	${OBJECTDIR}/src/TileMap.o \
@@ -106,6 +107,11 @@ ${OBJECTDIR}/src/Paintable.o: src/Paintable.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Paintable.o src/Paintable.cpp
+
+${OBJECTDIR}/src/Professor.o: src/Professor.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Professor.o src/Professor.cpp
 
 ${OBJECTDIR}/src/Prop.o: src/Prop.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
