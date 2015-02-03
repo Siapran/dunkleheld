@@ -35,13 +35,17 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/939751984/Game.o \
-	${OBJECTDIR}/_ext/939751984/GameLevel.o \
-	${OBJECTDIR}/Prop.o \
+	${OBJECTDIR}/src/Actor.o \
+	${OBJECTDIR}/src/Controller.o \
+	${OBJECTDIR}/src/Game.o \
+	${OBJECTDIR}/src/GameLevel.o \
 	${OBJECTDIR}/src/GameObject.o \
+	${OBJECTDIR}/src/Paintable.o \
+	${OBJECTDIR}/src/Prop.o \
 	${OBJECTDIR}/src/Tile.o \
 	${OBJECTDIR}/src/TileMap.o \
 	${OBJECTDIR}/src/TileSet.o \
+	${OBJECTDIR}/src/Trigger.o \
 	${OBJECTDIR}/src/main.o \
 	${OBJECTDIR}/src/tinyXML/tinystr.o \
 	${OBJECTDIR}/src/tinyXML/tinyxml.o \
@@ -73,25 +77,40 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/dunkelheld: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/dunkelheld ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/_ext/939751984/Game.o: /home/siapran/Programming/C++/SFML/Donker\ Held/src/Game.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/939751984
+${OBJECTDIR}/src/Actor.o: src/Actor.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/939751984/Game.o /home/siapran/Programming/C++/SFML/Donker\ Held/src/Game.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Actor.o src/Actor.cpp
 
-${OBJECTDIR}/_ext/939751984/GameLevel.o: /home/siapran/Programming/C++/SFML/Donker\ Held/src/GameLevel.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/939751984
+${OBJECTDIR}/src/Controller.o: src/Controller.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/939751984/GameLevel.o /home/siapran/Programming/C++/SFML/Donker\ Held/src/GameLevel.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller.o src/Controller.cpp
 
-${OBJECTDIR}/Prop.o: Prop.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/src/Game.o: src/Game.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Prop.o Prop.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Game.o src/Game.cpp
+
+${OBJECTDIR}/src/GameLevel.o: src/GameLevel.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameLevel.o src/GameLevel.cpp
 
 ${OBJECTDIR}/src/GameObject.o: src/GameObject.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameObject.o src/GameObject.cpp
+
+${OBJECTDIR}/src/Paintable.o: src/Paintable.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Paintable.o src/Paintable.cpp
+
+${OBJECTDIR}/src/Prop.o: src/Prop.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Prop.o src/Prop.cpp
 
 ${OBJECTDIR}/src/Tile.o: src/Tile.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -107,6 +126,11 @@ ${OBJECTDIR}/src/TileSet.o: src/TileSet.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TileSet.o src/TileSet.cpp
+
+${OBJECTDIR}/src/Trigger.o: src/Trigger.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Trigger.o src/Trigger.cpp
 
 ${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
