@@ -1,5 +1,5 @@
 <prop name="spike" id="42" x="13" y="69" state="off">
-	<trigger expression="switch#1.state == on ^ switch#2.state == on">
+	<trigger exp="switch#1.state == on ^ switch#2.state == on">
 		<then>
 			<action target="spike#42" value="spikes_on" />
 		</then>
