@@ -443,15 +443,56 @@
          </trigger></prop>
       <prop name="spikes"  x="176"  y="112"  width="16"  height="16" id="59"  state="on"/>
       <!-- line 6 -->
-      <prop name="spikes"  x="176"  y="128"  width="16"  height="16" id="69"/>
-      <prop name="spikes"  x="160"  y="128"  width="16"  height="16" id="68"/>
-      <prop name="spikes"  x="144"  y="128"  width="16"  height="16" id="67"/>
-      <prop name="spikes"  x="128"  y="128"  width="16"  height="16" id="66"/>
-      <prop name="spikes"  x="112"  y="128"  width="16"  height="16" id="65"/>
-      <prop name="spikes"  x="96"   y="128"  width="16"  height="16" id="64"/>
-      <prop name="spikes"  x="80"   y="128"  width="16"  height="16" id="63"/>
-      <prop name="spikes"  x="64"   y="128"  width="16"  height="16" id="62"/>
-      <prop name="spikes"  x="48"   y="128"  width="16"  height="16" id="61"/>
+      <prop name="spikes"  x="48"   y="128"  width="16"  height="16" id="61"  state="on"/>
+      <prop name="spikes"  x="64"   y="128"  width="16"  height="16" id="62">
+         <trigger exp="switch#1.state == on">
+            <then>
+               <action target="spikes#62" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#62" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="80"   y="128"  width="16"  height="16" id="63">
+         <trigger exp="switch#3.state == on">
+            <then>
+               <action target="spikes#63" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#63" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="96"   y="128"  width="16"  height="16" id="64"  state="on"/>
+      <prop name="spikes"  x="112"  y="128"  width="16"  height="16" id="65"  state="on"/>
+      <prop name="spikes"  x="128"  y="128"  width="16"  height="16" id="66">
+         <trigger exp="switch#1.state == on">
+            <then>
+               <action target="spikes#66" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#66" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="144"  y="128"  width="16"  height="16" id="67">
+         <trigger exp="switch#2.state == on">
+            <then>
+               <action target="spikes#67" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#67" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="160"  y="128"  width="16"  height="16" id="68">
+         <trigger exp="switch#4.state == on">
+            <then>
+               <action target="spikes#68" value="spikes_off" />
+            </then>
+            <else>
+               <action target="spikes#68" value="spikes_on" />
+            </else>
+         </trigger></prop>
+      <prop name="spikes"  x="176"  y="128"  width="16"  height="16" id="69"  state="on"/>
+      <!---------------------------------------- spike grid end ---------------------------------------->
 
       <prop name="cube_big"   x="96"   y="32"   width="16"  height="16" id="1"/>
       <prop name="cube_big"   x="128"  y="32"   width="16"  height="16" id="2"/>
