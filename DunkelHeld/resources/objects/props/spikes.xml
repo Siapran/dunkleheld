@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <prop name="spikes" file="spikes.png">
 
+	<properties ground="true" />
+
 	<hitbox x="0" y="0" width="14" height="15" />
 
 	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">

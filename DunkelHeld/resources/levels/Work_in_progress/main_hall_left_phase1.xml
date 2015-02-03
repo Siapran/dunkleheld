@@ -255,36 +255,36 @@
       <prop name="spikes"  x="144"  y="48"   width="16"  height="16" id="17"/>
       <prop name="spikes"  x="160"  y="48"   width="16"  height="16" id="18"/>
       <prop name="spikes"  x="176"  y="48"   width="16"  height="16" id="19"/>
-      <prop name="spikes"  x="176"  y="64"   width="16"  height="16" id="20"/>
-      <prop name="spikes"  x="160"  y="64"   width="16"  height="16" id="21"/>
-      <prop name="spikes"  x="144"  y="64"   width="16"  height="16" id="22"/>
-      <prop name="spikes"  x="128"  y="64"   width="16"  height="16" id="23"/>
-      <prop name="spikes"  x="112"  y="64"   width="16"  height="16" id="24"/>
-      <prop name="spikes"  x="96"   y="64"   width="16"  height="16" id="25"/>
-      <prop name="spikes"  x="80"   y="64"   width="16"  height="16" id="26"/>
-      <prop name="spikes"  x="64"   y="64"   width="16"  height="16" id="27"/>
-      <prop name="spikes"  x="48"   y="64"   width="16"  height="16" id="28"/>
+      <prop name="spikes"  x="176"  y="64"   width="16"  height="16" id="29"/>
+      <prop name="spikes"  x="160"  y="64"   width="16"  height="16" id="28"/>
+      <prop name="spikes"  x="144"  y="64"   width="16"  height="16" id="27"/>
+      <prop name="spikes"  x="128"  y="64"   width="16"  height="16" id="26"/>
+      <prop name="spikes"  x="112"  y="64"   width="16"  height="16" id="25"/>
+      <prop name="spikes"  x="96"   y="64"   width="16"  height="16" id="24"/>
+      <prop name="spikes"  x="80"   y="64"   width="16"  height="16" id="23"/>
+      <prop name="spikes"  x="64"   y="64"   width="16"  height="16" id="22"/>
+      <prop name="spikes"  x="48"   y="64"   width="16"  height="16" id="21"/>
       <prop name="spikes"  x="48"   y="80"   width="16"  height="16" id="29"/>
-      <prop name="spikes"  x="64"   y="80"   width="16"  height="16" id="30"/>
-      <prop name="spikes"  x="80"   y="80"   width="16"  height="16" id="31"/>
-      <prop name="spikes"  x="96"   y="80"   width="16"  height="16" id="32"/>
-      <prop name="spikes"  x="112"  y="80"   width="16"  height="16" id="33"/>
-      <prop name="spikes"  x="128"  y="80"   width="16"  height="16" id="34"/>
-      <prop name="spikes"  x="144"  y="80"   width="16"  height="16" id="35"/>
-      <prop name="spikes"  x="160"  y="80"   width="16"  height="16" id="36"/>
-      <prop name="spikes"  x="176"  y="80"   width="16"  height="16" id="37"/>
-      <prop name="spikes"  x="176"  y="96"   width="16"  height="16" id="38"/>
-      <prop name="spikes"  x="144"  y="96"   width="16"  height="16" id="39"/>
-      <prop name="spikes"  x="160"  y="96"   width="16"  height="16" id="40"/>
-      <prop name="spikes"  x="128"  y="96"   width="16"  height="16" id="41"/>
-      <prop name="spikes"  x="112"  y="96"   width="16"  height="16" id="42"/>
-      <prop name="spikes"  x="96"   y="96"   width="16"  height="16" id="43"/>
+      <prop name="spikes"  x="64"   y="80"   width="16"  height="16" id="31"/>
+      <prop name="spikes"  x="80"   y="80"   width="16"  height="16" id="32"/>
+      <prop name="spikes"  x="96"   y="80"   width="16"  height="16" id="33"/>
+      <prop name="spikes"  x="112"  y="80"   width="16"  height="16" id="34"/>
+      <prop name="spikes"  x="128"  y="80"   width="16"  height="16" id="35"/>
+      <prop name="spikes"  x="144"  y="80"   width="16"  height="16" id="36"/>
+      <prop name="spikes"  x="160"  y="80"   width="16"  height="16" id="37"/>
+      <prop name="spikes"  x="176"  y="80"   width="16"  height="16" id="38"/>
+      <prop name="spikes"  x="176"  y="96"   width="16"  height="16" id="39"/>
+      <prop name="spikes"  x="144"  y="96"   width="16"  height="16" id="49"/>
+      <prop name="spikes"  x="160"  y="96"   width="16"  height="16" id="47"/>
+      <prop name="spikes"  x="128"  y="96"   width="16"  height="16" id="48"/>
+      <prop name="spikes"  x="112"  y="96"   width="16"  height="16" id="46"/>
+      <prop name="spikes"  x="96"   y="96"   width="16"  height="16" id="45"/>
       <prop name="spikes"  x="80"   y="96"   width="16"  height="16" id="44"/>
-      <prop name="spikes"  x="64"   y="96"   width="16"  height="16" id="45"/>
-      <prop name="spikes"  x="48"   y="96"   width="16"  height="16" id="46"/>
-      <prop name="spikes"  x="48" y="112" width="16" height="16"/>
-      <prop name="spikes"  x="64" y="112" width="16" height="16"/>
-      <prop name="spikes"  x="80" y="112" width="16" height="16"/>
+      <prop name="spikes"  x="64"   y="96"   width="16"  height="16" id="43"/>
+      <prop name="spikes"  x="48"   y="96"   width="16"  height="16" id="42"/>
+      <prop name="spikes"  x="48"   y="112"  width="16"  height="16" id="41"/>
+      <prop name="spikes"  x="64"   y="112"  width="16"  height="16" id="51"/>
+      <prop name="spikes"  x="80"   y="112"  width="16"  height="16" id="52"/>
       <prop name="spikes"  x="96" y="112" width="16" height="16"/>
       <prop name="spikes"  x="112" y="112" width="16" height="16"/>
       <prop name="spikes"  x="144" y="112" width="16" height="16"/>
