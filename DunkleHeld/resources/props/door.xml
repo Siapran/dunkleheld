@@ -1,8 +1,6 @@
 <?xml version="1.0" ?>
 <prop name="door" file="resources/props/door.png" >
 
-	<hitbox xcenter="26" ycenter="16" />
-
 	<properties damage="false" depth="31" solid="true"/>
 
 	<frames xoff="0" yoff="0" xsize="48" ysize="32" t="100">
@@ -26,7 +24,7 @@
 	</state>
 
 	<state name="open">
-		<properties ground="true" solid="false"/>
+		<properties depth="0" solid="false"/>
 		<description lang="fr">Le mur est ouvert, vous invitant à explorer les profondeurs du temple.</description>
 		<animation> 5 </animation>
 
