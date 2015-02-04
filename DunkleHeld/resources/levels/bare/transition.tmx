@@ -238,5 +238,7 @@
   <object name="pebbles" x="48" y="32" width="16" height="16"/>
   <object name="pebbles" x="160" y="112" width="16" height="16"/>
   <object name="statue_b" x="160" y="64" width="32" height="32"/>
+  <object name="link" x="0" y="144" width="16" height="48"/>
+  <object name="link" x="112" y="0" width="32" height="16"/>
  </objectgroup>
 </map>
