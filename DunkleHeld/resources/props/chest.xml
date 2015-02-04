@@ -3,7 +3,7 @@
 
 	<hitbox x="0" y="8" width="14" height="8" />
 
-	<properties damage="false" ground="false" solid="true"/>
+	<properties damage="false" depth="16" solid="true"/>
 
 	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
 		<frame id="0" x="0" y="0"/>
