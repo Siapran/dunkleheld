@@ -259,7 +259,7 @@
 
 		<prop name="lever" x="80" y="192" width="16" height="16" state="off"/>
 
-		<prop name="golemspawn" x="0" y="48" width="240" height="16"/>
+		<!-- <prop name="golemspawn" x="0" y="48" width="240" height="16"/> -->
 
 		<prop name="pebbles" x="80" y="32" width="16" height="16" state="frame0"/>
 		<prop name="pebbles" x="144" y="80" width="16" height="16" state="frame2"/>

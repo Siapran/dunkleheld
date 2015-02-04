@@ -270,7 +270,7 @@
 				<setvar scope="local" target="lv2_room1_solved" value="(lv2_room1_press1 & lv2_room1_press2)" />
 			</trigger></prop>
 
-		<prop name="golemspawn"		x="112"	y="48"	width="112"	height="16"/>
+		<!-- <prop name="golemspawn"		x="112"	y="48"	width="112"	height="16"/> -->
 
 		<prop name="spikes"			x="96"	y="208"	width="16"	height="16">
 			<trigger exp="!(has_crystal) | (lv2_room1_solved)">

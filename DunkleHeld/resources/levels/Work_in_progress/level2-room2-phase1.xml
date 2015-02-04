@@ -236,16 +236,16 @@
 
 		<prop name="spikes" x="96" y="64" width="16" height="96" state="off"/>
 		<prop name="spikes" x="112" y="64" width="16" height="96" state="off">
-		<trigger exp="has_crystal">
+			<trigger exp="has_crystal">
 				<then>
 					<action target="spikes" value="spikes_on" />
 				</then>
 				<else>
 					<action target="spikes" value="spikes_off" />
 				</else>
-			</trigger>
-		</prop>
-		<prop name="golemappear" x="112" y="32" width="16" height="32"/>
+			</trigger></prop>
+
+		<!-- <prop name="golemspawn" x="112" y="32" width="16" height="32"/> -->
 
 		<examine name="writings" x="16" y="80" width="16" height="16">
 			<description lang="fr">Ne pas jeter de squelettes dans ce trou.</descripion>
