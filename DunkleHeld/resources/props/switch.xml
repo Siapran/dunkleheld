@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<prop name="switch" file="switch.png">
+<prop name="switch" file="resources/props/switch.png">
 
 	<hitbox x="0" y="7" width="14" height="8" />
 

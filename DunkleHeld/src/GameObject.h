@@ -24,14 +24,16 @@ public:
     GameObject(GameLevel *level = nullptr);
     virtual ~GameObject();
 
-    virtual void update(std::vector<std::string>& events);
+    virtual void loadFromXML(TiXmlElement *node) = 0;
+
+    virtual void update(sf::Time deltaTime, std::vector<std::string>& events);
     void listen(std::string target);
     void ignore(std::string target);
 
-    virtual void use(Actor *user);
-    virtual void showDescription();
-    virtual std::string getContext();
-    
+    virtual void use(Actor *user) = 0;
+    virtual void showDescription() = 0;
+    virtual std::string getContext() = 0;
+
     void addChild(GameObject *child);
 
 protected:

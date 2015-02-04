@@ -48,9 +48,9 @@ void GameObject::listen(std::string target) {
     }
 }
 
-void GameObject::update(std::vector<std::string>& events) {
+void GameObject::update(sf::Time deltaTime, std::vector<std::string>& events) {
     for (auto& child : m_children) {
-        child->update(events);
+        child->update(deltaTime, events);
     }
 }
 
@@ -58,14 +58,3 @@ void GameObject::setParent(GameObject* parent) {
     m_parent = parent;
 }
 
-std::string GameObject::getContext() {
-    return "";
-}
-
-void GameObject::showDescription() {
-
-}
-
-void GameObject::use(Actor* user) {
-
-}

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<prop name="spikes" file="spikes.png">
+<prop name="spikes" file="resources/props/spikes.png">
 
 	<hitbox x="0" y="0" width="14" height="15" />
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<prop name="crate_pile" file="crate_pile.png">
+<prop name="crate_pile" file="resources/props/crate_pile.png">
 
 	<hitbox x="5" y="17" width="22" height="10" />
 

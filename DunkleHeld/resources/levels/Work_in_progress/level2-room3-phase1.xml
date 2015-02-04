@@ -234,6 +234,13 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
+		<prop name="link"	x="128" y="224"	width="32"	height="16">
+			<destination map="level2-room3-phase1" x="144" y="0"/>
+		</prop>
+		<prop name="link"	x="128" y="0"	width="32"	height="16">
+			<destination map="pedestral_room" x="96" y="224"/>
+		</prop>
+
 		<prop name="statue_b" x="160" y="112" width="32" height="32" state="blue">
 			<trigger exp="has_crystal">
 				<then>
