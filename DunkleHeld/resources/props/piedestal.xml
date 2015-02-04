@@ -22,13 +22,17 @@
 		<float xpos="0" ypos="-6">
 
 		</float>
-		<action name="piedestal_red" state="red" />
+		<action name="piedestal_red" state="red">
+			<animation> 4 </animation>
+		</action>
 	</state>
 	
 	<state name="red">
 		<description lang="fr">Le piédestal, privé du cristal, a pris des teintes rouges.</description>
 		<animation> 4 5 6 6 5 </animation>
-		<action name="piedestal_blue" state="blue" />
+		<action name="piedestal_blue" state="blue">
+			<animation> 4 </animation>
+		</action>
 	</state>
 
 </prop>

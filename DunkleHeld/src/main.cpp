@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
     game.loadLevel(levelName.c_str());
     game.loadProps();
 
-
+    game.runGame();
 
     return 0;
 }

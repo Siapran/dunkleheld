@@ -15,7 +15,7 @@
 	<state name="off">
 		<description lang="fr">Un bouton bizzare, il n'est pas enfoncé.</description>
 		<animation> 0 </animation>
-		<action name="button_on" state="on" use="true">
+		<action name="button_on" state="on" playeruse="true">
 			<description lang="fr">Appuyer</description>
 			<animation> 1 2 3 </animation>
 		</action>

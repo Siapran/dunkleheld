@@ -22,5 +22,6 @@
 
 <link >
 	<destination file="resources/levels/level" x="42" y="69" condition="pursuit == true" />
-	<destination file="resources/levels/level2" x="42" y="69" />
+	<!-- 1 est le joueur 2 est le golem -->
+	<destination file="resources/levels/level2" x1="42" y1="69" x2="" y2=""/>
 </link>

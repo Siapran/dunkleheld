@@ -12,8 +12,8 @@
 	<prop name="pebbles" file="resources/props/pebbles.xml"/>
 	<prop name="pressure_plate" file="resources/props/pressure_plate.xml"/>
 	<prop name="spikes" file="resources/props/spikes.xml"/>
-	<prop name="statues_a" file="resources/props/statues_a.xml"/>
-	<prop name="statues_b" file="resources/props/statues_b.xml"/>
+	<prop name="statue_a" file="resources/props/statue_a.xml"/>
+	<prop name="statue_b" file="resources/props/statue_b.xml"/>
 	<prop name="switch" file="resources/props/switch.xml"/>
 	<prop name="door_b" file="resources/props/door_b.xml"/>
 	<prop name="pylon" file="resources/props/pylon.xml"/>

@@ -14,6 +14,7 @@ Prop::Prop(const char* fileName) {
 
     m_name = root->Attribute("name");
     std::string imgfile = root->Attribute("file");
+    m_texture = new sf::Texture;
     m_texture->loadFromFile(imgfile);
 
     std::vector<sf::FloatRect> hitBoxes;
@@ -75,8 +76,8 @@ Prop::Prop(const char* fileName) {
     for (
             TiXmlElement *stateNode = root->FirstChildElement("state");
             stateNode != nullptr;
-            stateNode = frameNode->NextSiblingElement("state")) {
-        std::string name = frameNode->Attribute("name");
+            stateNode = stateNode->NextSiblingElement("state")) {
+        std::string name = stateNode->Attribute("name");
         PropState *state = &(m_states[name]);
         state->name = name;
 
@@ -97,7 +98,7 @@ Prop::Prop(const char* fileName) {
         for (
                 TiXmlElement *descNode = stateNode->FirstChildElement("description");
                 descNode != nullptr;
-                descNode = frameNode->NextSiblingElement("description")) {
+                descNode = descNode->NextSiblingElement("description")) {
             std::string lang = descNode->Attribute("lang");
             state->descriptions[lang] = descNode->GetText();
         }
@@ -117,9 +118,9 @@ Prop::Prop(const char* fileName) {
             state->hitBoxes.push_back(sf::FloatRect(x, y, width, height));
         }
 
-        TiXmlElement *animationNode = frameNode->FirstChildElement("animation");
-        if (animationNode->GetText() != nullptr) {
-            std::string animText = animationNode->GetText();
+        TiXmlElement *stateAnimationNode = stateNode->FirstChildElement("animation");
+        if (stateAnimationNode->GetText() != nullptr) {
+            std::string animText = stateAnimationNode->GetText();
 
             std::string numstr = "";
             int num = 0;
@@ -129,6 +130,7 @@ Prop::Prop(const char* fileName) {
                 else {
                     num = std::atoi(numstr.c_str());
                     state->animation.addFrame(frames[num]);
+                    numstr = "";
                 }
             num = std::atoi(numstr.c_str());
             state->animation.addFrame(frames[num]);
@@ -137,7 +139,7 @@ Prop::Prop(const char* fileName) {
         for (
                 TiXmlElement *actionNode = stateNode->FirstChildElement("action");
                 actionNode != nullptr;
-                actionNode = frameNode->NextSiblingElement("action")) {
+                actionNode = stateNode->NextSiblingElement("action")) {
 
             std::string actionName = actionNode->Attribute("name");
             PropAction *action = &(state->actions[actionName]);
@@ -152,14 +154,15 @@ Prop::Prop(const char* fileName) {
             for (
                     TiXmlElement *descNode = actionNode->FirstChildElement("description");
                     descNode != nullptr;
-                    descNode = frameNode->NextSiblingElement("description")) {
+                    descNode = descNode->NextSiblingElement("description")) {
                 std::string lang = descNode->Attribute("lang");
                 action->descriptions[lang] = descNode->GetText();
             }
 
             TiXmlElement *animationNode = actionNode->FirstChildElement("animation");
-            if (animationNode->GetText() != nullptr) {
-                std::string animText = animationNode->GetText();
+            const char *text = animationNode->GetText();
+            if (text != nullptr) {
+                std::string animText = text;
 
                 std::string numstr = "";
                 int num = 0;
@@ -169,6 +172,7 @@ Prop::Prop(const char* fileName) {
                     else {
                         num = std::atoi(numstr.c_str());
                         action->animation.addFrame(frames[num]);
+                        numstr = "";
                     }
                 num = std::atoi(numstr.c_str());
                 action->animation.addFrame(frames[num]);
