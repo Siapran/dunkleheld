@@ -4,7 +4,7 @@
 	<hitbox x="6" y="17" width="20" height="19" />
 	<hitbox x="12" y="36" width="8" height="5" />
 
-	<properties damage="false" ground="false" solid="true"/>
+	<properties damage="false" depth="36" solid="true"/>
 
 	<frames xoff="0" yoff="0" xsize="32" ysize="48" t="100">
 		<frame id="0" x="0" y="0"/>

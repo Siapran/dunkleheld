@@ -3,7 +3,7 @@
 
 	<hitbox x="5" y="7" width="6" height="6" />
 
-	<properties damage="false" ground="false" solid="true"/>
+	<properties damage="false" depth="13" solid="true"/>
 
 	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
 		<frame id="0" x="0" y="0"/>
@@ -13,7 +13,7 @@
 	</frames>
 
 	<state name="off">
-		<properties ground="true" solid="false"/>
+		<properties depth="0" solid="false"/>
 		<description lang="fr">Tien, un pilone de soutient.</description>
 		<animation> 0 </animation>
 		<action name="pylon_on" state="on">
