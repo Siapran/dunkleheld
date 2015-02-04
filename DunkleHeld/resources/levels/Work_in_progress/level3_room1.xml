@@ -2878,9 +2878,9 @@
 		<prop name="link" x="624" y="0" width="32" height="16">
 			<destination map="Exit" x="" y=""/>
 		</prop>		
-		<prop name="link" x="368" y="784" width="48" height="16">
-			<destination map="transition" x="0"	y="144"/>
-		</prop>
+		<link x="368" y="784" width="48" height="16">
+			<destination file="transition" x="0"	y="144"/>
+		</link>
 
 	</objectgroup>
 </map>
