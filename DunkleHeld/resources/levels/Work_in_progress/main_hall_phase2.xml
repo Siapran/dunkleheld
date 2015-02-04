@@ -234,20 +234,15 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<link x="112" y="224"	width="16"	height="16">
-			<destination file="entrance" x="112"	y="32"/>
-		</link>
-		<link x="0"	y="144"	width="16"	height="48">
-			<destination file="main_hall_left_phase1" x="224" y="160"/>
-		</link>
 		<link x="224"	y="144"	width="16"	height="48">
-			<destination file="main_hall_right_phase2" x="0" y="160"/>
+			<trigger exp="!(has_crystal)">
+				<then>
+					<destination file="main_hall_right_phase2" x1="0" y1="64" x2="0" y2="144"/>
+				</then>
+			</trigger>
 		</link>
 
-		<prop name="door"       x="96"  y="0"   width="48"  height="32">
-			<trigger exp="cyan1 & cyan2">
-				<action target="door" value="door_open" />
-			</trigger></prop>
+		<prop name="door"       x="96"  y="0"   width="48"  height="32" state="close"/>
 
 		<prop name="pebbles"    x="160" y="192" width="16"  height="16" state="frame1"/>
 		<prop name="pebbles"    x="176" y="112" width="16"  height="16" state="frame3"/>
