@@ -2875,9 +2875,9 @@
 
 		<prop name="pylon" x="448" y="736" width="16" height="16" state="on"/>
 
-		<prop name="link" x="624" y="0" width="32" height="16">
-			<destination map="Exit" x="" y=""/>
-		</prop>		
+		<link x="624" y="0" width="32" height="16">
+			<destination file="Exit" x="" y=""/>
+		</link>		
 		<link x="368" y="784" width="48" height="16">
 			<destination file="transition" x="0"	y="144"/>
 		</link>
