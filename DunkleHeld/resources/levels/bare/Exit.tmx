@@ -243,5 +243,7 @@
   <object name="statue_b" x="176" y="80" width="32" height="32"/>
   <object name="statue_a" x="176" y="32" width="32" height="32"/>
   <object name="golem turn off" x="64" y="176" width="112" height="16"/>
+  <object name="link" x="96" y="224" width="48" height="16"/>
+  <object name="link" x="96" y="0" width="48" height="16"/>
  </objectgroup>
 </map>
