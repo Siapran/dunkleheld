@@ -18,4 +18,9 @@
 <oncollide />
 <examine />
 
-<setvar scope="local|global" target="hasTorch" value="">
+<setvar scope="local|global" target="hasTorch" value="" />
+
+<link>
+	<destination path="resources/levels/level" x="42" y="69" condition="pursuit == true" />
+	<destination path="resources/levels/level2" x="42" y="69" />
+</link>

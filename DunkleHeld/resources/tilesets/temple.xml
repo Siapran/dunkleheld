@@ -32,7 +32,7 @@
 
 	<tile id="24"> <box x="0" y="0" width="16" height="16"/> </tile>
 	<tile id="25"> <box x="0" y="0" width="16" height="16"/> </tile>
-	<tile id="26" depth="12"> <box x="2" y="2" width="12" height="12"/> </tile>
+	<tile id="26" depth="12"> <box x="4" y="4" width="8" height="8"/> </tile>
 	<tile id="27" depth="32"> <box x="0" y="0" width="12" height="16"/> </tile>
 	<tile id="28" depth="32"> <box x="0" y="0" width="12" height="16"/> </tile>
 	<tile id="29" depth="32" />
