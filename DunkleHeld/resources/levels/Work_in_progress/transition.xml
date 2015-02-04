@@ -234,13 +234,13 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<prop name="link"		x="112"	y="0"	width="32"	height="16">
-			<destination map="main_hall_right_phase2" x="224" y="144"/>
-		</prop>
+		<link x="112" y="0"	width="32"	height="16">
+			<destination file="main_hall_right_phase2" x="224" y="144"/>
+		</link>
 
-		<prop name="link"		x="0"	y="144"	width="16"	height="48">
-			<destination map="level3_room1" x="368" y="784"/>
-		</prop>
+		<link x="0"	y="144"	width="16"	height="48">
+			<destination file="level3_room1" x="368" y="784"/>
+		</link>
 
 		<prop name="pebbles"	x="128"	y="64"	width="16"	height="16"/>
 		<prop name="pebbles"	x="64"	y="128"	width="16"	height="16"/>
