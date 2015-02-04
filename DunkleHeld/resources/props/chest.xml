@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<prop name="chest" file="chest.png">
+<prop name="chest" file="resources/props/chest.png">
 
 	<hitbox x="0" y="8" width="14" height="8" />
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<prop name="pylon" file="pylon.png">
+<prop name="pylon" file="resources/props/pylon.png">
 
 	<hitbox x="5" y="7" width="6" height="6" />
 

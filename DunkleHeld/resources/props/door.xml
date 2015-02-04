@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<prop name="door" file="door.png" >
+<prop name="door" file="resources/props/door.png" >
 
 	<hitbox xcenter="26" ycenter="16" />
 

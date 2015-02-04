@@ -237,6 +237,9 @@
 		<prop name="link"		x="96"	y="224"	width="48"	height="16">
 			<destination map="main_hall_phase1" x="112" y="0"/>
 		</prop>
+		<prop name="link"		x="144"	y="0"	width="32"	height="16">
+			<destination map="level2-room2-phase1" x="144" y="224"/>
+		</prop>
 
 		<prop name="statue_b"		x="80"	y="96"	width="32"	height="32">
 			<trigger exp="has_crystal">

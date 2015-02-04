@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<prop name="cube_big" file="cube_big.png">
+<prop name="cube_big" file="resources/props/cube_big.png">
 
 	<hitbox x="4" y="7" width="8" height="8" />
 
