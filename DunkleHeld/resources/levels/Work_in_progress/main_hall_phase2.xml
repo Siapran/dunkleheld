@@ -241,7 +241,7 @@
 			<destination map="main_hall_left_phase1" x="224" y="160"/>
 		</prop>
 		<prop name="link"		x="224"	y="144"	width="16"	height="48">
-			<destination map="main_hall_right_phase1" x="0" y="160"/>
+			<destination map="main_hall_right_phase2" x="0" y="160"/>
 		</prop>
 
 		<prop name="door"       x="96"  y="0"   width="48"  height="32">
