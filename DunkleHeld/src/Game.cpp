@@ -82,3 +82,17 @@ void Game::loadTileset(const char* fileName) {
 void Game::loadControls(const char* fileName) {
 
 }
+
+void Game::loadProps(const char* fileName) {
+    TiXmlDocument doc(fileName);
+    doc.LoadFile();
+    TiXmlElement *root = doc.RootElement();
+
+    for (
+            TiXmlElement *propNode = root->FirstChildElement("prop");
+            propNode != nullptr;
+            propNode = propNode->NextSiblingElement()) {
+        std::string propName = propNode->Attribute("name");
+        m_propSet[propName] = new Prop(propNode->Attribute("file"));
+    }
+}

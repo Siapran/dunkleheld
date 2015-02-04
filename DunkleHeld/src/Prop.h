@@ -25,12 +25,18 @@ public:
     Prop(const char* fileName);
     Prop(const Prop& orig);
 
+    virtual void loadFromXML(TiXmlElement* node);
+    
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     virtual float getDepth();
 
     virtual void update(sf::Time deltaTime, std::vector<std::string>& events);
     
-    
+
+    virtual std::string getContext();
+    virtual void showDescription();
+    virtual void use(Actor* user);
+
 
 private:
 
@@ -48,6 +54,9 @@ struct PropState {
     std::vector<sf::FloatRect> hitBoxes; // liste de hitboxes
     std::map<std::string, PropAction> actions; // nom action -> action
     Animation animation; // animation
+    float depth;
+    bool damage;
+    bool solid;
 };
 
 struct PropAction {

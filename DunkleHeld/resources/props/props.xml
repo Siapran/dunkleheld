@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
 <props>
-	<prop name="button" file="button.xml"/>
-	<prop name="chest" file="chest.xml"/>
-	<prop name="crate" file="crate.xml"/>
-	<prop name="crate_pile" file="crate_pile.xml"/>
-	<prop name="cube_big" file="cube_big.xml"/>
-	<prop name="cube_small" file="cube_small.xml"/>
-	<prop name="desk" file="desk.xml"/>
-	<prop name="door" file="door.xml"/>
-	<prop name="piedestal" file="piedestal.xml"/>
-	<prop name="pebbles" file="pebbles.xml"/>
-	<prop name="pressure_plate" file="pressure_plate.xml"/>
-	<prop name="spikes" file="spikes.xml"/>
-	<prop name="statues_a" file="statues_a.xml"/>
-	<prop name="statues_b" file="statues_b.xml"/>
-	<prop name="switch" file="switch.xml"/>
+	<prop name="button" file="resources/props/button.xml"/>
+	<prop name="chest" file="resources/props/chest.xml"/>
+	<prop name="crate" file="resources/props/crate.xml"/>
+	<prop name="crate_pile" file="resources/props/crate_pile.xml"/>
+	<prop name="cube_big" file="resources/props/cube_big.xml"/>
+	<prop name="cube_small" file="resources/props/cube_small.xml"/>
+	<prop name="desk" file="resources/props/desk.xml"/>
+	<prop name="door" file="resources/props/door.xml"/>
+	<prop name="piedestal" file="resources/props/piedestal.xml"/>
+	<prop name="pebbles" file="resources/props/pebbles.xml"/>
+	<prop name="pressure_plate" file="resources/props/pressure_plate.xml"/>
+	<prop name="spikes" file="resources/props/spikes.xml"/>
+	<prop name="statues_a" file="resources/props/statues_a.xml"/>
+	<prop name="statues_b" file="resources/props/statues_b.xml"/>
+	<prop name="switch" file="resources/props/switch.xml"/>
 </props>

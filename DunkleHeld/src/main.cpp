@@ -26,7 +26,7 @@ float getFPS(const sf::Time& time) {
  */
 int main(int argc, char** argv) {
 
-    string levelName = "resources/levels/test.tmx";
+    string levelName = "resources/levels/bare/entrance.tmx";
     if (argc == 2) {
         levelName = argv[1];
     }
@@ -34,8 +34,8 @@ int main(int argc, char** argv) {
     Game game;
     game.loadTileset();
     game.loadLevel(levelName.c_str());
+    game.loadProps();
 
-    game.runGame();
 
 
     return 0;

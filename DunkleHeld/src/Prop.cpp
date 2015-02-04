@@ -10,12 +10,25 @@
 Prop::Prop(const char* fileName) {
     TiXmlDocument doc(fileName);
     doc.LoadFile();
-
     TiXmlElement *root = doc.RootElement();
+
     m_name = root->Attribute("name");
-    m_texture->loadFromFile(root->Attribute("file"));
+    std::string imgfile = root->Attribute("file");
+    m_texture->loadFromFile(imgfile);
 
     std::vector<sf::FloatRect> hitBoxes;
+
+    bool rootdamage = false, rootsolid = true;
+    int rootdepth = 0;
+
+    TiXmlElement *propertiesNode = root->FirstChildElement("properties");
+    if (propertiesNode != nullptr) {
+        std::string tmpstr = "true";
+        const char *tmp;
+        if (tmp = propertiesNode->Attribute("damage")) rootdamage = tmpstr == tmp;
+        if (tmp = propertiesNode->Attribute("solid")) rootsolid = tmpstr == tmp;
+        propertiesNode->Attribute("depth", &rootdepth);
+    }
 
     for (
             TiXmlElement *boxNode = root->FirstChildElement("hitbox");
@@ -67,6 +80,20 @@ Prop::Prop(const char* fileName) {
         PropState *state = &(m_states[name]);
         state->name = name;
 
+        TiXmlElement *propertiesNode = stateNode->FirstChildElement("properties");
+        state->damage = rootdamage;
+        state->depth = rootdepth;
+        state->solid = rootsolid;
+        if (propertiesNode != nullptr) {
+            std::string tmpstr = "true";
+            const char *tmp;
+            if (tmp = propertiesNode->Attribute("damage")) state->damage = tmpstr == tmp;
+            if (tmp = propertiesNode->Attribute("solid")) state->solid = tmpstr == tmp;
+            int depth = 0;
+            propertiesNode->Attribute("depth", &depth);
+            state->depth = depth;
+        }
+
         for (
                 TiXmlElement *descNode = stateNode->FirstChildElement("description");
                 descNode != nullptr;
@@ -75,14 +102,29 @@ Prop::Prop(const char* fileName) {
             state->descriptions[lang] = descNode->GetText();
         }
 
+        state->hitBoxes.insert(state->hitBoxes.end(), hitBoxes.begin(), hitBoxes.end());
+        for (
+                TiXmlElement *boxNode = root->FirstChildElement("hitbox");
+                boxNode != nullptr;
+                boxNode = boxNode->NextSiblingElement("hitbox")) {
+
+            // on ajoute la hitbox
+            int x = 0, width = 0, y = 0, height = 0;
+            boxNode->Attribute("x", &x);
+            boxNode->Attribute("y", &y);
+            boxNode->Attribute("width", &width);
+            boxNode->Attribute("height", &height);
+            state->hitBoxes.push_back(sf::FloatRect(x, y, width, height));
+        }
+
         TiXmlElement *animationNode = frameNode->FirstChildElement("animation");
         if (animationNode->GetText() != nullptr) {
             std::string animText = animationNode->GetText();
 
             std::string numstr = "";
             int num = 0;
-            for (char cur : animText)
-                if (cur >= "0" && cur <= "9")
+            for (const char cur : animText)
+                if (cur >= '0' && cur <= '9')
                     numstr += cur;
                 else {
                     num = std::atoi(numstr.c_str());
@@ -91,30 +133,45 @@ Prop::Prop(const char* fileName) {
             num = std::atoi(numstr.c_str());
             state->animation.addFrame(frames[num]);
         }
-        
+
         for (
                 TiXmlElement *actionNode = stateNode->FirstChildElement("action");
                 actionNode != nullptr;
                 actionNode = frameNode->NextSiblingElement("action")) {
 
             std::string actionName = actionNode->Attribute("name");
-            PropAction *action = state->actions[actionName];
+            PropAction *action = &(state->actions[actionName]);
             action->name = actionName;
             action->state = actionNode->Attribute("state");
-            
+
             std::string tmpstr = "true";
-            char* tmp;
-            if (tmp = actionNode->Attribute()) {
+            const char* tmp;
+            if (tmp = actionNode->Attribute("playeruse")) action->playerUse = tmpstr == tmp;
+            if (tmp = actionNode->Attribute("golemuse")) action->golemUse = tmpstr == tmp;
 
-            }
-
-            
             for (
                     TiXmlElement *descNode = actionNode->FirstChildElement("description");
                     descNode != nullptr;
                     descNode = frameNode->NextSiblingElement("description")) {
                 std::string lang = descNode->Attribute("lang");
                 action->descriptions[lang] = descNode->GetText();
+            }
+
+            TiXmlElement *animationNode = actionNode->FirstChildElement("animation");
+            if (animationNode->GetText() != nullptr) {
+                std::string animText = animationNode->GetText();
+
+                std::string numstr = "";
+                int num = 0;
+                for (const char cur : animText)
+                    if (cur >= '0' && cur <= '9')
+                        numstr += cur;
+                    else {
+                        num = std::atoi(numstr.c_str());
+                        action->animation.addFrame(frames[num]);
+                    }
+                num = std::atoi(numstr.c_str());
+                action->animation.addFrame(frames[num]);
             }
         }
 
@@ -144,4 +201,20 @@ float Prop::getDepth() {
         dirty = false;
     }
     return depth;
+}
+
+std::string Prop::getContext() {
+
+}
+
+void Prop::loadFromXML(TiXmlElement* node) {
+
+}
+
+void Prop::showDescription() {
+
+}
+
+void Prop::use(Actor* user) {
+
 }

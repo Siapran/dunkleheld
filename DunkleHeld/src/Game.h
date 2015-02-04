@@ -9,10 +9,13 @@
 #define	GAME_H
 
 #include <SFML/Graphics.hpp>
+#include <map>
+
 #include "TileSet.h"
 #include "GameLevel.h"
 #include "Controller.h"
 #include "Professor.h"
+#include "Prop.h"
 
 #define BACKGROUND_COLOR sf::Color(0x91, 0xb0, 0x9a)
 
@@ -24,7 +27,8 @@ public:
     void loadTileset(const char* fileName = "resources/tilesets/temple.xml");
     void loadLevel(const char* fileName = "resources/levels/test.tmx");
     void loadControls(const char* fileName = "resources/misc/DefaultControls.xml");
-
+    void loadProps(const char* fileName = "resources/props/props.xml");
+    
 private:
 
     void processEvents();
@@ -38,6 +42,7 @@ private:
     GameLevel *m_level;
     
     Professor m_player;
+    std::map<std::string, Prop *> m_propSet;
 
 };
 
