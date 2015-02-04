@@ -249,10 +249,10 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 		<link x="0"	y="144"	width="16"	height="48">
-			<destination file="main_hall_phase2" x="0" y="160"/>
+			<destination file="main_hall_phase2" x1="176" y1="160" x2="208" y2="144"/>
 		</link>
 		<link x="224"	y="144"	width="16"	height="48">
-			<destination file="transition" x="0" y="160"/>
+			<destination file="transition" x1="32" y1="160" x2="0" y2="144"/>
 		</link>
 
 		<prop name="cube_big"	x="80"	y="192"	width="16"	height="16"	state="blue"/>

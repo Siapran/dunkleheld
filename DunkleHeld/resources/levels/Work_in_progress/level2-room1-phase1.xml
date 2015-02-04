@@ -237,7 +237,7 @@
 		<link x="96"	y="224"	width="48"	height="16">
 			<trigger exp="has_crystal">
 				<then>
-					<destination file="main_hall_phase2" x1="112" y1="48" x2="96" y2="0"/>
+					<destination file="main_hall_phase2" x1="144" y1="64" x2="96" y2="32"/>
 				</then>
 				<else>
 					<destination file="main_hall_phase1" x="112" y="0"/>
