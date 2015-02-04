@@ -3,7 +3,7 @@
 
 	<hitbox x="0" y="0" width="14" height="15" />
 
-	<properties damage="true" ground="false" solid="true"/>
+	<properties damage="true" depth="14" solid="true"/>
 
 	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
 		<frame id="0" x="0" y="0"/>
@@ -13,7 +13,7 @@
 	</frames>
 
 	<state name="off">
-		<properties ground="true" solid="false"/>
+		<properties depth="0" solid="false"/>
 		<description lang="fr">Des pieux, faisons attention.</description>
 		<animation> 0 </animation>
 		<action name="spikes_on" state="on">
