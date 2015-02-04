@@ -43,7 +43,7 @@ float Actor::getDepth() {
     return m_position.y + m_size;
 }
 
-void Actor::setMovingFlags(sf::Uint32 movingFlags, char mode) {
+void Actor::setMovingFlags(sf::Uint32 movingFlags, bool mode) {
     if (mode) {
         m_movingFlags |= movingFlags;
     } else {
@@ -51,3 +51,6 @@ void Actor::setMovingFlags(sf::Uint32 movingFlags, char mode) {
     }
 }
 
+void Actor::setPosition(sf::Vector2f position) {
+    m_position = position;
+}

@@ -13,12 +13,14 @@
 
 class Professor : public Actor {
 public:
-    Professor();
+    Professor(sf::Vector2f position = sf::Vector2f());
     virtual ~Professor();
 
     virtual void update(sf::Time deltaTime);
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
+    virtual void setPosition(sf::Vector2f position);
+    
 private:
 
     AnimatedSprite m_sprite;

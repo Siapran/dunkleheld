@@ -17,8 +17,8 @@
 using std::cout;
 using std::endl;
 
-GameLevel::GameLevel(const char *fileName, TileSet &tileSet)
-: m_tileSet(tileSet) {
+GameLevel::GameLevel(const char *fileName, TileSet &tileSet, Professor &player)
+: m_tileSet(tileSet), m_player(&player) {
     loadFromXml(fileName);
 }
 
@@ -37,7 +37,7 @@ void GameLevel::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     std::vector<Paintable *> paintables;
     // vector::reserve alloue la place nécessaire mais ne change pas la taille du vector
     // on perd en mémoire... mais on gagne en vitesse!
-    paintables.reserve(m_size.x * m_size.y + m_objects.size());
+    paintables.reserve(m_size.x * m_size.y + m_objects.size() + 2);
 
     for (auto &row : m_tileMap)
         for (auto &tile : row)
@@ -48,6 +48,10 @@ void GameLevel::draw(sf::RenderTarget& target, sf::RenderStates states) const {
         if (paintable) // on n'ajoute que les objets peignables
             paintables.push_back(paintable);
     }
+    if (m_player != nullptr)
+        paintables.push_back(m_player);
+    
+
 
     // on trie les entités à peindre pour peindre les entités derrièrre en premier
     std::sort(paintables.begin(), paintables.end(), [](Paintable * a, Paintable * b) -> bool {

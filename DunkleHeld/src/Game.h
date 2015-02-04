@@ -12,6 +12,7 @@
 #include "TileSet.h"
 #include "GameLevel.h"
 #include "Controller.h"
+#include "Professor.h"
 
 #define BACKGROUND_COLOR sf::Color(0x91, 0xb0, 0x9a)
 
@@ -35,6 +36,8 @@ private:
 
     TileSet *m_tileSet;
     GameLevel *m_level;
+    
+    Professor m_player;
 
 };
 

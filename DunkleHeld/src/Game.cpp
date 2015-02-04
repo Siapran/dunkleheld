@@ -9,7 +9,13 @@
 
 Game::Game() :
 m_window(sf::VideoMode(480, 480), "Donker Held", sf::Style::Titlebar | sf::Style::Close),
-m_tileSet(nullptr), m_level(nullptr) {
+m_tileSet(nullptr), m_level(nullptr),
+m_player() {
+    m_controller.setPlayer1(&m_player);
+    m_controller.bindKey("P1 up", sf::Keyboard::Z);
+    m_controller.bindKey("P1 left", sf::Keyboard::Q);
+    m_controller.bindKey("P1 down", sf::Keyboard::S);
+    m_controller.bindKey("P1 right", sf::Keyboard::D);
 }
 
 void Game::runGame() {
@@ -52,7 +58,8 @@ void Game::processEvents() {
     }
 }
 
-void Game::update(sf::Time) {
+void Game::update(sf::Time deltaTime) {
+    m_player.update(deltaTime);
 }
 
 void Game::render() {
@@ -63,7 +70,8 @@ void Game::render() {
 
 void Game::loadLevel(const char* fileName) {
     if (m_level != nullptr) delete m_level;
-    m_level = new GameLevel(fileName, *m_tileSet);
+    m_level = new GameLevel(fileName, *m_tileSet, m_player);
+
 }
 
 void Game::loadTileset(const char* fileName) {

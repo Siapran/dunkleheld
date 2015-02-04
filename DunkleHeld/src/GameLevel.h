@@ -16,11 +16,12 @@
 #include "Tile.h"
 #include "TileSet.h"
 #include "GameObject.h"
+#include "Professor.h"
 
 class GameLevel : public sf::Drawable, public sf::Transformable {
 public:
 
-    GameLevel(const char *fileName, TileSet &tileSet);
+    GameLevel(const char *fileName, TileSet &tileSet, Professor &player);
     virtual ~GameLevel();
 
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
@@ -40,8 +41,9 @@ private:
 
     std::multimap<std::string, GameObject *> m_listeners;
     std::map<std::string, GameObject *> m_objects;
-    
-    
+
+    Professor *m_player;
+
 };
 
 #endif	/* GAMELEVEL_H */
