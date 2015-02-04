@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<prop name="pressure_plate" file="resources/props/prassure_plate.png">
+<prop name="pressure_plate" file="resources/props/pressure_plate.png">
 
 	<hitbox x="3" y="3" width="10" height="10" />
 

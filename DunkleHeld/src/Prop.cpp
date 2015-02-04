@@ -220,5 +220,5 @@ void Prop::showDescription() {
 }
 
 void Prop::use(Actor* user) {
-
+    
 }

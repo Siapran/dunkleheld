@@ -7,8 +7,17 @@
 
 #include "Game.h"
 
+Game *Game::m_instance = nullptr;
+
+Game* Game::Instance() {
+    if (m_instance == nullptr)
+        m_instance = new Game();
+    return m_instance;
+}
+
 Game::Game() :
 m_window(sf::VideoMode(240 * 3, 240 * 3), "Donker Held", sf::Style::Titlebar | sf::Style::Close),
+m_view(sf::FloatRect(0, 0, 240, 240)),
 m_tileSet(nullptr), m_level(nullptr),
 m_player() {
     m_controller.setPlayer1(&m_player);
@@ -19,9 +28,6 @@ m_player() {
 }
 
 void Game::runGame() {
-
-    sf::View view(sf::FloatRect(0, 0, 240, 240));
-    m_window.setView(view);
 
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
@@ -63,6 +69,8 @@ void Game::update(sf::Time deltaTime) {
 }
 
 void Game::render() {
+
+    m_window.setView(m_view);
     m_window.clear(BACKGROUND_COLOR);
     m_window.draw(*m_level);
     m_window.display();
@@ -70,7 +78,7 @@ void Game::render() {
 
 void Game::loadLevel(const char* fileName) {
     if (m_level != nullptr) delete m_level;
-    m_level = new GameLevel(fileName, *m_tileSet, m_player);
+    m_level = new GameLevel(this, fileName, *m_tileSet, m_player);
 
 }
 
@@ -95,4 +103,15 @@ void Game::loadProps(const char* fileName) {
         std::string propName = propNode->Attribute("name");
         m_propSet[propName] = new Prop(propNode->Attribute("file"));
     }
+}
+
+int Game::getVar(std::string varName) {
+    auto found = m_globalVars.find(varName);
+    if (found != m_globalVars.end())
+        return found->second;
+    else return 0;
+}
+
+void Game::setVar(std::string varName, int value) {
+    m_globalVars[varName] = value;
 }

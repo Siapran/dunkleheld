@@ -21,28 +21,40 @@
 
 class Game {
 public:
-    Game();
+
+    static Game *Instance();
+
     void runGame();
 
     void loadTileset(const char* fileName = "resources/tilesets/temple.xml");
     void loadLevel(const char* fileName = "resources/levels/test.tmx");
     void loadControls(const char* fileName = "resources/misc/DefaultControls.xml");
     void loadProps(const char* fileName = "resources/props/props.xml");
-    
+
+    void setVar(std::string varName, int value);
+    int getVar(std::string varName);
+
 private:
+
+    Game();
+    static Game *m_instance;
 
     void processEvents();
     void update(sf::Time deltaTime);
     void render();
 
     sf::RenderWindow m_window;
+    sf::RenderTexture m_shadow;
+    sf::View m_view;
     Controller m_controller;
 
     TileSet *m_tileSet;
     GameLevel *m_level;
-    
-    Professor m_player;
     std::map<std::string, Prop *> m_propSet;
+
+    std::map<std::string, int> m_globalVars;
+
+    Professor m_player;
 
 };
 

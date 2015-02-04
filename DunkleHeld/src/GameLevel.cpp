@@ -17,8 +17,8 @@
 using std::cout;
 using std::endl;
 
-GameLevel::GameLevel(const char *fileName, TileSet &tileSet, Professor &player)
-: m_tileSet(tileSet), m_player(&player) {
+GameLevel::GameLevel(Game *game, const char *fileName, TileSet &tileSet, Professor &player)
+: m_tileSet(tileSet), m_player(&player), m_game(game) {
     loadFromXml(fileName);
 }
 
@@ -50,7 +50,7 @@ void GameLevel::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     }
     if (m_player != nullptr)
         paintables.push_back(m_player);
-    
+
 
 
     // on trie les entités à peindre pour peindre les entités derrièrre en premier
@@ -123,4 +123,60 @@ void GameLevel::removeListener(std::string target, GameObject* listener) {
 
 void GameLevel::broadCastEvent(std::string source, std::string event) {
 
+}
+
+int GameLevel::getVar(std::string varName) {
+    auto found = m_localVars.find(varName);
+    if (found != m_localVars.end())
+        return found->second;
+    else return 0;
+}
+
+void GameLevel::setVar(std::string varName, int value) {
+    m_localVars[varName] = value;
+}
+
+int GameLevel::evalExpr(const char *expr) {
+    std::string token = "";
+    std::string op = "+";
+    int tmp = 0;
+    for (reader = expr; reader != nullptr; ++reader) {
+        if (*reader == '(')
+            tmp = evalOp(tmp, evalExpr(reader + 1), op);
+
+    }
+    return 0
+}
+
+int GameLevel::evalOp(int left, int right, std::string op) {
+
+    if (op == "+") return left + right;
+    if (op == "-") return left - right;
+    if (op == "*") return left * right;
+    if (op == "/") return left / right;
+
+    if (op == "==") return left == right;
+    if (op == "!=") return left != right;
+    if (op == "<") return left < right;
+    if (op == ">") return left > right;
+    if (op == "<=") return left <= right;
+    if (op == ">=") return left >= right;
+
+    if (op == "&&") return left && right;
+    if (op == "||") return left || right;
+    if (op == "^") return left ^ right;
+    if (op == "!") return !right;
+
+    return 0;
+}
+
+std::string GameLevel::readToken() {
+    std::string token = "";
+    for (; reader != nullptr; ++reader) {
+        if (
+                (*reader >= 'a' && *reader <= 'z')
+                || (*reader >='A' && *reader <= 'Z')
+                || (*reader >='0' && *reader <= '9')
+                || *reader == '_')
+    }
 }

@@ -85,3 +85,7 @@ void Professor::setPosition(sf::Vector2f position) {
     m_position = position;
     m_sprite.setPosition(m_position - m_offset);
 }
+
+float Professor::getDepth() {
+    return m_position.y + m_size - 2;
+}

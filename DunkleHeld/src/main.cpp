@@ -31,12 +31,12 @@ int main(int argc, char** argv) {
         levelName = argv[1];
     }
 
-    Game game;
-    game.loadTileset();
-    game.loadLevel(levelName.c_str());
-    game.loadProps();
+    Game *game = Game::Instance();
+    game->loadTileset();
+    game->loadLevel(levelName.c_str());
+    game->loadProps();
 
-    game.runGame();
+    game->runGame();
 
     return 0;
 }

@@ -18,10 +18,12 @@
 #include "GameObject.h"
 #include "Professor.h"
 
+class Game;
+
 class GameLevel : public sf::Drawable, public sf::Transformable {
 public:
 
-    GameLevel(const char *fileName, TileSet &tileSet, Professor &player);
+    GameLevel(Game *game, const char *fileName, TileSet &tileSet, Professor &player);
     virtual ~GameLevel();
 
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
@@ -30,6 +32,9 @@ public:
 
     void addListener(std::string target, GameObject *listener);
     void removeListener(std::string target, GameObject *listener);
+
+    void setVar(std::string varName, int value);
+    int getVar(std::string varName);
 
 private:
 
@@ -41,9 +46,16 @@ private:
 
     std::multimap<std::string, GameObject *> m_listeners;
     std::map<std::string, GameObject *> m_objects;
+    std::map<std::string, int> m_localVars;
 
+    Game *m_game;
     Professor *m_player;
 
+    // pour l'interprétation d'expression
+    int evalExpr(const char *expression);
+    std::string readToken();
+    int evalOp(int left, int right, std::string op);
+    const char* reader;
 };
 
 #endif	/* GAMELEVEL_H */

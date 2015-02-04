@@ -18,7 +18,9 @@ public:
 
     virtual void update(sf::Time deltaTime);
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+    virtual float getDepth();
 
+    
     virtual void setPosition(sf::Vector2f position);
     
 private:

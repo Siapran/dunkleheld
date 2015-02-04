@@ -8,7 +8,7 @@
 #include "Actor.h"
 
 Actor::Actor(sf::Vector2f position, float size, float speed, float range, int direction)
-: m_position(position), m_size(size), m_speed(speed), m_range(range), m_direction(direction) {
+: m_position(position), m_size(size), m_speed(speed), m_range(range), m_direction(direction), m_movingFlags(Direction::None) {
 
 }
 

@@ -233,28 +233,28 @@
 		</data>
 	</layer>
 	<objectgroup name="props" width="0" height="0">
-		<prop name="door"		x="96"	y="0"	width="48"	height="32">
-			<trigger exp="cyan1 & cyan2">
+		<prop name="door"		x="96"	y="0"	width="48"	height="32" id="1">
+			<trigger exp="cyan1 && cyan2">
 				<action target="door" value="door_open" />
 			</trigger></prop>
 		
-		<link x="112" y="224"	width="16"	height="16">
+		<link x="112" y="224"	width="16"	height="16" id="1">
 			<destination file="entrance" x="112"	y="32"/>
 		</link>
-		<link x="0"	y="144"	width="16"	height="48">
+		<link x="0"	y="144"	width="16"	height="48" id="2">
 			<destination file="main_hall_left_phase1" x="224" y="160"/>
 		</link>
-		<link x="96"	y="0"	width="48"	height="16">
+		<link x="96"	y="0"	width="48"	height="16" id="3">
 			<destination file="level2-room1-phase1" x="112" y="224"/>
 		</link>
 
-		<prop name="pebbles"	x="160"	y="192"	width="16"	height="16"	state="frame1"/>
-		<prop name="pebbles"	x="176"	y="112"	width="16"	height="16"	state="frame3"/>
-		<prop name="pebbles"	x="64"	y="96"	width="16"	height="16"	state="frame0"/>
-		<prop name="pebbles"	x="64"	y="176"	width="16"	height="16"	state="frame2"/>
-		<prop name="pebbles"	x="80"	y="192"	width="16"	height="16"	state="frame2"/>
-		<prop name="pebbles"	x="176"	y="48"	width="16"	height="16"	state="frame0"/>
-		<prop name="pebbles"	x="128"	y="48"	width="16"	height="16"	state="frame3"/>
+		<prop name="pebbles"	x="160"	y="192"	width="16"	height="16"	state="frame1" id="1"/>
+		<prop name="pebbles"	x="176"	y="112"	width="16"	height="16"	state="frame3" id="2"/>
+		<prop name="pebbles"	x="64"	y="96"	width="16"	height="16"	state="frame0" id="3"/>
+		<prop name="pebbles"	x="64"	y="176"	width="16"	height="16"	state="frame2" id="4"/>
+		<prop name="pebbles"	x="80"	y="192"	width="16"	height="16"	state="frame2" id="5"/>
+		<prop name="pebbles"	x="176"	y="48"	width="16"	height="16"	state="frame0" id="6"/>
+		<prop name="pebbles"	x="128"	y="48"	width="16"	height="16"	state="frame3" id="7"/>
 
 		<prop name="spikes"		x="48"	y="112"	width="16"	height="16"	id="1">
 			<trigger exp="spikes_hall_off">
@@ -267,9 +267,9 @@
 		<prop name="spikes"		x="208"	y="160"	width="16"	height="16"	id="6"/>
 		<prop name="spikes"		x="208"	y="176"	width="16"	height="16"	id="7"/>
 
-		<prop name="chest"		x="32"	y="32"	width="16"	height="16"	state="close">
-			<trigger exp="chest:chest_open">
-				<setvar scope="global" target="chest_main_hall" value="chest.state == on" />
+		<prop name="chest"		x="32"	y="32"	width="16"	height="16"	state="close" id="1">
+			<trigger exp="chest#1.state == open">
+				<setvar scope="global" target="chest_main_hall" value="true" />
 			</trigger></prop>
 
 		<examine name="writings" x="112" y="160" width="16" height="16">
