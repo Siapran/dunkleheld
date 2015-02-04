@@ -2508,8 +2508,6 @@
 		</data>
 	</layer>
 	<objectgroup name="props" width="0" height="0">
-<<<<<<< HEAD
-
 		<prop name="door" x="144" y="688" width="48" height="32" id="1" state="closed"/>
 		<prop name="door" x="368" y="688" width="48" height="32" id="2" state="closed"/>
 		<prop name="door" x="368" y="640" width="48" height="32" id="3" state="closed"/>
@@ -2533,7 +2531,6 @@
 		<prop name="pressure_plate" x="288" y="32" width="16" height="16" id="8"/>
 		<prop name="pressure_plate" x="368" y="32" width="16" height="16" id="9"/>
 		<prop name="pressure_plate" x="448" y="32" width="16" height="16" id="10"/>
-
 
 		<prop name="spikes" x="592" y="544" width="16" height="16" state="on"/>
 		<prop name="spikes" x="640" y="592" width="16" height="16" state="on"/>
