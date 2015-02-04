@@ -26,7 +26,7 @@ float getFPS(const sf::Time& time) {
  */
 int main(int argc, char** argv) {
 
-    string levelName = "resources/levels/bare/test.tmx";
+    string levelName = "resources/levels/test.tmx";
     if (argc == 2) {
         levelName = argv[1];
     }

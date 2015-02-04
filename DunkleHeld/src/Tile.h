@@ -17,7 +17,7 @@ public:
 
     Tile(
             int gid, sf::Vector2f position,
-            sf::Texture *texture, sf::FloatRect &texCoords, bool isGround);
+            sf::Texture *texture, sf::FloatRect &texCoords, float depth);
     
     Tile(Tile *orig, sf::Vector2f position);
     virtual ~Tile();

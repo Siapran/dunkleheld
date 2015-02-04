@@ -8,7 +8,7 @@
 #include "Game.h"
 
 Game::Game() :
-m_window(sf::VideoMode(480, 480), "Donker Held", sf::Style::Titlebar | sf::Style::Close),
+m_window(sf::VideoMode(240 * 3, 240 * 3), "Donker Held", sf::Style::Titlebar | sf::Style::Close),
 m_tileSet(nullptr), m_level(nullptr),
 m_player() {
     m_controller.setPlayer1(&m_player);

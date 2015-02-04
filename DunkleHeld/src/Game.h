@@ -22,7 +22,7 @@ public:
     void runGame();
 
     void loadTileset(const char* fileName = "resources/tilesets/temple.xml");
-    void loadLevel(const char* fileName = "resources/levels/bare/test.tmx");
+    void loadLevel(const char* fileName = "resources/levels/test.tmx");
     void loadControls(const char* fileName = "resources/misc/DefaultControls.xml");
 
 private:

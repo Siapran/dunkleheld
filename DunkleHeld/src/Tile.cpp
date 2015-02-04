@@ -8,7 +8,7 @@
 #include "Tile.h"
 #include <iostream>
 
-Tile::Tile(int gid, sf::Vector2f position, sf::Texture *texture, sf::FloatRect &texCoords, bool isGround)
+Tile::Tile(int gid, sf::Vector2f position, sf::Texture *texture, sf::FloatRect &texCoords, float _depth)
 : m_position(position), m_gid(gid), m_vertices(sf::Quads, 4), m_texture(texture) {
 
     m_vertices[0].position = position;
@@ -21,12 +21,9 @@ Tile::Tile(int gid, sf::Vector2f position, sf::Texture *texture, sf::FloatRect &
     m_vertices[2].texCoords = sf::Vector2f(texCoords.left + texCoords.width, texCoords.top + texCoords.height);
     m_vertices[3].texCoords = sf::Vector2f(texCoords.left + texCoords.width, texCoords.top);
 
-    ground = isGround;
-    depth = 0;
-    if (!ground)
-        for (const sf::FloatRect &box : m_hitBoxes)
-            if (box.top + box.height > depth)
-                depth = box.top + box.height;
+    ground = _depth == 0;
+    if (ground) depth = 0;
+    else depth = _depth + position.y;
     dirty = false;
 
 }
@@ -43,14 +40,14 @@ Tile::Tile(Tile *orig, sf::Vector2f position)
         box.left = box.left - m_position.x + position.x;
         box.top = box.top - m_position.y + position.y;
     }
-    m_position = position;
+    
 
-    depth = 0;
-    if (!ground)
-        for (const sf::FloatRect &box : m_hitBoxes)
-            if (box.top + box.height > depth)
-                depth = box.top + box.height;
+    ground = depth == 0;
+    if (ground) depth = 0;
+    else depth = depth - m_position.y + position.y;
     dirty = false;
+    
+    m_position = position;
 
 }
 

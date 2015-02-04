@@ -8,8 +8,8 @@
 #include "Professor.h"
 
 Professor::Professor(sf::Vector2f position)
-: m_sprite(sf::seconds(0.2), true, false), m_offset(sf::Vector2f(8, 12)),
-Actor(position, 5, 32, 10) {
+: m_sprite(sf::seconds(0.15), true, false), m_offset(sf::Vector2f(8, 12)),
+Actor(position, 5, 48, 10) {
     m_texture.loadFromFile("resources/actors/prof_dunkleheld.png");
 
     auto anim = &(m_animations["S"]);

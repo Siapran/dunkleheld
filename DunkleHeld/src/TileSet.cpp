@@ -40,11 +40,9 @@ TileSet::TileSet(const char* fileName) {
         int id;
         tileNode->Attribute("id", &id);
 
-        bool isGround = false;
-        std::string tmp = "true";
-        const char *ground = tileNode->Attribute("ground");
-        if (ground != nullptr && tmp == ground)
-            isGround = true;
+        int depth = 0;
+        tileNode->Attribute("depth", &depth);
+        
 
         int g_width = m_sheetSize.x / m_tileSize.x;
         //        int g_height = m_sheetSize.y / m_tileSize.y;
@@ -56,7 +54,7 @@ TileSet::TileSet(const char* fileName) {
 
         // on crée le tile
         Tile *tile = new Tile(id + 1, sf::Vector2f(0, 0), &m_tileSheet, texCoords,
-                isGround);
+                depth);
 
         // on explore les hitBox tant qu'on en trouve
         for (
