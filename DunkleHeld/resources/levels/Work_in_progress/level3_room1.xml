@@ -2816,7 +2816,7 @@
 			</trigger>
 		</prop>
 		<prop name="button" x="224" y="576" width="16" height="16" id="6" state="off">
-			<trigger expression="button#1.state == on">
+			<trigger expression="button#6.state == on">
 				<then>
 					<trigger expression="door#4.state == close">
 						<then>
@@ -2826,34 +2826,34 @@
 							<action target="door#4" value="close" />
 						</else>
 					</trigger>
-					<trigger expression="door#5.state == close">
+					<trigger expression="door#3.state == close">
 						<then>
-							<action target="door#5" value="open" />
+							<action target="door#3" value="open" />
 						</then>
 						<else>
-							<action target="door#5" value="close" />
+							<action target="door#3" value="close" />
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="button" x="704" y="496" width="16" height="16" id="7" state="off">
-			<trigger expression="button#1.state == on">
+			<trigger expression="button#7.state == on">
 				<then>
-					<trigger expression="door#4.state == close">
+					<trigger expression="door#3.state == close">
 						<then>
-							<action target="door#4" value="open" />
+							<action target="door#3" value="open" />
 						</then>
 						<else>
-							<action target="door#4" value="close" />
+							<action target="door#3" value="close" />
 						</else>
 					</trigger>
-					<trigger expression="door#5.state == close">
+					<trigger expression="door#7.state == close">
 						<then>
-							<action target="door#5" value="open" />
+							<action target="door#7" value="open" />
 						</then>
 						<else>
-							<action target="door#5" value="close" />
+							<action target="door#7" value="close" />
 						</else>
 					</trigger>
 				</then>
