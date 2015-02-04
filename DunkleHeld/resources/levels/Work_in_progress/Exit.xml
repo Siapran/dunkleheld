@@ -248,8 +248,10 @@
 			<action target="statue_a" value="statue_a_off" />
 			<action target="statue_b" value="statue_b_off" />
 		</trigger>
-		
-		<link x="96" y="224" width="48" height="16"/>
+
+		<link x="96" y="224" width="48" height="16">
+			<destination file="level3_room1" x="640" y="0"/>
+		</link>
 		<link x="96" y="0" width="48" height="16"/>
 	</objectgroup>
 </map>
