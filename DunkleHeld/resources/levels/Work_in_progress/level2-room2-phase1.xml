@@ -234,12 +234,12 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<prop name="link"	x="144"	y="224"	width="32"	height="16">
-			<destination map="level2-room1-phase1" x="160" y="0"/>
-		</prop>
-		<prop name="link"	x="128"	y="0"	width="32"	height="16">
-			<destination map="level2-room3-phase1" x="144" y="224"/>
-		</prop>
+		<link x="144"	y="224"	width="32"	height="16">
+			<destination file="level2-room1-phase1" x="160" y="0"/>
+		</link>
+		<link x="128"	y="0"	width="32"	height="16">
+			<destination file="level2-room3-phase1" x="144" y="224"/>
+		</link>
 
 		<prop name="spikes" x="96" y="64" width="16" height="96" state="off"/>
 		<prop name="spikes" x="112" y="64" width="16" height="96" state="off">

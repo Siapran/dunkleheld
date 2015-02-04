@@ -234,18 +234,18 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<prop name="link"		x="96"	y="224"	width="48"	height="16">
+		<link x="96"	y="224"	width="48"	height="16">
 			<trigger exp="has_crystal">
 				<then>
-					<destination map="main_hall_phase2" x="112" y="0"/>
+					<destination file="main_hall_phase2" x="112" y="0"/>
 				</then>
 				<else>
-					<destination map="main_hall_phase1" x="112" y="0"/>
+					<destination file="main_hall_phase1" x="112" y="0"/>
 				</else>
-			</trigger></prop>
-		<prop name="link"		x="144"	y="0"	width="32"	height="16">
-			<destination map="level2-room2-phase1" x="144" y="224"/>
-		</prop>
+			</trigger></link>
+		<link x="144"	y="0"	width="32"	height="16">
+			<destination file="level2-room2-phase1" x="144" y="224"/>
+		</link>
 
 		<prop name="statue_b"		x="80"	y="96"	width="32"	height="32">
 			<trigger exp="has_crystal">

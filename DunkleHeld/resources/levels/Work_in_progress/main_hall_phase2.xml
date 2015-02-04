@@ -234,15 +234,15 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<prop name="link"		x="112" y="224"	width="16"	height="16">
-			<destination map="entrance" x="112"	y="32"/>
-		</prop>
-		<prop name="link"		x="0"	y="144"	width="16"	height="48">
-			<destination map="main_hall_left_phase1" x="224" y="160"/>
-		</prop>
-		<prop name="link"		x="224"	y="144"	width="16"	height="48">
-			<destination map="main_hall_right_phase2" x="0" y="160"/>
-		</prop>
+		<link x="112" y="224"	width="16"	height="16">
+			<destination file="entrance" x="112"	y="32"/>
+		</link>
+		<link x="0"	y="144"	width="16"	height="48">
+			<destination file="main_hall_left_phase1" x="224" y="160"/>
+		</link>
+		<link x="224"	y="144"	width="16"	height="48">
+			<destination file="main_hall_right_phase2" x="0" y="160"/>
+		</link>
 
 		<prop name="door"       x="96"  y="0"   width="48"  height="32">
 			<trigger exp="cyan1 & cyan2">
