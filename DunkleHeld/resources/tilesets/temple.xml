@@ -33,8 +33,8 @@
 	<tile id="24"> <box x="0" y="0" width="16" height="16"/> </tile>
 	<tile id="25"> <box x="0" y="0" width="16" height="16"/> </tile>
 	<tile id="26" depth="12"> <box x="4" y="4" width="8" height="8"/> </tile>
-	<tile id="27" depth="32"> <box x="0" y="0" width="12" height="16"/> </tile>
-	<tile id="28" depth="32"> <box x="0" y="0" width="12" height="16"/> </tile>
+	<tile id="27" depth="32"> <box x="0" y="0" width="16" height="16"/> </tile>
+	<tile id="28" depth="32"> <box x="0" y="0" width="16" height="16"/> </tile>
 	<tile id="29" depth="32" />
 
 	<tile id="30" depth="32"> <box x="0" y="0" width="12" height="16"/> </tile>
@@ -58,7 +58,7 @@
 	<tile id="46" depth="32"> <box x="4" y="0" width="12" height="16"/> </tile>
 	<tile id="47" depth="32"> <box x="0" y="0" width="12" height="16"/> </tile>
 
-	<tile id="48" depth="14"> <box x="0" y="0" width="16" height="16"/> </tile>
+	<tile id="48" depth="32"> <box x="0" y="0" width="16" height="16"/> </tile>
 	<tile id="49" depth="14"> <box x="0" y="0" width="16" height="16"/> </tile>
 	<tile id="50" depth="14"> <box x="4" y="0" width="12" height="16"/> </tile>
 	<tile id="51" depth="14"> <box x="0" y="0" width="12" height="16"/> </tile>
