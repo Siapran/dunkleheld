@@ -52,6 +52,9 @@ struct PropState {
 
 struct PropAction {
     std::string name;
+    std::string state;
+    bool playerUse;
+    bool golemUse;
     std::map<std::string, std::string> descriptions; // langue -> description
     Animation animation; // animation
 };
