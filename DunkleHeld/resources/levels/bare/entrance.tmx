@@ -248,5 +248,7 @@
   <object name="Peeble" x="32" y="96" width="16" height="16"/>
   <object name="Les écritures sont trop abimées par le temps pour etre lues" x="192" y="80" width="16" height="16"/>
   <object name="Les écritures sont trop abimées par le temps pour etre lues" x="32" y="80" width="16" height="16"/>
+  <object name="link" x="96" y="32" width="48" height="16"/>
+  <object name="link" x="96" y="224" width="48" height="16"/>
  </objectgroup>
 </map>
