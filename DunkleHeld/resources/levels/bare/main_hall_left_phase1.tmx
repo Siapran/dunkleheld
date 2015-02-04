@@ -302,5 +302,6 @@
   <object name="pebbles" x="208" y="144" width="16" height="16"/>
   <object name="pebbles" x="160" y="32" width="16" height="16"/>
   <object name="pebbles" x="48" y="32" width="16" height="16"/>
+  <object name="link" x="224" y="144" width="16" height="48"/>
  </objectgroup>
 </map>
