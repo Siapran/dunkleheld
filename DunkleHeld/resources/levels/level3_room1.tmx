@@ -2578,6 +2578,5 @@
   <object name="statue_a" x="672" y="128" width="32" height="32"/>
   <object name="statue_b" x="672" y="80" width="32" height="32"/>
   <object name="statue_a" x="672" y="32" width="32" height="32"/>
-  <object x="-176" y="336"/>
  </objectgroup>
 </map>
