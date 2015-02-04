@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<prop name="pylon" file="pylon.png">
+<prop name="pylon" file="resources/props/pylon.png">
 
 	<hitbox x="5" y="7" width="6" height="6" />
 
-	<properties action="false" description="true" ground="false" solid="true"/>
+	<properties damage="false" ground="false" solid="true"/>
 
 	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
 		<frame id="0" x="0" y="0"/>

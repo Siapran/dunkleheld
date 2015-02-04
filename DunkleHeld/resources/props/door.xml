@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<prop name="door" file="door.png" >
+<prop name="door" file="resources/props/door.png" >
 
 	<hitbox xcenter="26" ycenter="16" />
 
-	<properties action="false" description="true" ground="false" solid="true"/>
+	<properties damage="false" ground="false" solid="true"/>
 
 	<frames xoff="0" yoff="0" xsize="48" ysize="32" t="100">
 		<frame id="0" x="0" y="0"/>

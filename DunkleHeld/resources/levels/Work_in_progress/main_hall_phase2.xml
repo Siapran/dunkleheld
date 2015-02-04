@@ -233,6 +233,17 @@
 		</data>
 	</layer>
 	<objectgroup name="props" width="0" height="0">
+
+		<prop name="link"		x="112" y="224"	width="16"	height="16">
+			<destination map="entrance" x="112"	y="32"/>
+		</prop>
+		<prop name="link"		x="0"	y="144"	width="16"	height="48">
+			<destination map="main_hall_left_phase1" x="224" y="160"/>
+		</prop>
+		<prop name="link"		x="224"	y="144"	width="16"	height="48">
+			<destination map="main_hall_right_phase2" x="0" y="160"/>
+		</prop>
+
 		<prop name="door"       x="96"  y="0"   width="48"  height="32">
 			<trigger exp="cyan1 & cyan2">
 				<action target="door" value="door_open" />
@@ -246,16 +257,29 @@
 		<prop name="pebbles"    x="176" y="48"  width="16"  height="16" state="frame0"/>
 		<prop name="pebbles"    x="128" y="48"  width="16"  height="16" state="frame3"/>
 
-		<prop name="spikes"     x="48"  y="112" width="16"  height="16" id="1">
-			<trigger exp="spikes_hall_off">
-				<action target="spikes" value="spikes-on" />
+		<prop name="spikes"     x="48"  y="112" width="16"  height="16" id="1" state="off"/>
+		<prop name="spikes"     x="64"  y="112" width="16"  height="16" id="2" state="off"/>
+		<prop name="spikes"     x="80"  y="64"  width="16"  height="16" id="3" state="off"/>
+		<prop name="spikes"     x="80"  y="80"  width="16"  height="16" id="4" state="off"/>
+
+		<prop name="spikes"     x="208" y="144" width="16"  height="16" id="5" state="on">
+			<trigger exp="!(has_crystal)">
+				<then>
+					<action target="spikes#5" value="spikes_off" />
+				</then>
 			</trigger></prop>
-		<prop name="spikes"     x="64"  y="112" width="16"  height="16" id="2"/>
-		<prop name="spikes"     x="80"  y="64"  width="16"  height="16" id="3"/>
-		<prop name="spikes"     x="80"  y="80"  width="16"  height="16" id="4"/>
-		<prop name="spikes"     x="208" y="144" width="16"  height="16" id="5"/>
-		<prop name="spikes"     x="208" y="160" width="16"  height="16" id="6"/>
-		<prop name="spikes"     x="208" y="176" width="16"  height="16" id="7"/>
+		<prop name="spikes"     x="208" y="160" width="16"  height="16" id="6" state="on">
+			<trigger exp="!(has_crystal)">
+				<then>
+					<action target="spikes#6" value="spikes_off" />
+				</then>
+			</trigger></prop>
+		<prop name="spikes"     x="208" y="176" width="16"  height="16" id="7" state="on">
+			<trigger exp="!(has_crystal)">
+				<then>
+					<action target="spikes#7" value="spikes_off" />
+				</then>
+			</trigger></prop>
 
 		<prop name="chest"      x="32"  y="32"  width="16"  height="16" state="close">
 			<trigger exp="chest:chest_open">

@@ -241,5 +241,6 @@
   <object name="pebbles" x="128" y="96" width="16" height="16"/>
   <object name="pebbles" x="128" y="112" width="16" height="16"/>
   <object name="pebbles" x="112" y="144" width="16" height="16"/>
+  <object name="link" x="96" y="224" width="32" height="16"/>
  </objectgroup>
 </map>

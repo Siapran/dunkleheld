@@ -249,7 +249,10 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 		<prop name="link"		x="224"	y="144"	width="16"	height="48">
-			<destination map="main_hall_phase1" x="0" y="160"/>
+			<destination map="main_hall_phase2" x="0" y="160"/>
+		</prop>
+		<prop name="link"		x="224"	y="144"	width="16"	height="48">
+			<destination map="level3_room1" x="368" y="784"/>
 		</prop>
 
 		<prop name="cube_big"	x="80"	y="192"	width="16"	height="16"	state="blue"/>
