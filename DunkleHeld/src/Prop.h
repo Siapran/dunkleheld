@@ -23,20 +23,23 @@ class Prop : public GameObject, public Paintable {
 public:
 
     Prop(const char* fileName);
-    Prop(GameLevel *level, const Prop& orig, TiXmlElement);
+    Prop(const Prop& orig);
 
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     virtual float getDepth();
 
-    virtual void update(std::vector<std::string>& events);
-    AnimatedSprite m_sprite;
+    virtual void update(sf::Time deltaTime, std::vector<std::string>& events);
+    
+    
 
 private:
 
+    AnimatedSprite m_sprite;
     sf::Texture *m_texture;
 
     std::map<std::string, PropState> m_states; // nom état -> état
     std::string m_currentState; // état actuel
+    std::string m_currentAction; // éction en cours
 };
 
 struct PropState {

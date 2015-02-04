@@ -8,14 +8,22 @@
 #include "Prop.h"
 
 Prop::Prop(const char* fileName) {
+    TiXmlDocument doc(fileName);
+    doc.LoadFile();
+
+    std::string tmpstr;
+
+    TiXmlElement *root = doc.RootElement();
+    m_name = root->Attribute("name");
+    m_texture->loadFromFile(root->Attribute())
 
 }
 
-Prop::Prop(GameLevel* level, const Prop& orig, TiXmlElement) {
+Prop::Prop(const Prop& orig) {
 
 }
 
-void Prop::update(std::vector<std::string>& events) {
+void Prop::update(sf::Time deltaTime, std::vector<std::string>& events) {
 
 }
 
