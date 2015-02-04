@@ -234,9 +234,9 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<prop name="link"	x="96" y="224"	width="32"	height="16">
-			<destination map="level2-room3-phase1" x="128" y="0"/>
-		</prop>
+		<link x="96" y="224"	width="32"	height="16">
+			<destination file="level2-room3-phase1" x="128" y="0"/>
+		</link>
 
 		<prop name="piedestal" x="104" y="72" width="16" height="16" state="blue">
 			<use>

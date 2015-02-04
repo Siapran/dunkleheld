@@ -233,15 +233,15 @@
 	  </data>
    </layer>
    <objectgroup name="props" width="0" height="0">
-		<prop name="link"	 x="0"	y="144"	width="16"	height="48">
+		<link x="0"	y="144"	width="16"	height="48">
 			<trigger exp="has_crystal">
 				<then>
-					<destination map="main_hall_phase2" x="224" y="160"/>
+					<destination file="main_hall_phase2" x="224" y="160"/>
 				</then>
 				<else>
-					<destination map="main_hall_phase1" x="224" y="160"/>
+					<destination file="main_hall_phase1" x="224" y="160"/>
 				</else>
-			</trigger></prop>
+			</trigger></link>
 
 		<prop name="switch"	 x="64"   y="160"  width="16"  height="16" id="1"/>
 		<prop name="switch"  x="96"   y="160"  width="16"  height="16" id="2"/>

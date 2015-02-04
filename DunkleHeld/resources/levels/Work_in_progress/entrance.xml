@@ -237,9 +237,9 @@
 		<prop name="statue_a"	x="144"	y="64"	width="32"	height="32"	state="blue"/>
 
 		<prop name="door"		x="96"	y="32"	width="48"	height="32"	state="open"/>
-		<prop name="link"		x="96"	y="32"	width="48"	height="16">
-			<destination map="main_hall_phase1" x="112" y="224"/>
-		</prop>
+		<link x="96"	y="32"	width="48"	height="16">
+			<destination file="main_hall_phase1" x="112" y="224"/>
+		</link>
 
 		<prop name="desk"		x="144"	y="144"	width="32"	height="16"	state="onlyone"/>
 
