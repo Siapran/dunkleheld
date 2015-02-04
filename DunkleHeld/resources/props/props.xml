@@ -15,4 +15,6 @@
 	<prop name="statues_a" file="resources/props/statues_a.xml"/>
 	<prop name="statues_b" file="resources/props/statues_b.xml"/>
 	<prop name="switch" file="resources/props/switch.xml"/>
+	<prop name="door_b" file="resources/props/door_b.xml"/>
+	<prop name="pylon" file="resources/props/pylon.xml"/>
 </props>
