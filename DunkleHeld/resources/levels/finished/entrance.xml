@@ -257,11 +257,11 @@
 		<prop name="pebbles"	x="32"	y="96"	width="16"	height="16"	state="frame2" id="7"/>
 
 		<examine name="writings" x="192" y="80" width="16" height="16" id="1">
-			<description lang="fr"  id="1">Les écritures sont trop abimées par le temps pour etre lues.</descripion>
+			<description lang="fr"  id="1">Les écritures sont trop abimées par le temps pour etre lues.</description>
 		</examine>
 
 		<examine name="writings" x="176" y="80" width="16" height="16" id="2">
-			<description lang="fr"  id="2">Les écritures sont trop abimées par le temps pour etre lues.</descripion>
+			<description lang="fr"  id="2">Les écritures sont trop abimées par le temps pour etre lues.</description>
 		</examine>
 
 	</objectgroup>

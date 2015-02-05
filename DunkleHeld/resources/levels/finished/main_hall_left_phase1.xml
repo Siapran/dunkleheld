@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="15" height="15" tilewidth="16" tileheight="16">
+	<tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16">
+		<image source="../../tilesets/tiles.png" width="96" height="144"/>
+	</tileset>
+	<layer name="Tiles" width="15" height="15">
+		<data>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="4"/>
+			<tile gid="5"/>
+			<tile gid="35"/>
+			<tile gid="5"/>
+			<tile gid="35"/>
+			<tile gid="5"/>
+			<tile gid="35"/>
+			<tile gid="5"/>
+			<tile gid="35"/>
+			<tile gid="5"/>
+			<tile gid="6"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="10"/>
+			<tile gid="11"/>
+			<tile gid="41"/>
+			<tile gid="11"/>
+			<tile gid="41"/>
+			<tile gid="11"/>
+			<tile gid="41"/>
+			<tile gid="11"/>
+			<tile gid="41"/>
+			<tile gid="11"/>
+			<tile gid="12"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="16"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="18"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="16"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="18"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="16"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="18"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="16"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="18"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="16"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="18"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="16"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="45"/>
+			<tile gid="5"/>
+			<tile gid="5"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="16"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="51"/>
+			<tile gid="11"/>
+			<tile gid="11"/>
+			<tile gid="4"/>
+			<tile gid="5"/>
+			<tile gid="46"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="10"/>
+			<tile gid="50"/>
+			<tile gid="52"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="16"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="33"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="16"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="0"/>
+			<tile gid="39"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="22"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="23"/>
+			<tile gid="24"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+			<tile gid="8"/>
+		</data>
+	</layer>
+	<objectgroup name="props" width="0" height="0">
+		<link x="0"	y="144"	width="16"	height="48" id="1">
+			<trigger id="1" event="has_crystal">
+				<then>
+					<destination file="main_hall_phase2" x="224" y="160" id="1"/>
+				</then>
+				<else>
+					<destination file="main_hall_phase1" x="224" y="160" id="2"/>
+				</else>
+			</trigger>
+		</link>
+
+		<prop name="switch"	 x="64"   y="160"  width="16"  height="16" id="1" state="off"/>
+		<prop name="switch"  x="96"   y="160"  width="16"  height="16" id="2" state="off"/>
+		<prop name="switch"  x="128"  y="160"  width="16"  height="16" id="3" state="off"/>
+		<prop name="switch"  x="160"  y="160"  width="16"  height="16" id="4" state="off"/>
+
+		<prop name="switch"  x="112"  y="32"   width="16"  height="16" id="5" state="off">
+			<trigger id="2" event="switch#5:switch_on">
+				<setvar scope="global" target="spikes_hall_off" value="switch#5.state == on" id="1"/>
+				<description lang="fr" id="1">On entend du metal cliqueter au loin ... sûrement un mécanisme.</description>
+			</trigger>
+		</prop>
+
+		<examine name="writings" x="16" y="160" width="16" height="16" id="1">
+			<description lang="fr" id="2">Trouve le bon chemin pour reveler la lumière divine.</description>
+		</examine>
+
+		<!------------------------------------------ spike grid ------------------------------------------>
+		<!-- line 1 -->
+		<prop name="spikes"  x="48"   y="48"   width="16"  height="16" id="11"  state="on"/>
+		<prop name="spikes"  x="64"   y="48"   width="16"  height="16" id="12"  state="on"/>
+		<prop name="spikes"  x="80"   y="48"   width="16"  height="16" id="13"  state="on"/>
+		<prop name="spikes"  x="96"   y="48"   width="16"  height="16" id="14"  state="on"/>
+		<prop name="spikes"  x="112"  y="48"   width="16"  height="16" id="15" state="on">
+			<trigger id="3" event="(switch#1.state == on) ^ (switch#2.state == on)">
+				<then>
+					<action id="1" target="spikes#15" value="spikes_off" />
+				</then>
+				<else>
+					<action id="2" target="spikes#15" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="128"  y="48"   width="16"  height="16" id="16"  state="on"/>
+		<prop name="spikes"  x="144"  y="48"   width="16"  height="16" id="17"  state="on"/>
+		<prop name="spikes"  x="160"  y="48"   width="16"  height="16" id="18"  state="on"/>
+		<prop name="spikes"  x="176"  y="48"   width="16"  height="16" id="19"  state="on"/>
+		<!-- line 2 -->
+		<prop name="spikes"  x="48"   y="64"   width="16"  height="16" id="21"  state="on"/>
+		<prop name="spikes"  x="64"   y="64"   width="16"  height="16" id="22" state="on">
+			<trigger id="4" event="((switch#4.state == on) ^ (switch#3.state == on))">
+				<then>
+					<action id="3" target="spikes#22" value="spikes_on" />
+				</then>
+				<else>
+					<action id="4" target="spikes#22" value="spikes_off" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="80"   y="64"   width="16"  height="16" id="23" state="on">
+			<trigger id="5" event="switch#2.state == on">
+				<then>
+					<action id="5" target="spikes#23" value="spikes_off" />
+				</then>
+				<else>
+					<action id="6" target="spikes#23" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="96"   y="64"   width="16"  height="16" id="24" state="on">
+			<trigger id="6" event="((switch#1.state == on) ^ (switch#2.state == on))">
+				<then>
+					<action id="7" target="spikes#24" value="spikes_off" />
+				</then>
+				<else>
+					<action id="8" target="spikes#24" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="112"  y="64"   width="16"  height="16" id="25" state="on">
+			<trigger id="7" event="((switch#1.state == on) ^ (switch#2.state == on))">
+				<then>
+					<action id="9" target="spikes#25" value="spikes_off" />
+				</then>
+				<else>
+					<action id="10" target="spikes#25" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="128"  y="64"   width="16"  height="16" id="26" state="on">
+			<trigger id="8" event="switch#4.state == on">
+				<then>
+					<action id="11" target="spikes#26" value="spikes_off" />
+				</then>
+				<else>
+					<action id="12" target="spikes#26" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="144"  y="64"   width="16"  height="16" id="27" state="on">
+			<trigger id="9" event="switch#4.state == on">
+				<then>
+					<action id="13" target="spikes#27" value="spikes_off" />
+				</then>
+				<else>
+					<action id="14" target="spikes#27" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="160"  y="64"   width="16"  height="16" id="28"  state="on"/>
+		<prop name="spikes"  x="176"  y="64"   width="16"  height="16" id="29"  state="on"/>
+		<!-- line 3 -->
+		<prop name="spikes"  x="48"   y="80"   width="16"  height="16" id="31"  state="on"/>
+		<prop name="spikes"  x="64"   y="80"   width="16"  height="16" id="32" state="on">
+			<trigger id="10" event="(switch#1.state == on) ^ (switch#2.state == on)">
+				<then>
+					<action id="15" target="spikes#32" value="spikes_off" />
+				</then>
+				<else>
+					<action id="16" target="spikes#32" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="80"   y="80"   width="16"  height="16" id="33"  state="on"/>
+		<prop name="spikes"  x="96"   y="80"   width="16"  height="16" id="34"  state="on"/>
+		<prop name="spikes"  x="112"  y="80"   width="16"  height="16" id="35" state="on">
+			<trigger id="11" event="((switch#4.state == on) ^ (switch#3.state == on))">
+				<then>
+					<action id="17" target="spikes#35" value="spikes_off" />
+				</then>
+				<else>
+					<action id="18" target="spikes#35" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="128"  y="80"   width="16"  height="16" id="36"  state="on"/>
+		<prop name="spikes"  x="144"  y="80"   width="16"  height="16" id="37" state="on">
+			<trigger id="12" event="switch#4.state == on">
+				<then>
+					<action id="19" target="spikes#37" value="spikes_off" />
+				</then>
+				<else>
+					<action id="2" target="spikes#37" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="160"  y="80"   width="16"  height="16" id="38"  state="on"/>
+		<prop name="spikes"  x="176"  y="80"   width="16"  height="16" id="39"  state="on"/>
+		<!-- line 4 -->
+		<prop name="spikes"  x="48"   y="96"   width="16"  height="16" id="41"  state="on"/>
+		<prop name="spikes"  x="64"   y="96"   width="16"  height="16" id="42" state="on">
+			<trigger id="13" event="((switch#1.state == on) ^ (switch#4.state == on))">
+				<then>
+					<action id="21" target="spikes#42" value="spikes_off" />
+				</then>
+				<else>
+					<action id="22" target="spikes#42" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="80"   y="96"   width="16"  height="16" id="43"  state="on"/>
+		<prop name="spikes"  x="96"   y="96"   width="16"  height="16" id="44"  state="on"/>
+		<prop name="spikes"  x="112"  y="96"   width="16"  height="16" id="45" state="on">
+			<trigger id="14" event="((switch#3.state == on) ^ (switch#4.state == on))">
+				<then>
+					<action id="23" target="spikes#45" value="spikes_off" />
+				</then>
+				<else>
+					<action id="24" target="spikes#45" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="128"  y="96"   width="16"  height="16" id="46" state="on">
+			<trigger id="15" event="switch#3.state == on">
+				<then>
+					<action id="25" target="spikes#46" value="spikes_off" />
+				</then>
+				<else>
+					<action id="26" target="spikes#46" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="144"  y="96"   width="16"  height="16" id="47" state="on">
+			<trigger id="16" event="switch#2.state == on">
+				<then>
+					<action id="27" target="spikes#47" value="spikes_off" />
+				</then>
+				<else>
+					<action id="28" target="spikes#47" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="160"  y="96"   width="16"  height="16" id="48"  state="on"/>
+		<prop name="spikes"  x="176"  y="96"   width="16"  height="16" id="49"  state="on"/>
+		<!-- line 5 -->
+		<prop name="spikes"  x="48"   y="112"  width="16"  height="16" id="51"  state="on"/>
+		<prop name="spikes"  x="64"   y="112"  width="16"  height="16" id="52" state="on">
+			<trigger id="17" event="switch#2.state == on">
+				<then>
+					<action id="29" target="spikes#52" value="spikes_off" />
+				</then>
+				<else>
+					<action id="30" target="spikes#52" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="80"   y="112"  width="16"  height="16" id="53" state="on">
+			<trigger id="18" event="switch#2.state == on">
+				<then>
+					<action id="31" target="spikes#53" value="spikes_off" />
+				</then>
+				<else>
+					<action id="32" target="spikes#53" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="96"   y="112"  width="16"  height="16" id="54"  state="on"/>
+		<prop name="spikes"  x="112"  y="112"  width="16"  height="16" id="55"  state="on"/>
+		<prop name="spikes"  x="144"  y="112"  width="16"  height="16" id="56"  state="on"/>
+		<prop name="spikes"  x="128"  y="112"  width="16"  height="16" id="57" state="on">
+			<trigger id="19" event="(switch#1.state == on) ^ (switch#2.state == on) ^ (switch#4.state == on)">
+				<then>
+					<action id="33" target="spikes#57" value="spikes_off" />
+				</then>
+				<else>
+					<action id="34" target="spikes#57" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="160"  y="112"  width="16"  height="16" id="58" state="on">
+			<trigger id="20" event="(switch#1.state == on) ^ (switch#4.state == on)">
+				<then>
+					<action id="35" target="spikes#58" value="spikes_off" />
+				</then>
+				<else>
+					<action id="36" target="spikes#58" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="176"  y="112"  width="16"  height="16" id="59"  state="on"/>
+		<!-- line 6 -->
+		<prop name="spikes"  x="48"   y="128"  width="16"  height="16" id="61"  state="on"/>
+		<prop name="spikes"  x="64"   y="128"  width="16"  height="16" id="62" state="on">
+			<trigger id="21" event="switch#1.state == on">
+				<then>
+					<action id="37" target="spikes#62" value="spikes_off" />
+				</then>
+				<else>
+					<action id="38" target="spikes#62" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="80"   y="128"  width="16"  height="16" id="63" state="on">
+			<trigger id="22" event="switch#3.state == on">
+				<then>
+					<action id="39" target="spikes#63" value="spikes_off" />
+				</then>
+				<else>
+					<action id="40" target="spikes#63" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="96"   y="128"  width="16"  height="16" id="64"  state="on"/>
+		<prop name="spikes"  x="112"  y="128"  width="16"  height="16" id="65"  state="on"/>
+		<prop name="spikes"  x="128"  y="128"  width="16"  height="16" id="66" state="on">
+			<trigger id="23" event="switch#1.state == on">
+				<then>
+					<action id="41" target="spikes#66" value="spikes_off" />
+				</then>
+				<else>
+					<action id="42" target="spikes#66" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="144"  y="128"  width="16"  height="16" id="67" state="on">
+			<trigger id="24" event="switch#2.state == on">
+				<then>
+					<action id="43" target="spikes#67" value="spikes_off" />
+				</then>
+				<else>
+					<action id="44" target="spikes#67" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="160"  y="128"  width="16"  height="16" id="68" state="on">
+			<trigger id="25" event="switch#4.state == on">
+				<then>
+					<action id="45" target="spikes#68" value="spikes_off" />
+				</then>
+				<else>
+					<action id="46" target="spikes#68" value="spikes_on" />
+				</else>
+			</trigger>
+		</prop>
+		<prop name="spikes"  x="176"  y="128"  width="16"  height="16" id="69"  state="on"/>
+		<!---------------------------------------- spike grid end ---------------------------------------->
+		<prop name="cube_big"   x="96"   y="32"   width="16"  height="16" id="1" state="blue"/>
+		<prop name="cube_big"   x="128"  y="32"   width="16"  height="16" id="2" state="blue"/>
+		<prop name="cube_big"   x="16"   y="192"  width="16"  height="16" id="3" state="blue"/>
+
+		<prop name="cube_small"   x="56"    y="40"   width="8"   height="8"  id="1" state="blue"/>
+		<prop name="cube_small"   x="176"   y="40"   width="8"   height="8"  id="2" state="blue"/>
+		<prop name="cube_small"   x="56"    y="144"  width="8"   height="8"  id="3" state="blue"/>
+		<prop name="cube_small"   x="176"   y="144"  width="8"   height="8"  id="4" state="blue"/>
+
+		<prop name="pebbles" x="48"   y="144"  width="16"  height="16" id="1" state="frame0"/>
+		<prop name="pebbles" x="80"   y="176"  width="16"  height="16" id="2" state="frame3"/>
+		<prop name="pebbles" x="128"  y="192"  width="16"  height="16" id="3" state="frame1"/>
+		<prop name="pebbles" x="208"  y="144"  width="16"  height="16" id="4" state="frame3"/>
+		<prop name="pebbles" x="160"  y="32"   width="16"  height="16" id="5" state="frame2"/>
+		<prop name="pebbles" x="48"   y="32"   width="16"  height="16" id="6" state="frame0"/>
+	</objectgroup>
+</map>
