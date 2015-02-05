@@ -18,18 +18,18 @@
 	</frames>
 
 	<state name="close">
+
 		<description lang="fr">Ce mur est orné d'un bas relief en forme de flèche.</description>
+		<properties lightrad="0"/>
 		<animation> 0 </animation>
-
 		<hitbox x="6" y="26" width="35" height="16" />
-
 		<action name="door_b_open" state="open">
 			<animation> 1 2 3 4 5 6 7 6 </animation>
 		</action>
 	</state>
 
 	<state name="open">
-		<properties depth="0" solid="false"/>
+		<properties depth="0" solid="false" lightrad="2"/>
 		<description lang="fr">Le mur est ouvert, vous invitant à explorer les profondeurs du temple.</description>
 		<animation> 6 </animation>
 		<action name="door_b_close" state="closed">

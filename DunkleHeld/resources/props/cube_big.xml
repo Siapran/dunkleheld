@@ -3,7 +3,7 @@
 
 	<hitbox x="4" y="7" width="8" height="8" />
 
-	<properties damage="false" depth="15" solid="true"/>
+	<properties damage="false" depth="15" solid="true" lightrad="4"/>
 
 	<frames xoff="0" yoff="0" xsize="16" ysize="16" t="100">
 		<frame id="0" x="0" y="0"/>
@@ -16,6 +16,7 @@
 	</frames>
 
 	<state name="off">
+		<properties lightrad="0"/>
 		<description lang="fr">Un indice ? ...</description>
 		<animation> 0 </animation>
 		<action name="cube_big_blue" state="blue">
