@@ -11,11 +11,13 @@ bool Collidable::collidesWithCircle(sf::Vector2f pos, float radius) {
     return squareDistance(pos, m_position) <= radius * radius;
 }
 
+// comment expulser la cible de nous
+
 sf::Vector2f Collidable::resoleCollision(sf::Vector2f pos, float radius) {
     auto len = distance(pos, m_position);
     auto normal = (pos - m_position) / len;
-    auto penetration = radius - len;
-    return (len > 0) ? len : 0;
+    auto penetration = -(radius - len);
+    return (penetration > 0) ? normal * penetration : sf::Vector2f();
 }
 
 float Collidable::distance(sf::Vector2f a, sf::Vector2f b) {
@@ -28,7 +30,6 @@ float Collidable::squareDistance(sf::Vector2f a, sf::Vector2f b) {
 }
 
 bool Collidable::collidesBoxVSCircle(sf::FloatRect box, sf::Vector2f pos, float radius) {
-    // Setup a couple pointers to each object
 
     // Vector from A to B
     auto n = pos - getCentre(box);
@@ -40,17 +41,44 @@ bool Collidable::collidesBoxVSCircle(sf::FloatRect box, sf::Vector2f pos, float 
     float x_extent = box.width / 2;
     float y_extent = box.height / 2;
 
-    // Clamp point to edges of the AABB
+    // Clamp point to edges of the box
     closest.x = clamp(-x_extent, x_extent, closest.x);
     closest.y = clamp(-y_extent, y_extent, closest.y);
 
-    bool inside = n == closest;
+    bool inside = false;
 
-    float d = squareDistance(n, closest); //normal.LengthSquared()
+    // Circle is inside the AABB, so we need to clamp the circle's center
+    // to the closest edge
+    if (n == closest) {
+        inside = true;
+
+        // Find closest axis
+        if (abs(n.x) > abs(n.y)) {
+            // Clamp to closest extent
+            if (closest.x > 0)
+                closest.x = x_extent;
+            else
+                closest.x = -x_extent;
+        }// y axis is shorter
+        else {
+            // Clamp to closest extent
+            if (closest.y > 0)
+                closest.y = y_extent;
+            else
+                closest.y = -y_extent;
+        }
+    }
+
+    auto normal = n - closest;
+    float d = squareDistance(normal); //normal.LengthSquared()
     float r = radius;
 
-    return !inside && d > r * r;
+    // Early out of the radius is shorter than distance to closest point and
+    // Circle not inside the AABB
+    return !(!inside && d >= r * r);
 }
+
+// comment expulser le cercle du rectangle
 
 sf::Vector2f Collidable::resolveBoxVSCircle(sf::FloatRect box, sf::Vector2f pos, float radius) {
 
@@ -98,7 +126,7 @@ sf::Vector2f Collidable::resolveBoxVSCircle(sf::FloatRect box, sf::Vector2f pos,
 
     // Early out of the radius is shorter than distance to closest point and
     // Circle not inside the AABB
-    if (!inside && d > r * r)
+    if (!inside && d >= r * r)
         return sf::Vector2f();
 
     // Avoided sqrt until we needed
@@ -106,13 +134,13 @@ sf::Vector2f Collidable::resolveBoxVSCircle(sf::FloatRect box, sf::Vector2f pos,
 
     // Collision normal needs to be flipped to point outside if circle was
     // inside the AABB
-    if (inside) return (-n / d) * (r + d);
-    else return (n / d) * (r + d);
+    if (inside) return -normal * (r - d) / d;
+    else return normal * (r - d) / d;
 
 }
 
 sf::Vector2f Collidable::getCentre(sf::FloatRect box) {
-    return sf::Vector2f(box.left + box.width / 2, box.top + box.width / 2);
+    return sf::Vector2f(box.left + box.width / 2, box.top + box.height / 2);
 }
 
 float Collidable::clamp(float a, float b, float z) {

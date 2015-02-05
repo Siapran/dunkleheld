@@ -9,7 +9,7 @@
 #include <iostream>
 
 Tile::Tile(int gid, sf::Vector2f position, sf::Texture *texture, sf::FloatRect &texCoords, float _depth)
-: m_position(position), m_gid(gid), m_vertices(sf::Quads, 4), m_texture(texture) {
+: Collidable(position), m_gid(gid), m_vertices(sf::Quads, 4), m_texture(texture) {
 
     m_vertices[0].position = position;
     m_vertices[1].position = sf::Vector2f(position.x, position.y + texCoords.height);
@@ -81,6 +81,10 @@ sf::Vector2f Tile::resoleCollision(sf::Vector2f pos, float radius) {
     return total;
 }
 
+void Tile::onCollide(Actor* target) {
+
+}
+
 int Tile::getGid() const {
     return m_gid;
 }
@@ -89,14 +93,14 @@ void Tile::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     //    std::cout << "DEBUG " << m_gid << std::endl;
     target.draw(m_vertices, states);
 
-    //    for (const sf::FloatRect &hitbox : m_hitBoxes) {
-    //        sf::RectangleShape box(sf::Vector2f(hitbox.width, hitbox.height));
-    //        box.move(hitbox.left, hitbox.top);
-    //        box.setFillColor(sf::Color(255, 0, 0, 64));
-    //        box.setOutlineColor(sf::Color::Red);
-    //        box.setOutlineThickness(0.5);
-    //        target.draw(box);
-    //    }
+    for (const sf::FloatRect &hitbox : m_hitBoxes) {
+        sf::RectangleShape box(sf::Vector2f(hitbox.width, hitbox.height));
+        box.move(hitbox.left, hitbox.top);
+        box.setFillColor(sf::Color(255, 0, 0, 64));
+        box.setOutlineColor(sf::Color::Red);
+        box.setOutlineThickness(0.5);
+        target.draw(box);
+    }
 }
 
 float Tile::getDepth() {

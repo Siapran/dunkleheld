@@ -26,7 +26,8 @@ public:
 
     virtual void loadFromXML(TiXmlElement *node) = 0;
 
-    virtual void update(sf::Time deltaTime, std::vector<std::string>& events);
+    virtual void evaluate();
+    virtual void update(sf::Time deltaTime);
     void listen(std::string target);
     void ignore(std::string target);
 

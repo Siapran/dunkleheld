@@ -5,6 +5,9 @@
  * Created on January 22, 2015, 9:01 PM
  */
 
+#include <SFML/System/Vector2.hpp>
+
+
 #include "GameLevel.h"
 #include "tinyXML/tinyxml.h"
 #include "Paintable.h"
@@ -64,6 +67,9 @@ void GameLevel::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     // on peint les entités dans le bon ordre
     for (auto &paintable : paintables)
         paintable->draw(target, states);
+
+    sf::Sprite shadow(m_shadow.getTexture());
+    target.draw(shadow);
 
     //    std::cout << timer.restart().asMicroseconds() << std::endl;
 
@@ -297,4 +303,64 @@ Prop* GameLevel::findProp(std::string propName) {
     return nullptr;
 }
 
+void GameLevel::queryCollideWith(sf::Vector2f pos, float radius) {
+    m_collideQuery.clear();
+    auto tilesize = m_tileSet.getTileSize();
+    for (int i = (pos.y - radius) / tilesize.y; i <= (pos.y + radius) / tilesize.y; i++)
+        for (int j = (pos.x - radius) / tilesize.x; j <= (pos.x + radius) / tilesize.x; j++) {
+            if (i >= 0 && i <= m_size.y)
+                if (j >= 0 && j <= m_size.x) {
+                    auto tile = m_tileMap[i][j];
+                    if (tile != nullptr) {
+                        if (tile->collidesWithCircle(pos, radius)) {
+                            std::cout << "[" << i << "] [" << j << "]" << std::endl;
 
+                            sf::RectangleShape box(sf::Vector2f(tilesize.x, tilesize.y));
+                            box.move(i * tilesize.y, j * tilesize.x);
+                            box.setFillColor(sf::Color(0, 255, 0, 64));
+                            box.setOutlineColor(sf::Color::Green);
+                            box.setOutlineThickness(0.5);
+
+                            m_shadow.draw(box);
+
+                            m_collideQuery.push_back(tile);
+                        }
+                    }
+                }
+        }
+
+    for (auto &pair : m_objects) {
+        Collidable *collidable = dynamic_cast<Collidable*> (pair.second);
+        if (collidable) // on n'ajoute que les objets peignables
+            if (collidable->collidesWithCircle(pos, radius))
+                m_collideQuery.push_back(collidable);
+    }
+
+    m_shadow.display();
+    std::cout << "DEBUG 1 " << m_collideQuery.size() << std::endl;
+}
+
+sf::Vector2i GameLevel::getMapSize() {
+    return m_size;
+}
+
+void GameLevel::update(sf::Time deltaTime) {
+    // collision du professeur avec le golem en premier;
+    auto pos = m_player->getPos();
+    auto radius = m_player->getSize();
+
+    // puis avec le reste des tiles et objets
+    queryCollideWith(pos, radius);
+
+    sf::Vector2f total;
+    float num = 0;
+
+    for (auto &collidable : m_collideQuery) {
+
+        total += collidable->resoleCollision(pos, radius);
+        ++num;
+    }
+    if (num != 0)
+        m_player->move(total / num);
+
+}

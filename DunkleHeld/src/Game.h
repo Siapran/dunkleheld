@@ -45,7 +45,6 @@ private:
     void render();
 
     sf::RenderWindow m_window;
-    sf::RenderTexture m_shadow;
     sf::View m_view;
     Controller m_controller;
 

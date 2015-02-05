@@ -27,11 +27,12 @@ public:
     Prop(const Prop& orig);
 
     virtual void loadFromXML(TiXmlElement* node);
-    
+
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     virtual float getDepth();
 
-    virtual void update(sf::Time deltaTime, std::vector<std::string>& events);
+    virtual void update(sf::Time deltaTime);
+    
     void setState(std::string stateName);
     std::string getState();
     void doAction(std::string actionName);
@@ -39,6 +40,12 @@ public:
     virtual std::string getContext();
     virtual void showDescription();
     virtual void use(Actor* user);
+
+
+    virtual bool collidesWithCircle(sf::Vector2f pos, float radius);
+    virtual sf::Vector2f resoleCollision(sf::Vector2f pos, float radius);
+    virtual void onCollide(Actor* target);
+
 
 private:
 

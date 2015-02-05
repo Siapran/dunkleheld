@@ -10,10 +10,22 @@
 
 #include <SFML/Graphics.hpp>
 
+class Actor;
+
+//enum CollideReaction {
+//    RESOLVE, DAMAGE, ACTION, NONE
+//};
+
 class Collidable {
 public:
+
+    Collidable(sf::Vector2f m_position = sf::Vector2f()) :
+    m_position(m_position) {
+    }
+
     virtual bool collidesWithCircle(sf::Vector2f pos, float radius);
     virtual sf::Vector2f resoleCollision(sf::Vector2f pos, float radius);
+    virtual void onCollide(Actor *target) = 0;
     sf::Vector2f m_position;
 
     static float distance(sf::Vector2f a, sf::Vector2f b);

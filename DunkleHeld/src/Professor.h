@@ -22,6 +22,8 @@ public:
 
     
     virtual void setPosition(sf::Vector2f position);
+    virtual void onCollide(Actor* target);
+
     
 private:
 

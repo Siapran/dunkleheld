@@ -42,7 +42,7 @@ TileSet::TileSet(const char* fileName) {
 
         int depth = 0;
         tileNode->Attribute("depth", &depth);
-        
+
 
         int g_width = m_sheetSize.x / m_tileSize.x;
         //        int g_height = m_sheetSize.y / m_tileSize.y;
@@ -89,4 +89,8 @@ TileSet::~TileSet() {
 
 sf::Texture* TileSet::getTileSheet() {
     return &m_tileSheet;
+}
+
+sf::Vector2i TileSet::getTileSize() {
+    return m_tileSize;
 }

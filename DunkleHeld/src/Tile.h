@@ -26,6 +26,8 @@ public:
     void addHitBox(sf::FloatRect hitBox);
     virtual bool collidesWithCircle(sf::Vector2f pos, float radius);
     virtual sf::Vector2f resoleCollision(sf::Vector2f pos, float radius);
+    virtual void onCollide(Actor* target);
+
 
     int getGid() const;
 

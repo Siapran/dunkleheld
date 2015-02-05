@@ -22,6 +22,7 @@ public:
     ~TileSet();
     
     sf::Texture *getTileSheet();
+    sf::Vector2i getTileSize();
     
 private:
 

@@ -8,7 +8,8 @@
 #include "Actor.h"
 
 Actor::Actor(sf::Vector2f position, float size, float speed, float range, int direction)
-: m_position(position), m_size(size), m_speed(speed), m_range(range), m_direction(direction), m_movingFlags(Direction::None) {
+: Collidable(position), m_size(size), m_speed(speed), m_range(range),
+m_direction(direction), m_movingFlags(Direction::None), m_gamelevel(nullptr) {
 
 }
 
@@ -60,5 +61,22 @@ bool Actor::collidesWithCircle(sf::Vector2f pos, float radius) {
 }
 
 sf::Vector2f Actor::resoleCollision(sf::Vector2f pos, float radius) {
-    return Collidable::collidesWithCircle(pos, radius + m_size);
+    return Collidable::resoleCollision(pos, radius + m_size);
 }
+
+void Actor::setLevel(GameLevel* level) {
+    m_gamelevel = level;
+}
+
+void Actor::move(sf::Vector2f vector) {
+    setPosition(m_position + vector);
+}
+
+float Actor::getSize() {
+    return m_size;
+}
+
+sf::Vector2f Actor::getPos() {
+    return m_position;
+}
+

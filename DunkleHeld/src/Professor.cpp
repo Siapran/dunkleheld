@@ -44,6 +44,13 @@ Professor::~Professor() {
 
 void Professor::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     target.draw(m_sprite);
+
+    sf::CircleShape circle(m_size);
+    circle.move(m_position.x - m_size, m_position.y - m_size);
+    circle.setFillColor(sf::Color(255, 0, 0, 64));
+    circle.setOutlineColor(sf::Color::Red);
+    circle.setOutlineThickness(0.5);
+    target.draw(circle);
 }
 
 void Professor::update(sf::Time deltaTime) {
@@ -88,4 +95,8 @@ void Professor::setPosition(sf::Vector2f position) {
 
 float Professor::getDepth() {
     return m_position.y + m_size - 2;
+}
+
+void Professor::onCollide(Actor* target) {
+    move(-resoleCollision(target->m_position, target->getSize()));
 }

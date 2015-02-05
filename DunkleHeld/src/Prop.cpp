@@ -187,8 +187,8 @@ Prop::Prop(const Prop& orig) {
 
 }
 
-void Prop::update(sf::Time deltaTime, std::vector<std::string>& events) {
-
+void Prop::update(sf::Time deltaTime) {
+    
 }
 
 void Prop::draw(sf::RenderTarget& target, sf::RenderStates states) const {
@@ -220,7 +220,7 @@ void Prop::showDescription() {
 }
 
 void Prop::use(Actor* user) {
-    
+
 }
 
 void Prop::doAction(std::string actionName) {
@@ -233,4 +233,16 @@ std::string Prop::getState() {
 
 void Prop::setState(std::string stateName) {
 
+}
+
+bool Prop::collidesWithCircle(sf::Vector2f pos, float radius) {
+    return false;
+}
+
+void Prop::onCollide(Actor* target) {
+
+}
+
+sf::Vector2f Prop::resoleCollision(sf::Vector2f pos, float radius) {
+    return sf::Vector2f();
 }

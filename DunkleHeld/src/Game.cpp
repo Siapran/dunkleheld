@@ -16,10 +16,10 @@ Game* Game::Instance() {
 }
 
 Game::Game() :
-m_window(sf::VideoMode(240 * 3, 240 * 3), "Donker Held", sf::Style::Titlebar | sf::Style::Close),
+m_window(sf::VideoMode(240 * 3, 240 * 3), "DunkleHeld", sf::Style::Titlebar | sf::Style::Close),
 m_view(sf::FloatRect(0, 0, 240, 240)),
 m_tileSet(nullptr), m_level(nullptr),
-m_player() {
+m_player(sf::Vector2f(120, 120)) {
     m_controller.setPlayer1(&m_player);
     m_controller.bindKey("P1 up", sf::Keyboard::Z);
     m_controller.bindKey("P1 left", sf::Keyboard::Q);
@@ -65,6 +65,7 @@ void Game::processEvents() {
 }
 
 void Game::update(sf::Time deltaTime) {
+    m_level->update(deltaTime);
     m_player.update(deltaTime);
 }
 

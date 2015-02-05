@@ -11,9 +11,10 @@
 #include "Paintable.h"
 #include "GameObject.h"
 #include "Collidable.h"
+#include "GameLevel.h"
 #include <SFML/Graphics.hpp>
 
-class Game;
+class GameLevel;
 
 enum Interaction {
     USE, EXAMINE, CONTEXT
@@ -47,20 +48,25 @@ public:
 
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const = 0;
     virtual float getDepth();
+    float getSize();
+    sf::Vector2f getPos();
 
     void setMovingFlags(sf::Uint32 movingFlags, bool mode);
     virtual void setPosition(sf::Vector2f position);
+    void move(sf::Vector2f vector);
+    void setLevel(GameLevel *level);
 
     virtual bool collidesWithCircle(sf::Vector2f pos, float radius);
     virtual sf::Vector2f resoleCollision(sf::Vector2f pos, float radius);
 
+    virtual void onCollide(Actor* target) = 0;
 
 protected:
 
     void move(sf::Time deltaTime);
 
 
-    Game *m_game;
+    GameLevel *m_gamelevel;
 
     //    sf::Vector2f m_position; // contient la position // déplacé dans Collidable
     float m_size;
