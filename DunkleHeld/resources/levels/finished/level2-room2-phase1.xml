@@ -244,6 +244,7 @@
 				</else>
 			</trigger>
 		</link>
+
 		<link x="128"	y="0"	width="32"	height="16" id="2">
 			<trigger exp="has_crystal" id="2">
 				<then>
@@ -255,16 +256,49 @@
 			</trigger>
 		</link>
 
-		<prop name="spikes" x="96" y="64" width="16" height="96" state="off" id="1"/>
-		<prop name="spikes" x="112" y="64" width="16" height="96" state="off id="2"">
+		<prop name="spikes" x="96" y="64" width="16" height="16" state="off" id="1"/>
+		<prop name="spikes" x="96" y="80" width="16" height="16" state="off" id="2"/>
+		<prop name="spikes" x="96" y="96" width="16" height="16" state="off" id="3"/>
+		<prop name="spikes" x="96" y="112" width="16" height="16" state="off" id="4"/>
+		<prop name="spikes" x="96" y="128" width="16" height="16" state="off" id="5"/>
+		<prop name="spikes" x="96" y="144" width="16" height="16" state="off" id="6"/>
+		<prop name="spikes" x="112" y="64" width="16" height="16" state="off" id="7"/>
+		<prop name="spikes" x="112" y="80" width="16" height="16" state="off" id="8"/>
+		<prop name="spikes" x="112" y="96" width="16" height="16" state="off" id="9"/>
+		<prop name="spikes" x="112" y="112" width="16" height="16" state="off" id="10"/>	
+		<prop name="spikes" x="112" y="128" width="16" height="16" state="off" id="11"/>	
+		<prop name="spikes" x="112" y="144" width="16" height="16" state="off" id="12">	
 			<trigger exp="has_crystal" id="3">
 				<then>
-					<action target="spikes" value="spikes_on" id="1"/>
+					<action target="spikes#1" value="spikes_on" id="1"/>
+					<action target="spikes#2" value="spikes_on" id="2"/>
+					<action target="spikes#3" value="spikes_on" id="3"/>
+					<action target="spikes#4" value="spikes_on" id="4"/>
+					<action target="spikes#5" value="spikes_on" id="5"/>
+					<action target="spikes#6" value="spikes_on" id="6"/>
+					<action target="spikes#7" value="spikes_on" id="7"/>
+					<action target="spikes#8" value="spikes_on" id="8"/>
+					<action target="spikes#9" value="spikes_on" id="9"/>
+					<action target="spikes#10" value="spikes_on" id="10"/>
+					<action target="spikes#11" value="spikes_on" id="11"/>
+					<action target="spikes#12" value="spikes_on" id="12"/>
 				</then>
 				<else>
-					<action target="spikes" value="spikes_off" id="2"/>
+					<action target="spikes#1" value="spikes_off" id="13"/>
+					<action target="spikes#2" value="spikes_off" id="14"/>
+					<action target="spikes#3" value="spikes_off" id="15"/>
+					<action target="spikes#4" value="spikes_off" id="16"/>
+					<action target="spikes#5" value="spikes_off" id="17"/>
+					<action target="spikes#6" value="spikes_off" id="18"/>
+					<action target="spikes#7" value="spikes_off" id="19"/>
+					<action target="spikes#8" value="spikes_off" id="20"/>
+					<action target="spikes#9" value="spikes_off" id="21"/>
+					<action target="spikes#10" value="spikes_off" id="22"/>
+					<action target="spikes#11" value="spikes_off" id="23"/>
+					<action target="spikes#12" value="spikes_off" id="24"/>	
 				</else>
-			</trigger></prop>
+			</trigger>
+		</prop>
 
 		<examine name="writings" x="16" y="80" width="16" height="16" id="1">
 			<description lang="fr" id="1">Ne pas jeter de squelettes dans ce trou.</description>
