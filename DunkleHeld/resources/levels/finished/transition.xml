@@ -247,6 +247,7 @@
 		<prop name="pebbles"	x="48"	y="32"	width="16"	height="16"id="3"/>
 		<prop name="pebbles"	x="160"	y="112"	width="16"	height="16"id="4"/>
 		
-		<prop name="statue_b"	x="160"	y="64"	width="32"	height="32" state="blue"id="1"/>
+		<prop name="statue_b"	x="160"	y="64"	width="32"	height="32" state="blue" id="1"/>
+		
 	</objectgroup>
 </map>
