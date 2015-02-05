@@ -250,7 +250,7 @@
 	<objectgroup name="props" width="0" height="0">
 		
 		<link x="0"	y="144"	width="16"	height="48" id="1">
-			<trigger event="has_crystal" id="666">
+			<trigger exp="has_crystal" id="666">
 				<then id="1">
 					<destination file="main_hall_phase2" x1="176" y1="160" x2="208" y2="144" id="1"/>
 				</then>
@@ -272,9 +272,9 @@
 		<prop name="cube_big"	x="96"	y="96"	width="16"	height="16" state="blue" id="5"/>
 
 		<prop name="switch"		x="80"	y="176"	width="16"	height="16"	id="1"	state="off">
-			<trigger event="switch#1.state == on" id="1">
+			<trigger exp="switch#1.state == on" id="1">
 				<setvar scope="local" target="cyan1" value="switch#1.state == on" id="1" />
-				<trigger event="(cyan1 & cyan2) & !cyan3" id="2">
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="2">
 					<then id="2">
 						<setvar scope="global" name="door_mh" value="true" id="2"/>
 					</then>
@@ -283,9 +283,9 @@
 					</else>
 				</trigger>
 			</trigger>
-			<trigger event="switch#1.state == off" id="3">
+			<trigger exp="switch#1.state == off" id="3">
 				<setvar scope="local" target="cyan1" value="switch#1.state == off"  id="4"/>
-				<trigger event="(cyan1 & cyan2) & !cyan3" id="4">
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="4">
 					<then id="3">
 						<setvar scope="global" name="door_mh" value="true" id="5"/>
 					</then>
@@ -297,9 +297,9 @@
 		</prop>
 
 		<prop name="switch"		x="112"	y="176"	width="16"	height="16"	id="2"	state="off">
-			<trigger event="switch#2.state == on" id="5">
+			<trigger exp="switch#2.state == on" id="5">
 				<setvar scope="local" target="cyan2" value="switch#2.state == on"  id="7"/>
-				<trigger event="(cyan1 & cyan2) & !cyan3" id="6">
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="6">
 					<then id="4">
 						<setvar scope="global" name="door_mh" value="true" id="8"/>
 					</then>
@@ -308,9 +308,9 @@
 					</else>
 				</trigger>
 			</trigger>
-			<trigger event="switch#2.state == off" id="7">
+			<trigger exp="switch#2.state == off" id="7">
 				<setvar scope="local" target="cyan2" value="switch#2.state == off" id="10"/>
-				<trigger event="(cyan1 & cyan2) & !cyan3" id="8">
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="8">
 					<then id="5">
 						<setvar scope="global" name="door_mh" value="true"id="11"/>
 					</then>
@@ -322,9 +322,9 @@
 		</prop>
 
 		<prop name="switch"		x="144"	y="176"	width="16"	height="16"	id="3"	state="off">
-			<trigger event="switch#3.state == on" id="9">
+			<trigger exp="switch#3.state == on" id="9">
 				<setvar scope="local" target="cyan3" value="switch#3.state == on" id="13"/>
-				<trigger event="(cyan1 & cyan2) & !cyan3" id="10">
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="10">
 					<then id="6">
 						<setvar scope="global" name="door_mh" value="true"id="14"/>
 					</then>
@@ -333,9 +333,9 @@
 					</else>
 				</trigger>
 			</trigger>
-			<trigger event="switch#3.state == off" id="11">
+			<trigger exp="switch#3.state == off" id="11">
 				<setvar scope="local" target="cyan3" value="switch#3.state == off" id="16"/>
-				<trigger event="(cyan1 & cyan2) & !cyan3" id="12">
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="12">
 					<then id="7">
 						<setvar scope="global" name="door_mh" value="true"id="17"/>
 					</then>
@@ -364,7 +364,7 @@
 		<prop name="spikes"		x="208" y="176" width="16"	height="16" state="on" id="3"/>
 
 		<prop name="pressure_plate"	x="224" y="160" width="16"	height="16" state="off" id="1">
-			<trigger event="pressure_plate#1.state==on" id="667">
+			<trigger exp="pressure_plate#1.state==on" id="667">
 				<then id="8">
 					<action target="spikes#1" value="spikes_off" id="1"/>
 					<action target="spikes#2" value="spikes_off" id="2"/>

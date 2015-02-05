@@ -235,7 +235,7 @@
 	<objectgroup name="props" width="0" height="0">
 
 		<link x="224"	y="144"	width="16"	height="48" id="1">
-			<trigger event="!(has_crystal)" id="6">
+			<trigger exp="!(has_crystal)" id="6">
 				<then>
 					<destination id="1" file="main_hall_right_phase2" x1="0" y1="64" x2="0" y2="144"/>
 				</then>
@@ -258,21 +258,21 @@
 		<prop name="spikes"     x="80"  y="80"  width="16"  height="16" id="4" state="off"/>
 
 		<prop name="spikes"     x="208" y="144" width="16"  height="16" id="5" state="on">
-			<trigger event="!(has_crystal)" id="1">
+			<trigger exp="!(has_crystal)" id="1">
 				<then>
 					<action target="spikes#5" value="spikes_off" id="1"/>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="spikes"     x="208" y="160" width="16"  height="16" id="6" state="on">
-			<trigger event="!(has_crystal)" id="2">
+			<trigger exp="!(has_crystal)" id="2">
 				<then>
 					<action target="spikes#6" value="spikes_off" id="2"/>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="spikes"     x="208" y="176" width="16"  height="16" id="7" state="on">
-			<trigger event="!(has_crystal)" id="3">
+			<trigger exp="!(has_crystal)" id="3">
 				<then>
 					<action target="spikes#7" value="spikes_off" id="3"/>
 				</then>
@@ -281,13 +281,13 @@
 
 
 
-		<trigger event="chest_main_hall == true" id="666">
+		<trigger exp="chest_main_hall == true" id="666">
 			<then>
 				<prop name="chest"      x="32"  y="32"  width="16"  height="16" state="open" id="1"/>
 			</then>
 			<else>
 				<prop name="chest"      x="32"  y="32"  width="16"  height="16" state="close" id="2">
-					<trigger event="chest:chest_open" id="4">
+					<trigger exp="chest.state == on" id="4">
 						<setvar scope="global" target="chest_main_hall" value="chest.state == on" id="1"/>
 					</trigger>
 				</prop>

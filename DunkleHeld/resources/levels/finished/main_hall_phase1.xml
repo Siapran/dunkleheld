@@ -234,7 +234,7 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 		<prop name="door"		x="96"	y="0"	width="48"	height="32" id="1">
-			<trigger event="door_mh == true" id="1">
+			<trigger exp="door_mh == true" id="1">
 				<action target="door" value="door_open" id="1"/>
 			</trigger>
 		</prop>
@@ -264,7 +264,7 @@
 		<prop name="pebbles"	x="128"	y="48"	width="16"	height="16"	state="frame3" id="7"/>
 
 		<prop name="spikes"		x="48"	y="112"	width="16"	height="16"	id="1">
-			<trigger event="spikes_hall_off" id="2">
+			<trigger exp="spikes_hall_off" id="2">
 				<action target="spikes#1" value="spikes_off"  id="2"/>
 				<action target="spikes#2" value="spikes_off"  id="3"/>
 				<action target="spikes#3" value="spikes_off"  id="4"/>
@@ -282,7 +282,7 @@
 		<prop name="spikes"		x="208"	y="176"	width="16"	height="16"	id="7"/>
 
 		<prop name="chest"		x="32"	y="32"	width="16"	height="16"	state="close" id="1">
-			<trigger event="chest#1.state == open" id="3">
+			<trigger exp="chest#1.state == open" id="3">
 				<setvar scope="global" target="chest_main_hall" value="true" id="1"/>
 			</trigger>
 		</prop>
