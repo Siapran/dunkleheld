@@ -115,3 +115,7 @@ int Game::getVar(std::string varName) {
 void Game::setVar(std::string varName, int value) {
     m_globalVars[varName] = value;
 }
+
+bool Game::isSet(std::string varName) {
+    return m_globalVars.find(varName) != m_globalVars.end();
+}

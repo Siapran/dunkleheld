@@ -32,12 +32,12 @@ public:
 
     virtual void update(sf::Time deltaTime, std::vector<std::string>& events);
     void setState(std::string stateName);
+    std::string getState();
     void doAction(std::string actionName);
 
     virtual std::string getContext();
     virtual void showDescription();
     virtual void use(Actor* user);
-
 
 private:
 

@@ -14,7 +14,7 @@
 
 	<state name="off">
 		<properties depth="0" solid="false"/>
-		<description lang="fr">Tien, un pilone de soutient.</description>
+		<description lang="fr">Une étrange dalle sur le sol.</description>
 		<animation> 0 </animation>
 		<action name="pylon_on" state="on">
 			<animation> 1 2 3 </animation>
@@ -22,7 +22,7 @@
 	</state>
 	
 	<state name="on">
-		<description lang="fr">Tien, un pilone de soutient.</description>
+		<description lang="fr">Un pylone rétractable.</description>
 		<animation> 3 </animation>
 		<action name="pylon_off" state="off">
 			<animation> 2 1 0 </animation>

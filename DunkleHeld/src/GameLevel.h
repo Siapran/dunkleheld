@@ -16,9 +16,22 @@
 #include "Tile.h"
 #include "TileSet.h"
 #include "GameObject.h"
+#include "Prop.h"
 #include "Professor.h"
 
 class Game;
+
+enum TokenType {
+    INT, STR, OBJ, OP, PAR, UNKNOWN, EXPREND
+};
+
+struct Token {
+    TokenType type;
+    std::string value;
+    std::string strVal;
+    std::string objVal;
+    int intVal;
+};
 
 class GameLevel : public sf::Drawable, public sf::Transformable {
 public:
@@ -35,6 +48,7 @@ public:
 
     void setVar(std::string varName, int value);
     int getVar(std::string varName);
+    bool isSet(std::string varName);
 
 private:
 
@@ -44,6 +58,9 @@ private:
     TileSet &m_tileSet;
     sf::Vector2i m_size;
 
+
+
+    Prop *findProp(std::string propName);
     std::multimap<std::string, GameObject *> m_listeners;
     std::map<std::string, GameObject *> m_objects;
     std::map<std::string, int> m_localVars;
@@ -53,7 +70,7 @@ private:
 
     // pour l'interprétation d'expression
     int evalExpr(const char *expression);
-    std::string readToken();
+    Token readToken();
     int evalOp(int left, int right, std::string op);
     const char* reader;
 };

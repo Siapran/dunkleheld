@@ -18,7 +18,7 @@
 	</frames>
 
 	<state name="close">
-		<description lang="fr">Ce mur est orné d'un bas relief en forme de flêche. Elle vous indique la voie à suivre.</description>
+		<description lang="fr">Ce mur est orné d'un bas relief en forme de flèche.</description>
 		<animation> 0 </animation>
 
 		<hitbox x="6" y="26" width="35" height="16" />

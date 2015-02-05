@@ -33,7 +33,8 @@ public:
 
     void setVar(std::string varName, int value);
     int getVar(std::string varName);
-
+    bool isSet(std::string varName);
+    
 private:
 
     Game();

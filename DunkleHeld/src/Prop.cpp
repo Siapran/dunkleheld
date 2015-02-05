@@ -222,3 +222,15 @@ void Prop::showDescription() {
 void Prop::use(Actor* user) {
     
 }
+
+void Prop::doAction(std::string actionName) {
+
+}
+
+std::string Prop::getState() {
+    return m_currentState;
+}
+
+void Prop::setState(std::string stateName) {
+
+}

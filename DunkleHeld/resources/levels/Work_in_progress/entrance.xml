@@ -241,7 +241,7 @@
 			<destination file="main_hall_phase1" x="112" y="224"/>
 		</link>
 
-		<prop name="desk"		x="144"	y="144"	width="32"	height="16"	state="onlyone"/>
+		<prop name="desk "		x="144"	y="144"	width="32"	height="16"	state="onlyone"/>
 
 		<prop name="crate"	x="64"	y="144"	width="16"	height="16"	state="crate1"/>
 		<prop name="crate"	x="64"	y="160"	width="16"	height="16"	state="crate2"/>

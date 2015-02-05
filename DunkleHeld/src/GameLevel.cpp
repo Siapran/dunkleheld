@@ -8,11 +8,13 @@
 #include "GameLevel.h"
 #include "tinyXML/tinyxml.h"
 #include "Paintable.h"
+#include "Game.h"
 #include <SFML/Graphics.hpp>
 
 #include <stdio.h>
 #include <iostream>
 #include <math.h>
+#include <ctype.h>
 
 using std::cout;
 using std::endl;
@@ -137,15 +139,43 @@ void GameLevel::setVar(std::string varName, int value) {
 }
 
 int GameLevel::evalExpr(const char *expr) {
-    std::string token = "";
+    Token token;
+    std::string leftStr = "";
     std::string op = "+";
-    int tmp = 0;
-    for (reader = expr; reader != nullptr; ++reader) {
-        if (*reader == '(')
-            tmp = evalOp(tmp, evalExpr(reader + 1), op);
-
+    int total = 0;
+    token = readToken();
+    switch (token.type) {
+        case PAR:
+            ++reader;
+            if (token.value == "(") {
+                total = evalOp(total, evalExpr(reader), op);
+            }
+            if (token.value == ")") {
+                return total;
+            }
+            break;
+        case EXPREND:
+            return total;
+            break;
+        case INT:
+            total = evalOp(total, token.intVal, op);
+            break;
+        case STR:
+            if (op == "+") op = "==";
+            if (op == "==") total = leftStr == token.strVal;
+            if (op == "!=") total = leftStr != token.strVal;
+            leftStr = token.strVal;
+            break;
+        case OP:
+            op = token.value;
+            break;
+        default:
+            throw "INVALID TOKEN";
+            return total;
+            break;
     }
-    return 0
+
+    return total;
 }
 
 int GameLevel::evalOp(int left, int right, std::string op) {
@@ -170,13 +200,101 @@ int GameLevel::evalOp(int left, int right, std::string op) {
     return 0;
 }
 
-std::string GameLevel::readToken() {
-    std::string token = "";
-    for (; reader != nullptr; ++reader) {
+Token GameLevel::readToken() {
+    Token token;
+    if (*reader == '(' || *reader == ')') {
+        token.type = TokenType::PAR;
+        token.value = *reader++;
+    } else if (isdigit(*reader)) {
+        token.type = TokenType::INT;
+        do {
+            token.value += *reader++;
+        } while (isdigit(*reader));
+        token.intVal = std::atoi(token.value.c_str());
+    } else if (isalnum(*reader) || *reader == '_') {
+        do {
+            token.value += *reader++;
+        } while (isalnum(*reader) || *reader == '_');
+        if (*reader == '#') {
+            token.type = TokenType::OBJ;
+            do {
+                token.value += *reader++;
+            } while (isdigit(*reader));
+            token.objVal = token.value;
+            token.value = "";
+            if (*reader == '.') {
+                auto prop = findProp(token.objVal);
+                ++reader;
+                do {
+                    token.value += *reader++;
+                } while (isdigit(*reader));
+                if (token.value == "state") {
+                    token.type = TokenType::STR;
+                    token.strVal = prop->getState();
+                } else {
+                    token.type = TokenType::UNKNOWN;
+                }
+            } else {
+                if (isSet(token.value)) {
+                    token.type = TokenType::INT;
+                    token.intVal = getVar(token.value);
+                } else if (m_game->isSet(token.value)) {
+                    token.type = TokenType::INT;
+                    token.intVal = m_game->getVar(token.value);
+                } else if (token.value == "true") {
+                    token.type = TokenType::INT;
+                    token.intVal = 1;
+                } else if (token.value == "false") {
+                    token.type = TokenType::INT;
+                    token.intVal = 0;
+                } else {
+                    token.type = TokenType::STR;
+                    token.strVal = token.value;
+                }
+            }
+        }
+    } else if (
+            *reader == '+' ||
+            *reader == '-' ||
+            *reader == '*' ||
+            *reader == '/' ||
+
+            *reader == '=' ||
+            *reader == '!' ||
+            *reader == '<' ||
+            *reader == '>' ||
+
+            *reader == '&' ||
+            *reader == '|' ||
+            *reader == '^') {
+        token.type = TokenType::OP;
+        token.value = *reader;
         if (
-                (*reader >= 'a' && *reader <= 'z')
-                || (*reader >='A' && *reader <= 'Z')
-                || (*reader >='0' && *reader <= '9')
-                || *reader == '_')
+                *reader == '=' ||
+                *reader == '&' ||
+                *reader == '|') {
+            token.value += *reader++;
+        }
+    } else if (*reader == 0) {
+        token.type = TokenType::EXPREND;
+    } else {
+        token.type = TokenType::UNKNOWN;
+        token.value = *reader++;
     }
+    while (isblank(*reader)) ++reader;
+    return token;
 }
+
+bool GameLevel::isSet(std::string varName) {
+    return m_localVars.find(varName) != m_localVars.end();
+}
+
+Prop* GameLevel::findProp(std::string propName) {
+    auto found = m_objects.find(propName);
+    if (found != m_objects.end()) {
+        return dynamic_cast<Prop*> (found->second);
+    }
+    return nullptr;
+}
+
+

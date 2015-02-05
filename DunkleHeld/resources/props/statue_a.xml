@@ -17,7 +17,7 @@
 	</frames>
 
 	<state name="off">
-		<description lang="fr">On sens une aura s'en dégager. Que faut-il faire ?</description>
+		<description lang="fr">On sent une aura s'en dégager. Que faut-il faire ?</description>
 		<animation> 0 </animation>
 		<action name="statue_a_blue" state="blue">
 			<animation> 1 2 </animation>
