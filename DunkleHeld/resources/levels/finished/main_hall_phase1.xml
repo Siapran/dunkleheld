@@ -233,7 +233,7 @@
 		</data>
 	</layer>
 	<objectgroup name="props" width="0" height="0">
-		<prop name="door"		x="96"	y="0"	width="48"	height="32" id="1">
+		<prop name="door"		x="96"	y="0"	width="48"	height="32" id="1" state="close" >
 			<trigger exp="door_mh == true" id="1">
 				<action target="door" value="door_open" id="1"/>
 			</trigger>
@@ -263,7 +263,7 @@
 		<prop name="pebbles"	x="176"	y="48"	width="16"	height="16"	state="frame0" id="6"/>
 		<prop name="pebbles"	x="128"	y="48"	width="16"	height="16"	state="frame3" id="7"/>
 
-		<prop name="spikes"		x="48"	y="112"	width="16"	height="16"	id="1">
+		<prop name="spikes"		x="48"	y="112"	width="16"	height="16"	id="1" state="on">
 			<trigger exp="spikes_hall_off" id="2">
 				<action target="spikes#1" value="spikes_off"  id="2"/>
 				<action target="spikes#2" value="spikes_off"  id="3"/>
@@ -274,12 +274,12 @@
 				<action target="spikes#7" value="spikes_off"  id="8"/>
 			</trigger>
 		</prop>
-		<prop name="spikes"		x="64"	y="112"	width="16"	height="16"	id="2"/>
-		<prop name="spikes"		x="80"	y="64"	width="16"	height="16"	id="3"/>
-		<prop name="spikes"		x="80"	y="80"	width="16"	height="16"	id="4"/>
-		<prop name="spikes"		x="208"	y="144"	width="16"	height="16"	id="5"/>
-		<prop name="spikes"		x="208"	y="160"	width="16"	height="16"	id="6"/>
-		<prop name="spikes"		x="208"	y="176"	width="16"	height="16"	id="7"/>
+		<prop name="spikes"		x="64"	y="112"	width="16"	height="16"	id="2" state="on" />
+		<prop name="spikes"		x="80"	y="64"	width="16"	height="16"	id="3" state="on" />
+		<prop name="spikes"		x="80"	y="80"	width="16"	height="16"	id="4" state="on" />
+		<prop name="spikes"		x="208"	y="144"	width="16"	height="16"	id="5" state="on" />
+		<prop name="spikes"		x="208"	y="160"	width="16"	height="16"	id="6" state="on" />
+		<prop name="spikes"		x="208"	y="176"	width="16"	height="16"	id="7" state="on" />
 
 		<prop name="chest"		x="32"	y="32"	width="16"	height="16"	state="close" id="1">
 			<trigger exp="chest#1.state == open" id="3">

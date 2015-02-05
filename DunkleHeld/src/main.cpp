@@ -75,7 +75,9 @@ int main(int argc, char** argv) {
     //                << " : " << Collidable::resolveBoxVSCircle(box.getGlobalBounds(), circle.getPosition() + sf::Vector2f(circle.getRadius(), circle.getRadius()), circle.getRadius()) << endl;
     //    }
 
-    string levelName = "resources/levels/finished/entrance.xml";
+    string levelName = "resources/levels/finished/main_hall_phase1.xml";
+    //    string levelName = "resources/levels/finished/Exit.xml";
+    //    string levelName = "resources/levels/finished/entrance.xml";
     if (argc == 2) {
         levelName = argv[1];
     }

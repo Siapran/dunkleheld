@@ -266,6 +266,14 @@ void Prop::setState(std::string stateName) {
 }
 
 bool Prop::collidesWithCircle(sf::Vector2f pos, float radius) {
+    if (m_states[m_currentState]->solid) {
+        for (sf::FloatRect box : m_states[m_currentState]->hitBoxes) {
+            box.left += m_position.x;
+            box.top += m_position.y;
+            if (Collidable::collidesBoxVSCircle(box, pos, radius))
+                return true;
+        }
+    }
     return false;
 }
 
@@ -274,7 +282,16 @@ void Prop::onCollide(Actor* target) {
 }
 
 sf::Vector2f Prop::resoleCollision(sf::Vector2f pos, float radius) {
-    return sf::Vector2f();
+    sf::Vector2f total;
+    sf::Vector2f moved;
+    for (sf::FloatRect box : m_states[m_currentState]->hitBoxes) {
+        box.left += m_position.x;
+        box.top += m_position.y;
+        moved = Collidable::resolveBoxVSCircle(box, pos, radius);
+        pos += moved;
+        total += moved;
+    }
+    return total;
 }
 
 void Prop::setPosition(float x, float y) {
