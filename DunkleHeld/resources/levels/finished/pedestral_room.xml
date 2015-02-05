@@ -235,7 +235,7 @@
 	<objectgroup name="props" width="0" height="0">
 
 		<link x="96" y="224"	width="32"	height="16" id="1">
-			<trigger exp="has_crystal" id="1">
+			<trigger event="has_crystal" id="1">
 				<then>
 					<destination id="1" file="level2-room3-phase1" x1="128" y1="48" x2="128" y2="0"/>
 				</then>
