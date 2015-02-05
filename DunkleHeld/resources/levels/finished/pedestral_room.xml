@@ -234,35 +234,36 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<link x="96" y="224"	width="32"	height="16">
-			<trigger exp="has_crystal">
+		<link x="96" y="224"	width="32"	height="16" id="1">
+			<trigger exp="has_crystal" id="1">
 				<then>
-					<destination file="level2-room3-phase1" x1="128" y1="48" x2="128" y2="0"/>
+					<destination id="1" file="level2-room3-phase1" x1="128" y1="48" x2="128" y2="0"/>
 				</then>
 				<else>
-					<destination file="level2-room3-phase1" x1="128" y1="0"/>
+					<destination id="2" file="level2-room3-phase1" x1="128" y1="0"/>
 				</else>
 			</trigger>
 		</link>
 
-		<prop name="piedestal" x="104" y="72" width="16" height="16" state="blue">
-			<use>
-				<action target="piedestal" value="piedestal_red" />
-				<action target="statue_a" value="statue_a_red" />
-				<setvar scope="global" target="has_crystal" value="true" />
-				<setvar scope="global" target="golem_state" value="active_red"/>
+		<prop name="piedestal" x="104" y="72" width="16" height="16" state="blue" id="1">
+			<use id="1">
+				<action id="1" target="piedestal" value="piedestal_red" />
+				<action id="2" target="statue_a" value="statue_a_red" />
+				<setvar id="1" scope="global" target="has_crystal" value="true" />
+				<setvar id="2" scope="global" target="golem_state" value="active_red"/>
 			</use>
 		</prop>
 
-		<prop name="statue_a" x="32" y="96" width="32" height="32" state="blue"/>
-		<setvar scope="global" target="golem_state" value="inactive" />
-		<spawn name="golem" x="160" y="96" width="32" height="32" />
+		<prop name="statue_a" x="32" y="96" width="32" height="32" state="blue" id="1"/>
 
-		<prop name="pebbles" x="64" y="96" width="16" height="16" state="frame3"/>
-		<prop name="pebbles" x="80" y="112" width="16" height="16" state="frame1"/>
-		<prop name="pebbles" x="128" y="96" width="16" height="16" state="frame0"/>
-		<prop name="pebbles" x="128" y="112" width="16" height="16" state="frame2"/>
-		<prop name="pebbles" x="112" y="144" width="16" height="16" state="frame0"/>
+		<setvar  id="3"scope="global" target="golem_state" value="inactive" />
+		<spawn name="golem" x="160" y="96" width="32" height="32" id="1" />
 
+		<prop name="pebbles"  id="1" x="64" y="96" width="16" height="16" state="frame3"/>
+		<prop name="pebbles"  id="2" x="80" y="112" width="16" height="16" state="frame1"/>
+		<prop name="pebbles"  id="3" x="128" y="96" width="16" height="16" state="frame0"/>
+		<prop name="pebbles"  id="4" x="128" y="112" width="16" height="16" state="frame2"/>
+		<prop name="pebbles"  id="5" x="112" y="144" width="16" height="16" state="frame0"/>
+		
 	</objectgroup>
 </map>
