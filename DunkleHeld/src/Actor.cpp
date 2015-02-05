@@ -54,3 +54,11 @@ void Actor::setMovingFlags(sf::Uint32 movingFlags, bool mode) {
 void Actor::setPosition(sf::Vector2f position) {
     m_position = position;
 }
+
+bool Actor::collidesWithCircle(sf::Vector2f pos, float radius) {
+    return Collidable::collidesWithCircle(pos, radius + m_size);
+}
+
+sf::Vector2f Actor::resoleCollision(sf::Vector2f pos, float radius) {
+    return Collidable::collidesWithCircle(pos, radius + m_size);
+}

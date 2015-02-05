@@ -17,7 +17,15 @@ public:
     sf::Vector2f m_position;
 
     static float distance(sf::Vector2f a, sf::Vector2f b);
-    static float squareDistance(sf::Vector2f a, sf::Vector2f b);
+    static float squareDistance(sf::Vector2f a, sf::Vector2f b = sf::Vector2f());
+
+    static bool collidesBoxVSCircle(sf::FloatRect box,
+            sf::Vector2f pos, float radius);
+    static sf::Vector2f resolveBoxVSCircle(sf::FloatRect box,
+            sf::Vector2f pos, float radius);
+
+    static sf::Vector2f getCentre(sf::FloatRect box);
+    static inline float clamp(float left, float right, float z);
 };
 
 #endif	/* COLLIDABLE_H */
