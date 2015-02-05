@@ -233,25 +233,27 @@
 		</data>
 	</layer>
 	<objectgroup name="props" width="0" height="0">
-		<prop name="open_door" x="96" y="0" width="48" height="32" state="open"/>
-		<prop name="statue_a" x="32" y="32" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="32" y="80" width="32" height="32" state="blue"/>
-		<prop name="statue_a" x="32" y="128" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="32" y="176" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="176" y="176" width="32" height="32" state="blue"/>
-		<prop name="statue_a" x="176" y="128" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="176" y="80" width="32" height="32" state="blue"/>
-		<prop name="statue_a" x="176" y="32" width="32" height="32" state="blue"/>
+		<prop name="door" x="96" y="0" width="48" height="32" state="open" id="1"/>
+		<prop name="statue_a" x="32" y="32" width="32" height="32" state="blue" id="1"/>
+		<prop name="statue_b" x="32" y="80" width="32" height="32" state="blue" id="1"/>
+		<prop name="statue_a" x="32" y="128" width="32" height="32" state="blue" id="2"/>
+		<prop name="statue_b" x="32" y="176" width="32" height="32" state="blue" id="2"/>
+		<prop name="statue_b" x="176" y="176" width="32" height="32" state="blue" id="3"/>
+		<prop name="statue_a" x="176" y="128" width="32" height="32" state="blue" id="3"/>
+		<prop name="statue_b" x="176" y="80" width="32" height="32" state="blue" id="4"/>
+		<prop name="statue_a" x="176" y="32" width="32" height="32" state="blue" id="4"/>
 
-		<trigger name="golem turn off" x="64" y="176" width="112" height="16">
-			<setvar scope="global" name="golem_state" value="inactive"/>
-			<action target="statue_a" value="statue_a_off" />
-			<action target="statue_b" value="statue_b_off" />
+		<trigger name="golem turn off" x="64" y="176" width="112" height="16" id="1">
+			<setvar scope="global" name="golem_state" value="inactive" id="1"/>
+			<action target="statue_a" value="statue_a_off" id="1"/>
+			<action target="statue_b" value="statue_b_off" id="2"/>
 		</trigger>
 
-		<link x="96" y="224" width="48" height="16">
-			<destination file="level3_room1" x="640" y="0"/>
+		<link x="96" y="224" width="48" height="16" id="1">
+			<destination file="level3_room1" x="640" y="0" id="1"/>
 		</link>
-		<link x="96" y="0" width="48" height="16"/>
+		<link x="96" y="0" width="48" height="16" id="2">
+			<setvar scope="global" name="end" value="true" id="2"/>
+		</link>
 	</objectgroup>
 </map>

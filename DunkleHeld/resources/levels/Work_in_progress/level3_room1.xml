@@ -2509,12 +2509,12 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<link x="368" y="768" width="32" height="16">
-			<destination file="transition" x1="112" y1="32" x2="112" y2="0"/>
-			<setvar scope="global" target="golem_state" value="inactive"/>
+		<link x="368" y="768" width="32" height="16" id="1">
+			<destination file="transition" x1="112" y1="32" x2="112" y2="0" id="1"/>
+			<setvar scope="global" target="golem_state" value="inactive" id="1"/>
 		</link>
-		<link x="368" y="768" width="32" height="16">
-			<destination file="Exit" x1="112" y1="112" x2="112" y2="176"/>
+		<link x="368" y="768" width="32" height="16" id="2">
+			<destination file="Exit" x1="112" y1="112" x2="112" y2="176" id="2"/>
 		</link>
 
 		<prop name="door_b" x="144" y="672" width="48" height="48" id="1" state="close"/>
@@ -2532,370 +2532,370 @@
 
 
 		<prop name="pressure_plate" x="16" y="752" width="16" height="16" id="1" state="off">
-			<trigger expression="pressure_plate#1.state == on">
+			<trigger expression="pressure_plate#1.state == on" id="1">
 				<then>
-					<trigger expression="door_b#1.state == close">
+					<trigger expression="door_b#1.state == close" id="2">
 						<then>
-							<action target="door_b#1" value="open" />
+							<action target="door_b#1" value="open" id="1"/>
 						</then>
 						<else>
-							<action target="door_b#1" value="close" />
+							<action target="door_b#1" value="close" id="2"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="160" y="640" width="16" height="16" id="2" state="off">	
-			<trigger expression="pressure_plate#2.state == on">
+			<trigger expression="pressure_plate#2.state == on" id="3">
 				<then>
-					<trigger expression="door_b#2.state == close">
+					<trigger expression="door_b#2.state == close" id="4">
 						<then>
-							<action target="door_b#2" value="open" />
+							<action target="door_b#2" value="open" id="3"/>
 						</then>
 						<else>
-							<action target="door_b#2" value="close" />
+							<action target="door_b#2" value="close" id="4"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="704" y="544" width="16" height="16" id="3" state="off">
-			<trigger expression="pressure_plate#1.state == on">
+			<trigger expression="pressure_plate#1.state == on" id="5">
 				<then>
-					<trigger expression="door_b#1.state == close">
+					<trigger expression="door_b#1.state == close" id="6">
 						<then>
-							<action target="door_b#1" value="open" />
+							<action target="door_b#1" value="open" id="5"/>
 						</then>
 						<else>
-							<action target="door_b#1" value="close" />
+							<action target="door_b#1" value="close" id="6"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="64" y="416" width="16" height="16" id="4" state="off">
-			<trigger expression="pressure_plate#4.state == on">
+			<trigger expression="pressure_plate#4.state == on" id="7">
 				<then>
-					<trigger expression="door_b#4.state == close">
+					<trigger expression="door_b#4.state == close" id="8">
 						<then>
-							<action target="door_b#4" value="open" />
+							<action target="door_b#4" value="open" id="7"/>
 						</then>
 						<else>
-							<action target="door_b#4" value="close" />
+							<action target="door_b#4" value="close" id="8"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="144" y="416" width="16" height="16" id="5" state="off">
-			<trigger expression="pressure_plate#5.state == on">
+			<trigger expression="pressure_plate#5.state == on" id="9">
 				<then>
-					<trigger expression="door_b#8.state == close">
+					<trigger expression="door_b#8.state == close" id="10">
 						<then>
-							<action target="door_b#8" value="open" />
+							<action target="door_b#8" value="open" id="9"/>
 						</then>
 						<else>
-							<action target="door_b#8" value="close" />
+							<action target="door_b#8" value="close" id="10"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="224" y="416" width="16" height="16" id="6" state="off">
-			<trigger expression="pressure_plate#6.state == on">
+			<trigger expression="pressure_plate#6.state == on" id="11">
 				<then>
-					<trigger expression="door_b#11.state == close">
+					<trigger expression="door_b#11.state == close" id="12">
 						<then>
-							<action target="door_b#11" value="open" />
+							<action target="door_b#11" value="open" id="11"/>
 						</then>
 						<else>
-							<action target="door_b#11" value="close" />
+							<action target="door_b#11" value="close" id="12"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="208" y="32" width="16" height="16" id="7" state="off">
-			<trigger expression="pressure_plate#7.state == on">
+			<trigger expression="pressure_plate#7.state == on" id="13">
 				<then>
-					<trigger expression="door_b#8.state == close">
+					<trigger expression="door_b#8.state == close" id="14">
 						<then>
-							<action target="door_b#8" value="open" />
+							<action target="door_b#8" value="open" id="13"/>
 						</then>
 						<else>
-							<action target="door_b#8" value="close" />
+							<action target="door_b#8" value="close" id="14"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="288" y="32" width="16" height="16" id="8" state="off">
-			<trigger expression="pressure_plate#8.state == on">
+			<trigger expression="pressure_plate#8.state == on" id="15">
 				<then>
-					<trigger expression="door_b#8.state == close">
+					<trigger expression="door_b#8.state == close" id="16">
 						<then>
-							<action target="door_b#8" value="open" />
+							<action target="door_b#8" value="open" id="15"/>
 						</then>
 						<else>
-							<action target="door_b#8" value="close" />
+							<action target="door_b#8" value="close" id="16"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#10.state == close">
+					<trigger expression="door_b#10.state == close" id="17">
 						<then>
-							<action target="door_b#10" value="open" />
+							<action target="door_b#10" value="open" id="17"/>
 						</then>
 						<else>
-							<action target="door_b#10" value="close" />
+							<action target="door_b#10" value="close" id="18"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="368" y="32" width="16" height="16" id="9" state="off">
-			<<trigger expression="pressure_plate#9.state == on">
+			<<trigger expression="pressure_plate#9.state == on" id="18">
 				<then>
-					<trigger expression="door_b#6.state == close">
+					<trigger expression="door_b#6.state == close" id="19">
 						<then>
-							<action target="door_b#6" value="open" />
+							<action target="door_b#6" value="open" id="19"/>
 						</then>
 						<else>
-							<action target="door_b#6" value="close" />
+							<action target="door_b#6" value="close" id="20"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#9.state == close">
+					<trigger expression="door_b#9.state == close" id="20">
 						<then>
-							<action target="door_b#9" value="open" />
+							<action target="door_b#9" value="open" id="21"/>
 						</then>
 						<else>
-							<action target="door_b#9" value="close" />
+							<action target="door_b#9" value="close" id="22"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="448" y="32" width="16" height="16" id="10" state="off">
-			<trigger expression="pressure_plate#10.state == on">
+			<trigger expression="pressure_plate#10.state == on" id="21">
 				<then>
-					<trigger expression="door_b#12.state == close">
+					<trigger expression="door_b#12.state == close" id="22">
 						<then>
-							<action target="door_b#12" value="open" />
+							<action target="door_b#12" value="open" id="23"/>
 						</then>
 						<else>
-							<action target="door_b#12" value="close" />
+							<action target="door_b#12" value="close" id="24"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>	
 
-		<prop name="spikes" x="592" y="544" width="16" height="16"/>
-		<prop name="spikes" x="640" y="592" width="16" height="16"/>
-		<prop name="spikes" x="592" y="640" width="16" height="16"/>
-		<prop name="spikes" x="528" y="656" width="16" height="16"/>
-		<prop name="spikes" x="560" y="704" width="16" height="16"/>
-		<prop name="spikes" x="512" y="736" width="16" height="16"/>
-		<prop name="spikes" x="576" y="752" width="16" height="16"/>
-		<prop name="spikes" x="192" y="736" width="16" height="16"/>
-		<prop name="spikes" x="224" y="768" width="16" height="16"/>
-		<prop name="spikes" x="272" y="752" width="16" height="16"/>
-		<prop name="spikes" x="80" y="752" width="16" height="16"/>
-		<prop name="spikes" x="208" y="384" width="16" height="16"/>
-		<prop name="spikes" x="224" y="384" width="16" height="16"/>
-		<prop name="spikes" x="240" y="384" width="16" height="16"/>
-		<prop name="spikes" x="160" y="384" width="16" height="16"/>
-		<prop name="spikes" x="144" y="384" width="16" height="16"/>
-		<prop name="spikes" x="128" y="384" width="16" height="16"/>
-		<prop name="spikes" x="48" y="384" width="16" height="16"/>
-		<prop name="spikes" x="64" y="384" width="16" height="16"/>
-		<prop name="spikes" x="80" y="384" width="16" height="16"/>
-		<prop name="spikes" x="144" y="656" width="16" height="16"/>
-		<prop name="spikes" x="160" y="656" width="16" height="16"/>
-		<prop name="spikes" x="176" y="656" width="16" height="16"/>
-		<prop name="spikes" x="432" y="64" width="16" height="16"/>
-		<prop name="spikes" x="448" y="64" width="16" height="16"/>
-		<prop name="spikes" x="464" y="64" width="16" height="16"/>
+		<prop name="spikes" x="592" y="544" width="16" height="16" id="1"/>
+		<prop name="spikes" x="640" y="592" width="16" height="16" id="2"/>
+		<prop name="spikes" x="592" y="640" width="16" height="16" id="3"/>
+		<prop name="spikes" x="528" y="656" width="16" height="16" id="4"/>
+		<prop name="spikes" x="560" y="704" width="16" height="16" id="5"/>
+		<prop name="spikes" x="512" y="736" width="16" height="16" id="6"/>
+		<prop name="spikes" x="576" y="752" width="16" height="16" id="7"/>
+		<prop name="spikes" x="192" y="736" width="16" height="16" id="8"/>
+		<prop name="spikes" x="224" y="768" width="16" height="16" id="9"/>
+		<prop name="spikes" x="272" y="752" width="16" height="16" id="10"/>
+		<prop name="spikes" x="80" y="752" width="16" height="16" id="11"/>
+		<prop name="spikes" x="208" y="384" width="16" height="16" id="12"/>
+		<prop name="spikes" x="224" y="384" width="16" height="16" id="13"/>
+		<prop name="spikes" x="240" y="384" width="16" height="16" id="14"/>
+		<prop name="spikes" x="160" y="384" width="16" height="16" id="15"/>
+		<prop name="spikes" x="144" y="384" width="16" height="16" id="16"/>
+		<prop name="spikes" x="128" y="384" width="16" height="16" id="17"/>
+		<prop name="spikes" x="48" y="384" width="16" height="16" id="18"/>
+		<prop name="spikes" x="64" y="384" width="16" height="16" id="19"/>
+		<prop name="spikes" x="80" y="384" width="16" height="16" id="20"/>
+		<prop name="spikes" x="144" y="656" width="16" height="16" id="21"/>
+		<prop name="spikes" x="160" y="656" width="16" height="16" id="22"/>
+		<prop name="spikes" x="176" y="656" width="16" height="16" id="23"/>
+		<prop name="spikes" x="432" y="64" width="16" height="16" id="24"/>
+		<prop name="spikes" x="448" y="64" width="16" height="16" id="25"/>
+		<prop name="spikes" x="464" y="64" width="16" height="16" id="26"/>
 
 		<prop name="button" x="128" y="464" width="16" height="16" id="1" state="off">
-			<trigger expression="button#1.state == on">
+			<trigger expression="button#1.state == on" id="23">
 				<then>
-					<trigger expression="door_b#4.state == close">
+					<trigger expression="door_b#4.state == close" id="24">
 						<then>
-							<action target="door_b#4" value="open" />
+							<action target="door_b#4" value="open" id="25"/>
 						</then>
 						<else>
-							<action target="door_b#4" value="close" />
+							<action target="door_b#4" value="close" id="26"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#5.state == close">
+					<trigger expression="door_b#5.state == close" id="25">
 						<then>
-							<action target="door_b#5" value="open" />
+							<action target="door_b#5" value="open" id="27"/>
 						</then>
 						<else>
-							<action target="door_b#5" value="close" />
+							<action target="door_b#5" value="close" id="28"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="button" x="192" y="464" width="16" height="16"id="2" state="off">
-			<trigger expression="button#1.state == on">
+			<trigger expression="button#1.state == on" id="26">
 				<then>
-					<trigger expression="door_b2#.state == close">
+					<trigger expression="door_b2#.state == close" id="27">
 						<then>
-							<action target="door_b#2" value="open" />
+							<action target="door_b#2" value="open" id="29"/>
 						</then>
 						<else>
-							<action target="door_b#"2 value="close" />
+							<action target="door_b#"2 value="close" id="30"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#5.state == close">
+					<trigger expression="door_b#5.state == close" id="28">
 						<then>
-							<action target="door_b#5" value="open" />
+							<action target="door_b#5" value="open" id="31"/>
 						</then>
 						<else>
-							<action target="door_b#5" value="close" />
+							<action target="door_b#5" value="close" id="32"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="button" x="64" y="464" width="16" height="16" id="3" state="off">
-			<trigger expression="button#3.state == on">
+			<trigger expression="button#3.state == on" id="29">
 				<then>
-					<trigger expression="door_b#2.state == close">
+					<trigger expression="door_b#2.state == close" id="30">
 						<then>
-							<action target="door_b#2" value="open" />
+							<action target="door_b#2" value="open" id="33"/>
 						</then>
 						<else>
-							<action target="door_b#2" value="close" />
+							<action target="door_b#2" value="close" id="34"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#3.state == close">
+					<trigger expression="door_b#3.state == close" id="31">
 						<then>
-							<action target="door_b#3" value="open" />
+							<action target="door_b#3" value="open" id="35"/>
 						</then>
 						<else>
-							<action target="door_b#3" value="close" />
+							<action target="door_b#3" value="close" id="36"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="button" x="96" y="464" width="16" height="16" id="4" state="off">
-			<trigger expression="button#4.state == on">
+			<trigger expression="button#4.state == on" id="32">
 				<then>
-					<trigger expression="door_b#4.state == close">
+					<trigger expression="door_b#4.state == close" id="33">
 						<then>
-							<action target="door_b#4" value="open" />
+							<action target="door_b#4" value="open" id="37"/>
 						</then>
 						<else>
-							<action target="door_b#4" value="close" />
+							<action target="door_b#4" value="close" id="38"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#6.state == close">
+					<trigger expression="door_b#6.state == close" id="34">
 						<then>
-							<action target="door_b#6" value="open" />
+							<action target="door_b#6" value="open" id="39"/>
 						</then>
 						<else>
-							<action target="door_b#6" value="close" />
+							<action target="door_b#6" value="close" id="40"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="button" x="160" y="464" width="16" height="16" id="5" state="off">
-			<trigger expression="button#5.state == on">
+			<trigger expression="button#5.state == on" id="35">
 				<then>
-					<trigger expression="door_b#7.state == close">
+					<trigger expression="door_b#7.state == close" id="36">
 						<then>
-							<action target="door_b#7" value="open" />
+							<action target="door_b#7" value="open" id="41"/>
 						</then>
 						<else>
-							<action target="door_b#7" value="close" />
+							<action target="door_b#7" value="close" id="42"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#5.state == close">
+					<trigger expression="door_b#5.state == close" id="37">
 						<then>
-							<action target="door_b#5" value="open" />
+							<action target="door_b#5" value="open" id="43"/>
 						</then>
 						<else>
-							<action target="door_b#5" value="close" />
+							<action target="door_b#5" value="close" id="44"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="button" x="224" y="464" width="16" height="16" id="6" state="off">
-			<trigger expression="button#6.state == on">
+			<trigger expression="button#6.state == on" id="38">
 				<then>
-					<trigger expression="door_b#4.state == close">
+					<trigger expression="door_b#4.state == close" id="39">
 						<then>
-							<action target="door_b#4" value="open" />
+							<action target="door_b#4" value="open" id="45"/>
 						</then>
 						<else>
-							<action target="door_b#4" value="close" />
+							<action target="door_b#4" value="close" id="46"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#3.state == close">
+					<trigger expression="door_b#3.state == close" id="40">
 						<then>
-							<action target="door_b#3" value="open" />
+							<action target="door_b#3" value="open" id="47"/>
 						</then>
 						<else>
-							<action target="door_b#3" value="close" />
+							<action target="door_b#3" value="close" id="48"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 		<prop name="button" x="704" y="496" width="16" height="16" id="7" state="off">
-			<trigger expression="button#7.state == on">
+			<trigger expression="button#7.state == on" id="41">
 				<then>
-					<trigger expression="door_b#3.state == close">
+					<trigger expression="door_b#3.state == close" id="42">
 						<then>
-							<action target="door_b#3" value="open" />
+							<action target="door_b#3" value="open" id="49"/>
 						</then>
 						<else>
-							<action target="door_b#3" value="close" />
+							<action target="door_b#3" value="close" id="50"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#7.state == close">
+					<trigger expression="door_b#7.state == close" id="43">
 						<then>
-							<action target="door_b#7" value="open" />
+							<action target="door_b#7" value="open" id="51"/>
 						</then>
 						<else>
-							<action target="door_b#7" value="close" />
+							<action target="door_b#7" value="close" id="52"/>
 						</else>
 					</trigger>
 				</then>
 			</trigger>
 		</prop>
 
-		<prop name="statue_b" x="432" y="464" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="432" y="400" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="432" y="336" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="432" y="272" width="32" height="32" state="blue"/>
+		<prop name="statue_b" x="432" y="464" width="32" height="32" state="blue" id="1"/>
+		<prop name="statue_b" x="432" y="400" width="32" height="32" state="blue" id="2"/>
+		<prop name="statue_b" x="432" y="336" width="32" height="32" state="blue" id="3"/>
+		<prop name="statue_b" x="432" y="272" width="32" height="32" state="blue" id="4"/>
 
-		<prop name="statue_a" x="592" y="48" width="32" height="32" state="blue"/>
-		<prop name="statue_a" x="592" y="144" width="32" height="32" state="blue"/>
-		<prop name="statue_a" x="672" y="144" width="32" height="32" state="blue"/>
-		<prop name="statue_a" x="672" y="48" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="592" y="96" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="592" y="192" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="672" y="192" width="32" height="32" state="blue"/>
-		<prop name="statue_b" x="672" y="96" width="32" height="32" state="blue"/>
+		<prop name="statue_a" x="592" y="48" width="32" height="32" state="blue" id="1"/>
+		<prop name="statue_a" x="592" y="144" width="32" height="32" state="blue" id="2"/>
+		<prop name="statue_a" x="672" y="144" width="32" height="32" state="blue" id="3"/>
+		<prop name="statue_a" x="672" y="48" width="32" height="32" state="blue" id="4"/>
+		<prop name="statue_b" x="592" y="96" width="32" height="32" state="blue" id="5"/>
+		<prop name="statue_b" x="592" y="192" width="32" height="32" state="blue" id="6"/>
+		<prop name="statue_b" x="672" y="192" width="32" height="32" state="blue" id="7"/>
+		<prop name="statue_b" x="672" y="96" width="32" height="32" state="blue" id="8"/>
 
-		<prop name="cube_big" x="80" y="480" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="144" y="480" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="208" y="480" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="720" y="512" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="688" y="512" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="352" y="720" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="416" y="720" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="608" y="64" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="608" y="112" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="608" y="160" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="672" y="160" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="672" y="112" width="16" height="16" state="blue"/>
-		<prop name="cube_big" x="672" y="64" width="16" height="16" state="blue"/>
+		<prop name="cube_big" x="80" y="480" width="16" height="16" state="blue" id="1"/>
+		<prop name="cube_big" x="144" y="480" width="16" height="16" state="blue" id="2"/>
+		<prop name="cube_big" x="208" y="480" width="16" height="16" state="blue" id="3"/>
+		<prop name="cube_big" x="720" y="512" width="16" height="16" state="blue" id="4"/>
+		<prop name="cube_big" x="688" y="512" width="16" height="16" state="blue" id="5"/>
+		<prop name="cube_big" x="352" y="720" width="16" height="16" state="blue" id="6"/>
+		<prop name="cube_big" x="416" y="720" width="16" height="16" state="blue" id="7"/>
+		<prop name="cube_big" x="608" y="64" width="16" height="16" state="blue" id="8"/>
+		<prop name="cube_big" x="608" y="112" width="16" height="16" state="blue" id="9"/>
+		<prop name="cube_big" x="608" y="160" width="16" height="16" state="blue" id="10"/>
+		<prop name="cube_big" x="672" y="160" width="16" height="16" state="blue" id="11"/>
+		<prop name="cube_big" x="672" y="112" width="16" height="16" state="blue" id="12"/>
+		<prop name="cube_big" x="672" y="64" width="16" height="16" state="blue" id="13"/>
 	</propgroup>
 </map>
