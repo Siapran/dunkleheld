@@ -71,7 +71,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/usr/lib `pkg-config --libs sfml-all`  
+LDLIBSOPTIONS=-L/usr/lib -L/usr/local/lib `pkg-config --libs sfml-all`  
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -84,102 +84,102 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/dunkleheld: ${OBJECTFILES}
 ${OBJECTDIR}/src/Actor.o: src/Actor.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Actor.o src/Actor.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Actor.o src/Actor.cpp
 
 ${OBJECTDIR}/src/AnimatedSprite.o: src/AnimatedSprite.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/AnimatedSprite.o src/AnimatedSprite.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/AnimatedSprite.o src/AnimatedSprite.cpp
 
 ${OBJECTDIR}/src/Animation.o: src/Animation.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Animation.o src/Animation.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Animation.o src/Animation.cpp
 
 ${OBJECTDIR}/src/Collidable.o: src/Collidable.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Collidable.o src/Collidable.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Collidable.o src/Collidable.cpp
 
 ${OBJECTDIR}/src/Controller.o: src/Controller.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller.o src/Controller.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller.o src/Controller.cpp
 
 ${OBJECTDIR}/src/Game.o: src/Game.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Game.o src/Game.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Game.o src/Game.cpp
 
 ${OBJECTDIR}/src/GameLevel.o: src/GameLevel.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameLevel.o src/GameLevel.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameLevel.o src/GameLevel.cpp
 
 ${OBJECTDIR}/src/GameObject.o: src/GameObject.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameObject.o src/GameObject.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameObject.o src/GameObject.cpp
 
 ${OBJECTDIR}/src/Paintable.o: src/Paintable.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Paintable.o src/Paintable.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Paintable.o src/Paintable.cpp
 
 ${OBJECTDIR}/src/Professor.o: src/Professor.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Professor.o src/Professor.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Professor.o src/Professor.cpp
 
 ${OBJECTDIR}/src/Prop.o: src/Prop.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Prop.o src/Prop.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Prop.o src/Prop.cpp
 
 ${OBJECTDIR}/src/Tile.o: src/Tile.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Tile.o src/Tile.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Tile.o src/Tile.cpp
 
 ${OBJECTDIR}/src/TileMap.o: src/TileMap.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TileMap.o src/TileMap.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TileMap.o src/TileMap.cpp
 
 ${OBJECTDIR}/src/TileSet.o: src/TileSet.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TileSet.o src/TileSet.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TileSet.o src/TileSet.cpp
 
 ${OBJECTDIR}/src/Trigger.o: src/Trigger.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Trigger.o src/Trigger.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Trigger.o src/Trigger.cpp
 
 ${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
 
 ${OBJECTDIR}/src/tinyXML/tinystr.o: src/tinyXML/tinystr.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/tinyXML
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tinyXML/tinystr.o src/tinyXML/tinystr.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tinyXML/tinystr.o src/tinyXML/tinystr.cpp
 
 ${OBJECTDIR}/src/tinyXML/tinyxml.o: src/tinyXML/tinyxml.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/tinyXML
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tinyXML/tinyxml.o src/tinyXML/tinyxml.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tinyXML/tinyxml.o src/tinyXML/tinyxml.cpp
 
 ${OBJECTDIR}/src/tinyXML/tinyxmlerror.o: src/tinyXML/tinyxmlerror.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/tinyXML
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tinyXML/tinyxmlerror.o src/tinyXML/tinyxmlerror.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tinyXML/tinyxmlerror.o src/tinyXML/tinyxmlerror.cpp
 
 ${OBJECTDIR}/src/tinyXML/tinyxmlparser.o: src/tinyXML/tinyxmlparser.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/tinyXML
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tinyXML/tinyxmlparser.o src/tinyXML/tinyxmlparser.cpp
+	$(COMPILE.cc) -g -I/usr/include -I/usr/local/include `pkg-config --cflags sfml-all` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/tinyXML/tinyxmlparser.o src/tinyXML/tinyxmlparser.cpp
 
 # Subprojects
 .build-subprojects:

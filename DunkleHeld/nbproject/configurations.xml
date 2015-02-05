@@ -20,30 +20,6 @@
       <itemPath>src/TileSet.h</itemPath>
       <itemPath>src/Trigger.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="f1" displayName="lib" projectFiles="true">
-      <itemPath>src/tinyXML/tinystr.cpp</itemPath>
-      <itemPath>src/tinyXML/tinystr.h</itemPath>
-      <itemPath>src/tinyXML/tinyxml.cpp</itemPath>
-      <itemPath>src/tinyXML/tinyxml.h</itemPath>
-      <itemPath>src/tinyXML/tinyxmlerror.cpp</itemPath>
-      <itemPath>src/tinyXML/tinyxmlparser.cpp</itemPath>
-    </logicalFolder>
-    <logicalFolder name="nbproject" displayName="nbproject" projectFiles="true">
-      <logicalFolder name="private" displayName="private" projectFiles="true">
-        <itemPath>nbproject/private/Makefile-variables.mk</itemPath>
-        <itemPath>nbproject/private/configurations.xml</itemPath>
-        <itemPath>nbproject/private/launcher.properties</itemPath>
-        <itemPath>nbproject/private/private.xml</itemPath>
-      </logicalFolder>
-      <itemPath>nbproject/Makefile-Debug.mk</itemPath>
-      <itemPath>nbproject/Makefile-Release.mk</itemPath>
-      <itemPath>nbproject/Makefile-impl.mk</itemPath>
-      <itemPath>nbproject/Makefile-variables.mk</itemPath>
-      <itemPath>nbproject/Package-Debug.bash</itemPath>
-      <itemPath>nbproject/Package-Release.bash</itemPath>
-      <itemPath>nbproject/configurations.xml</itemPath>
-      <itemPath>nbproject/project.xml</itemPath>
-    </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
@@ -68,6 +44,18 @@
       <itemPath>src/Trigger.cpp</itemPath>
       <itemPath>src/main.cpp</itemPath>
     </logicalFolder>
+    <logicalFolder name="src" displayName="src" projectFiles="true">
+      <logicalFolder name="editor" displayName="editor" projectFiles="true">
+      </logicalFolder>
+      <logicalFolder name="tinyXML" displayName="tinyXML" projectFiles="true">
+        <itemPath>src/tinyXML/tinystr.cpp</itemPath>
+        <itemPath>src/tinyXML/tinystr.h</itemPath>
+        <itemPath>src/tinyXML/tinyxml.cpp</itemPath>
+        <itemPath>src/tinyXML/tinyxml.h</itemPath>
+        <itemPath>src/tinyXML/tinyxmlerror.cpp</itemPath>
+        <itemPath>src/tinyXML/tinyxmlparser.cpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
                    projectFiles="false"
@@ -81,8 +69,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>/home/siapran/Programming/C++/SFML/Donker Held/src/tinyXML</Elem>
-    <Elem>nbproject</Elem>
+    <Elem>src</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -97,50 +84,19 @@
           <standard>8</standard>
           <incDir>
             <pElem>/usr/include</pElem>
+            <pElem>/usr/local/include</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
           <linkerAddLib>
             <pElem>/usr/lib</pElem>
+            <pElem>/usr/local/lib</pElem>
           </linkerAddLib>
           <linkerLibItems>
             <linkerOptionItem>`pkg-config --libs sfml-all`</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="nbproject/Makefile-Debug.mk" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Makefile-Release.mk" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Makefile-impl.mk" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Makefile-variables.mk" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Package-Debug.bash" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Package-Release.bash" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/configurations.xml" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/private/Makefile-variables.mk"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="nbproject/private/configurations.xml"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="nbproject/private/launcher.properties"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="nbproject/private/private.xml" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/project.xml" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="src/Actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Actor.h" ex="false" tool="3" flavor2="0">
@@ -236,39 +192,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="nbproject/Makefile-Debug.mk" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Makefile-Release.mk" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Makefile-impl.mk" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Makefile-variables.mk" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Package-Debug.bash" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/Package-Release.bash" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/configurations.xml" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/private/Makefile-variables.mk"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="nbproject/private/configurations.xml"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="nbproject/private/launcher.properties"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="nbproject/private/private.xml" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="nbproject/project.xml" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="src/Actor.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Actor.h" ex="false" tool="3" flavor2="0">
