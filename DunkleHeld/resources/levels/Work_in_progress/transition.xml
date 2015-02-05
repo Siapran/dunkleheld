@@ -234,18 +234,19 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<link x="112" y="0"	width="32"	height="16">
-			<destination file="main_hall_right_phase2" x1="208" y1="160" x2="224" y2="144"/>
+		<link x="112" y="0"	width="32"	height="16" id="1">
+			<destination file="main_hall_right_phase2" x1="208" y1="160" x2="224" y2="144" id="1"/>
 		</link>
 
-		<link x="0"	y="144"	width="16"	height="48">
-			<destination file="level3_room1" x1="368" y1="752" x2="368" y2="768"/>
+		<link x="0"	y="144"	width="16"	height="48" id="2">
+			<destination file="level3_room1" x1="368" y1="752" x2="368" y2="768" id="2"/>
 		</link>
 
-		<prop name="pebbles"	x="128"	y="64"	width="16"	height="16"/>
-		<prop name="pebbles"	x="64"	y="128"	width="16"	height="16"/>
-		<prop name="pebbles"	x="48"	y="32"	width="16"	height="16"/>
-		<prop name="pebbles"	x="160"	y="112"	width="16"	height="16"/>
-		<prop name="statue_b"	x="160"	y="64"	width="32"	height="32" state="blue"/>
+		<prop name="pebbles"	x="128"	y="64"	width="16"	height="16"id="1"/>
+		<prop name="pebbles"	x="64"	y="128"	width="16"	height="16"id="2"/>
+		<prop name="pebbles"	x="48"	y="32"	width="16"	height="16"id="3"/>
+		<prop name="pebbles"	x="160"	y="112"	width="16"	height="16"id="4"/>
+		
+		<prop name="statue_b"	x="160"	y="64"	width="32"	height="32" state="blue"id="1"/>
 	</objectgroup>
 </map>

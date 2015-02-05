@@ -234,18 +234,25 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 		<prop name="door"		x="96"	y="0"	width="48"	height="32" id="1">
-			<trigger exp="cyan1 && cyan2">
-				<action target="door" value="door_open" />
-			</trigger></prop>
+			<trigger exp="door_mh == true" id="1">
+				<action target="door" value="door_open" id="1"/>
+			</trigger>
+		</prop>
 		
 		<link x="112" y="224"	width="16"	height="16" id="1">
-			<destination file="entrance" x="112"	y="32"/>
+			<destination file="entrance" x="112"	y="32" id="1"/>
 		</link>
+
 		<link x="0"	y="144"	width="16"	height="48" id="2">
-			<destination file="main_hall_left_phase1" x="224" y="160"/>
+			<destination file="main_hall_left_phase1" x="224" y="160" id="2"/>
 		</link>
+
 		<link x="96"	y="0"	width="48"	height="16" id="3">
-			<destination file="level2-room1-phase1" x="112" y="224"/>
+			<destination file="level2-room1-phase1" x="112" y="224" id="3"/>
+		</link>
+
+		<link x="224"	y="144"	width="48"	height="16" id="4">
+			<destination file="main_hall_right_phase2" x="0" y="44" id="4"/>
 		</link>
 
 		<prop name="pebbles"	x="160"	y="192"	width="16"	height="16"	state="frame1" id="1"/>
@@ -257,9 +264,16 @@
 		<prop name="pebbles"	x="128"	y="48"	width="16"	height="16"	state="frame3" id="7"/>
 
 		<prop name="spikes"		x="48"	y="112"	width="16"	height="16"	id="1">
-			<trigger exp="spikes_hall_off">
-				<action target="spikes" value="door_open" />
-			</trigger></prop>
+			<trigger exp="spikes_hall_off" id="2">
+				<action target="spikes#1" value="spikes_off"  id="2"/>
+				<action target="spikes#2" value="spikes_off"  id="3"/>
+				<action target="spikes#3" value="spikes_off"  id="4"/>
+				<action target="spikes#4" value="spikes_off"  id="5"/>
+				<action target="spikes#5" value="spikes_off"  id="6"/>
+				<action target="spikes#6" value="spikes_off"  id="7"/>
+				<action target="spikes#7" value="spikes_off"  id="8"/>
+			</trigger>
+		</prop>
 		<prop name="spikes"		x="64"	y="112"	width="16"	height="16"	id="2"/>
 		<prop name="spikes"		x="80"	y="64"	width="16"	height="16"	id="3"/>
 		<prop name="spikes"		x="80"	y="80"	width="16"	height="16"	id="4"/>
@@ -268,12 +282,13 @@
 		<prop name="spikes"		x="208"	y="176"	width="16"	height="16"	id="7"/>
 
 		<prop name="chest"		x="32"	y="32"	width="16"	height="16"	state="close" id="1">
-			<trigger exp="chest#1.state == open">
-				<setvar scope="global" target="chest_main_hall" value="true" />
-			</trigger></prop>
+			<trigger exp="chest#1.state == open" id="3">
+				<setvar scope="global" target="chest_main_hall" value="true" id="1"/>
+			</trigger>
+		</prop>
 
-		<examine name="writings" x="112" y="160" width="16" height="16">
-			<description lang="fr">La voie se liberera en temps de grand besoin.</descripion>
+		<examine name="writings" x="112" y="160" width="16" height="16" id="1">
+			<description lang="fr" id="1">La voie se liberera en temps de grand besoin.</descripion>
 		</examine>
 	</objectgroup>
 </map>

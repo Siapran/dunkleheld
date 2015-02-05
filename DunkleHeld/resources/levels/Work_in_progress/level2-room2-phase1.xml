@@ -234,52 +234,50 @@
 	</layer>
 	<objectgroup name="props" width="0" height="0">
 
-		<link x="144"	y="224"	width="32"	height="16">
-			<trigger exp="has_crystal">
+		<link x="144"	y="224"	width="32"	height="16" id="1">
+			<trigger exp="has_crystal" id="1">
 				<then>
-					<destination file="level2-room1-phase1" x1="144" y1="48" x2="144" y2="0"/>
+					<destination file="level2-room1-phase1" x1="144" y1="48" x2="144" y2="0" id="1"/>
 				</then>
 				<else>
-					<destination file="level2-room1-phase1" x="144" y="0"/>
+					<destination file="level2-room1-phase1" x="144" y="0" id="2"/>
 				</else>
 			</trigger>
 		</link>
-		<link x="128"	y="0"	width="32"	height="16">
-			<trigger exp="has_crystal">
+		<link x="128"	y="0"	width="32"	height="16" id="2">
+			<trigger exp="has_crystal" id="2">
 				<then>
-					<destination file="level2-room3-phase1" x1="144" y1="176" x2="144" y2="208"/>
+					<destination file="level2-room3-phase1" x1="144" y1="176" x2="144" y2="208" id="3"/>
 				</then>
 				<else>
-					<destination file="level2-room3-phase1" x="144" y="224"/>
+					<destination file="level2-room3-phase1" x="144" y="224" id="4"/>
 				</else>
 			</trigger>
 		</link>
 
-		<prop name="spikes" x="96" y="64" width="16" height="96" state="off"/>
-		<prop name="spikes" x="112" y="64" width="16" height="96" state="off">
-			<trigger exp="has_crystal">
+		<prop name="spikes" x="96" y="64" width="16" height="96" state="off" id="1"/>
+		<prop name="spikes" x="112" y="64" width="16" height="96" state="off id="2"">
+			<trigger exp="has_crystal" id="3">
 				<then>
-					<action target="spikes" value="spikes_on" />
+					<action target="spikes" value="spikes_on" id="1"/>
 				</then>
 				<else>
-					<action target="spikes" value="spikes_off" />
+					<action target="spikes" value="spikes_off" id="2"/>
 				</else>
 			</trigger></prop>
 
-		<!-- <prop name="golemspawn" x="112" y="32" width="16" height="32"/> -->
-
-		<examine name="writings" x="16" y="80" width="16" height="16">
-			<description lang="fr">Ne pas jeter de squelettes dans ce trou.</descripion>
+		<examine name="writings" x="16" y="80" width="16" height="16" id="1">
+			<description lang="fr" id="1">Ne pas jeter de squelettes dans ce trou.</descripion>
 		</examine>
 
-		<prop name="pebbles" x="16" y="144" width="16" height="16" state="frame1"/>
-		<prop name="pebbles" x="32" y="192" width="16" height="16" state="frame3"/>
-		<prop name="pebbles" x="160" y="160" width="16" height="16" state="frame2"/>
-		<prop name="pebbles" x="192" y="176" width="16" height="16" state="frame0"/>
-		<prop name="pebbles" x="176" y="48" width="16" height="16" state="frame0"/>
-		<prop name="pebbles" x="208" y="32" width="16" height="16" state="frame1"/>
-		<prop name="pebbles" x="48" y="48" width="16" height="16" state="frame3"/>
-		<prop name="pebbles" x="64" y="112" width="16" height="16" state="frame1"/>
+		<prop name="pebbles" x="16" y="144" width="16" height="16" state="frame1" id="1"/>
+		<prop name="pebbles" x="32" y="192" width="16" height="16" state="frame3" id="2"/>
+		<prop name="pebbles" x="160" y="160" width="16" height="16" state="frame2" id="3"/>
+		<prop name="pebbles" x="192" y="176" width="16" height="16" state="frame0" id="4"/>
+		<prop name="pebbles" x="176" y="48" width="16" height="16" state="frame0" id="5"/>
+		<prop name="pebbles" x="208" y="32" width="16" height="16" state="frame1" id="6"/>
+		<prop name="pebbles" x="48" y="48" width="16" height="16" state="frame3" id="7"/>
+		<prop name="pebbles" x="64" y="112" width="16" height="16" state="frame1" id="8"/>
 
 	</objectgroup>
 </map>

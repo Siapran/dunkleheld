@@ -248,47 +248,129 @@
 		</data>
 	</layer>
 	<objectgroup name="props" width="0" height="0">
-		<link x="0"	y="144"	width="16"	height="48">
-			<destination file="main_hall_phase2" x1="176" y1="160" x2="208" y2="144"/>
-		</link>
-		<link x="224"	y="144"	width="16"	height="48">
-			<destination file="transition" x1="32" y1="160" x2="0" y2="144"/>
+		
+		<link x="0"	y="144"	width="16"	height="48" id="1">
+			<trigger exp="has_crystal" id="666">
+				<then>
+					<destination file="main_hall_phase2" x1="176" y1="160" x2="208" y2="144" id="1"/>
+				</then>
+				<else>
+					<destination file="main_hall_phase1" x1="176" y1="160" x2="208" y2="144" id="2"/>
+				</else>
+			</link>
+		</trigger>
+
+
+		<link x="224"	y="144"	width="16"	height="48" id="2">
+			<destination file="transition" x1="32" y1="160" x2="0" y2="144" id="3"/>
 		</link>
 
-		<prop name="cube_big"	x="80"	y="192"	width="16"	height="16"	state="blue"/>
-		<prop name="cube_big"	x="112"	y="192"	width="16"	height="16"	state="green"/>
-		<prop name="cube_big"	x="144"	y="192"	width="16"	height="16"	state="red"/>
+		<prop name="cube_big"	x="80"	y="192"	width="16"	height="16"	state="blue" id="1"/>
+		<prop name="cube_big"	x="112"	y="192"	width="16"	height="16"	state="green" id="2"/>
+		<prop name="cube_big"	x="144"	y="192"	width="16"	height="16"	state="red" id="3"/>
+		<prop name="cube_big"	x="128"	y="96"	width="16"	height="16" state="blue" id="4"/>
+		<prop name="cube_big"	x="96"	y="96"	width="16"	height="16" state="blue" id="5"/>
 
 		<prop name="switch"		x="80"	y="176"	width="16"	height="16"	id="1"	state="off">
-			<trigger exp="switch#1:switch_on">
-				<setvar scope="global" target="cyan1" value="switch#1.state == on" />
-			</trigger></prop>
-		<prop name="switch"		x="112"	y="176"	width="16"	height="16"	id="2"	state="off">
-			<trigger exp="switch#2:switch_on">
-				<setvar scope="global" target="cyan1" value="switch#2.state == on" />
-			</trigger></prop>
-		<prop name="switch"		x="144"	y="176"	width="16"	height="16"	id="3"	state="off"/>
+			<trigger exp="switch#1.state == on" id="1">
+				<setvar scope="local" target="cyan1" value="switch#1.state == on" id="1" />
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="2">
+					<then>
+						<setvar scope="global" name="door_mh" value="true" id="2"/>
+					</then>
+					<else>
+						<setvar scope="global" name="door_mh" value="false" id="3"/>
+					</else>
+				</trigger>
+			</trigger>
+			<trigger exp="switch#1.state == off" id="3">
+				<setvar scope="local" target="cyan1" value="switch#1.state == off"  id="4"/>
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="4">
+					<then>
+						<setvar scope="global" name="door_mh" value="true" id="5"/>
+					</then>
+					<else>
+						<setvar scope="global" name="door_mh" value="false" id="6"/>
+					</else>
+				</trigger>
+			</trigger>
+		</prop>
 
-		<examine name="writings"	x="112"	y="80"	width="16"	height="16">
-			<description lang="fr">L'intrus devra résoudre cette énigme s'il souhaite revoir le ciel.</descripion>
+		<prop name="switch"		x="112"	y="176"	width="16"	height="16"	id="2"	state="off">
+			<trigger exp="switch#2.state == on" id="5">
+				<setvar scope="local" target="cyan2" value="switch#2.state == on"  id="7"/>
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="6">
+					<then>
+						<setvar scope="global" name="door_mh" value="true" id="8"/>
+					</then>
+					<else>
+						<setvar scope="global" name="door_mh" value="false" id="9"/>
+					</else>
+				</trigger>
+			</trigger>
+			<trigger exp="switch#2.state == off" id="7">
+				<setvar scope="local" target="cyan2" value="switch#2.state == off" id="10"/>
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="8">
+					<then>
+						<setvar scope="global" name="door_mh" value="true"id="11"/>
+					</then>
+					<else>
+						<setvar scope="global" name="door_mh" value="false"id="12"/>
+					</else>
+				</trigger>
+			</trigger>
+		</prop>
+
+		<prop name="switch"		x="144"	y="176"	width="16"	height="16"	id="3"	state="off">
+			<trigger exp="switch#3.state == on" id="9">
+				<setvar scope="local" target="cyan3" value="switch#3.state == on" id="13"/>
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="10">
+					<then>
+						<setvar scope="global" name="door_mh" value="true"id="14"/>
+					</then>
+					<else>
+						<setvar scope="global" name="door_mh" value="false"id="15"/>
+					</else>
+				</trigger>
+			</trigger>
+			<trigger exp="switch#3.state == off" id="11">
+				<setvar scope="local" target="cyan3" value="switch#3.state == off" id="16"/>
+				<trigger exp="(cyan1 & cyan2) & !cyan3" id="12">
+					<then>
+						<setvar scope="global" name="door_mh" value="true"id="17"/>
+					</then>
+					<else>
+						<setvar scope="global" name="door_mh" value="false"id="18"/>
+					</else>
+				</trigger>
+			</trigger>
+		</prop>
+
+		<examine name="writings"	x="112"	y="80"	width="16"	height="16" id="1">
+			<description lang="fr" id="1">L'intrus devra résoudre cette énigme s'il souhaite revoir le ciel.</descripion>
 		</examine>
 
-		<prop name="statue_a"	x="48"	y="96"	width="32"	height="32"	state="blue"/>
-		<prop name="statue_a"	x="160"	y="96"	width="32"	height="32"	state="blue"/>
+		<prop name="statue_a"	x="48"	y="96"	width="32"	height="32"	state="blue" id="1"/>
+		<prop name="statue_a"	x="160"	y="96"	width="32"	height="32"	state="blue" id="2"/>
 
-		<prop name="pebbles"	x="176"	y="176"	width="16"	height="16"	state="frame1"/>
-		<prop name="pebbles"	x="96"	y="112"	width="16"	height="16"	state="frame3"/>
-		<prop name="pebbles"	x="48"	y="176"	width="16"	height="16"	state="frame1"/>
-		<prop name="pebbles"	x="16"	y="144"	width="16"	height="16"	state="frame0"/>
-		<prop name="pebbles"	x="144"	y="128"	width="16"	height="16"	state="frame2"/>
+		<prop name="pebbles"	x="176"	y="176"	width="16"	height="16"	state="frame1" id="1"/>
+		<prop name="pebbles"	x="96"	y="112"	width="16"	height="16"	state="frame3" id="2"/>
+		<prop name="pebbles"	x="48"	y="176"	width="16"	height="16"	state="frame1" id="3"/>
+		<prop name="pebbles"	x="16"	y="144"	width="16"	height="16"	state="frame0" id="4"/>
+		<prop name="pebbles"	x="144"	y="128"	width="16"	height="16"	state="frame2" id="5"/>
 
-		<prop name="spikes"		x="208" y="144" width="16"	height="16" state="on"/>
-		<prop name="spikes"		x="208" y="160" width="16"	height="16" state="on"/>
-		<prop name="spikes"		x="208" y="176" width="16"	height="16" state="on"/>
+		<prop name="spikes"		x="208" y="144" width="16"	height="16" state="on" id="1"/>
+		<prop name="spikes"		x="208" y="160" width="16"	height="16" state="on" id="2"/>
+		<prop name="spikes"		x="208" y="176" width="16"	height="16" state="on" id="3"/>
 
-		<prop name="button"		x="224" y="160" width="16"	height="16" state="off"/>
-
-		<prop name="cube_big"	x="128"	y="96"	width="16"	height="16" state="blue"/>
-		<prop name="cube_big"	x="96"	y="96"	width="16"	height="16" state="blue"/>
+		<prop name="pressure_plate"	x="224" y="160" width="16"	height="16" state="off" id="1">
+			<trigger exp="pressure_plate#1.state==on" id="667">
+				<then>
+					<action target="spikes#1" value="spikes_off" id="1"/>
+					<action target="spikes#2" value="spikes_off" id="2"/>
+					<action target="spikes#3" value="spikes_off" id="3"/>
+				</then>
+			</trigger>
+		</prop>		
 	</objectgroup>
 </map>
