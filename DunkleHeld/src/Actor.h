@@ -10,6 +10,7 @@
 
 #include "Paintable.h"
 #include "GameObject.h"
+#include "Collidable.h"
 #include <SFML/Graphics.hpp>
 
 class Game;
@@ -35,7 +36,7 @@ enum Direction {
 #define OFF false
 #define ON true
 
-class Actor : public Paintable {
+class Actor : public Paintable, public Collidable {
 public:
     Actor(sf::Vector2f position, float size,
             float speed, float range, int direction = 4);
@@ -50,13 +51,18 @@ public:
     void setMovingFlags(sf::Uint32 movingFlags, bool mode);
     virtual void setPosition(sf::Vector2f position);
 
+    virtual bool collidesWithCircle(sf::Vector2f pos, float radius);
+    virtual sf::Vector2f resoleCollision(sf::Vector2f pos, float radius);
+
+
 protected:
 
     void move(sf::Time deltaTime);
 
+
     Game *m_game;
 
-    sf::Vector2f m_position; // contient la position
+    //    sf::Vector2f m_position; // contient la position // déplacé dans Collidable
     float m_size;
     int m_direction; // là où le personnage regarde: 0 == Nord, 7 == Nord-Ouest
     sf::Vector2f m_moving;

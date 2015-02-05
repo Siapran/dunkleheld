@@ -63,11 +63,22 @@ void Tile::addHitBox(sf::FloatRect hitBox) {
 // les positions sont déjà calculées donc il suffit de faire
 //  box.intersects pour chaque hitbox
 
-bool Tile::collidesWith(sf::FloatRect& hitBox) const {
+bool Tile::collidesWithCircle(sf::Vector2f pos, float radius) {
     for (const sf::FloatRect &box : m_hitBoxes)
-        if (box.intersects(hitBox))
+        if (Collidable::collidesBoxVSCircle(box, pos, radius))
             return true;
     return false;
+}
+
+sf::Vector2f Tile::resoleCollision(sf::Vector2f pos, float radius) {
+    sf::Vector2f total;
+    sf::Vector2f moved;
+    for (const sf::FloatRect &box : m_hitBoxes) {
+        moved = Collidable::resolveBoxVSCircle(box, pos, radius);
+        pos += moved;
+        total += moved;
+    }
+    return total;
 }
 
 int Tile::getGid() const {
@@ -78,14 +89,14 @@ void Tile::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     //    std::cout << "DEBUG " << m_gid << std::endl;
     target.draw(m_vertices, states);
 
-//    for (const sf::FloatRect &hitbox : m_hitBoxes) {
-//        sf::RectangleShape box(sf::Vector2f(hitbox.width, hitbox.height));
-//        box.move(hitbox.left, hitbox.top);
-//        box.setFillColor(sf::Color(255, 0, 0, 64));
-//        box.setOutlineColor(sf::Color::Red);
-//        box.setOutlineThickness(0.5);
-//        target.draw(box);
-//    }
+    //    for (const sf::FloatRect &hitbox : m_hitBoxes) {
+    //        sf::RectangleShape box(sf::Vector2f(hitbox.width, hitbox.height));
+    //        box.move(hitbox.left, hitbox.top);
+    //        box.setFillColor(sf::Color(255, 0, 0, 64));
+    //        box.setOutlineColor(sf::Color::Red);
+    //        box.setOutlineThickness(0.5);
+    //        target.draw(box);
+    //    }
 }
 
 float Tile::getDepth() {

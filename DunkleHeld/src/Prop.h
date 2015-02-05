@@ -15,11 +15,12 @@
 #include "GameObject.h"
 #include "Paintable.h"
 #include "AnimatedSprite.h"
+#include "Collidable.h"
 
 struct PropState;
 struct PropAction;
 
-class Prop : public GameObject, public Paintable {
+class Prop : public GameObject, public Paintable, public Collidable {
 public:
 
     Prop(const char* fileName);
