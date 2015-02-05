@@ -2532,9 +2532,9 @@
 
 
 		<prop name="pressure_plate" x="16" y="752" width="16" height="16" id="1" state="off">
-			<trigger expression="pressure_plate#1.state == on" id="1">
+			<trigger event="pressure_plate#1.state == on" id="1">
 				<then>
-					<trigger expression="door_b#1.state == close" id="2">
+					<trigger event="door_b#1.state == close" id="2">
 						<then>
 							<action target="door_b#1" value="open" id="1"/>
 						</then>
@@ -2546,9 +2546,9 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="160" y="640" width="16" height="16" id="2" state="off">	
-			<trigger expression="pressure_plate#2.state == on" id="3">
+			<trigger event="pressure_plate#2.state == on" id="3">
 				<then>
-					<trigger expression="door_b#2.state == close" id="4">
+					<trigger event="door_b#2.state == close" id="4">
 						<then>
 							<action target="door_b#2" value="open" id="3"/>
 						</then>
@@ -2560,9 +2560,9 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="704" y="544" width="16" height="16" id="3" state="off">
-			<trigger expression="pressure_plate#1.state == on" id="5">
+			<trigger event="pressure_plate#1.state == on" id="5">
 				<then>
-					<trigger expression="door_b#1.state == close" id="6">
+					<trigger event="door_b#1.state == close" id="6">
 						<then>
 							<action target="door_b#1" value="open" id="5"/>
 						</then>
@@ -2574,9 +2574,9 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="64" y="416" width="16" height="16" id="4" state="off">
-			<trigger expression="pressure_plate#4.state == on" id="7">
+			<trigger event="pressure_plate#4.state == on" id="7">
 				<then>
-					<trigger expression="door_b#4.state == close" id="8">
+					<trigger event="door_b#4.state == close" id="8">
 						<then>
 							<action target="door_b#4" value="open" id="7"/>
 						</then>
@@ -2588,9 +2588,9 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="144" y="416" width="16" height="16" id="5" state="off">
-			<trigger expression="pressure_plate#5.state == on" id="9">
+			<trigger event="pressure_plate#5.state == on" id="9">
 				<then>
-					<trigger expression="door_b#8.state == close" id="10">
+					<trigger event="door_b#8.state == close" id="10">
 						<then>
 							<action target="door_b#8" value="open" id="9"/>
 						</then>
@@ -2602,9 +2602,9 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="224" y="416" width="16" height="16" id="6" state="off">
-			<trigger expression="pressure_plate#6.state == on" id="11">
+			<trigger event="pressure_plate#6.state == on" id="11">
 				<then>
-					<trigger expression="door_b#11.state == close" id="12">
+					<trigger event="door_b#11.state == close" id="12">
 						<then>
 							<action target="door_b#11" value="open" id="11"/>
 						</then>
@@ -2616,9 +2616,9 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="208" y="32" width="16" height="16" id="7" state="off">
-			<trigger expression="pressure_plate#7.state == on" id="13">
+			<trigger event="pressure_plate#7.state == on" id="13">
 				<then>
-					<trigger expression="door_b#8.state == close" id="14">
+					<trigger event="door_b#8.state == close" id="14">
 						<then>
 							<action target="door_b#8" value="open" id="13"/>
 						</then>
@@ -2630,9 +2630,9 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="288" y="32" width="16" height="16" id="8" state="off">
-			<trigger expression="pressure_plate#8.state == on" id="15">
+			<trigger event="pressure_plate#8.state == on" id="15">
 				<then>
-					<trigger expression="door_b#8.state == close" id="16">
+					<trigger event="door_b#8.state == close" id="16">
 						<then>
 							<action target="door_b#8" value="open" id="15"/>
 						</then>
@@ -2640,7 +2640,7 @@
 							<action target="door_b#8" value="close" id="16"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#10.state == close" id="17">
+					<trigger event="door_b#10.state == close" id="17">
 						<then>
 							<action target="door_b#10" value="open" id="17"/>
 						</then>
@@ -2652,9 +2652,9 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="368" y="32" width="16" height="16" id="9" state="off">
-			<trigger expression="pressure_plate#9.state == on" id="18">
+			<trigger event="pressure_plate#9.state == on" id="18">
 				<then>
-					<trigger expression="door_b#6.state == close" id="19">
+					<trigger event="door_b#6.state == close" id="19">
 						<then>
 							<action target="door_b#6" value="open" id="19"/>
 						</then>
@@ -2662,7 +2662,7 @@
 							<action target="door_b#6" value="close" id="20"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#9.state == close" id="20">
+					<trigger event="door_b#9.state == close" id="20">
 						<then>
 							<action target="door_b#9" value="open" id="21"/>
 						</then>
@@ -2674,9 +2674,9 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="448" y="32" width="16" height="16" id="10" state="off">
-			<trigger expression="pressure_plate#10.state == on" id="21">
+			<trigger event="pressure_plate#10.state == on" id="21">
 				<then>
-					<trigger expression="door_b#12.state == close" id="22">
+					<trigger event="door_b#12.state == close" id="22">
 						<then>
 							<action target="door_b#12" value="open" id="23"/>
 						</then>
@@ -2716,9 +2716,9 @@
 		<prop name="spikes" x="464" y="64" width="16" height="16" id="26"/>
 
 		<prop name="button" x="128" y="464" width="16" height="16" id="1" state="off">
-			<trigger expression="button#1.state == on" id="23">
+			<trigger event="button#1.state == on" id="23">
 				<then>
-					<trigger expression="door_b#4.state == close" id="24">
+					<trigger event="door_b#4.state == close" id="24">
 						<then>
 							<action target="door_b#4" value="open" id="25"/>
 						</then>
@@ -2726,7 +2726,7 @@
 							<action target="door_b#4" value="close" id="26"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#5.state == close" id="25">
+					<trigger event="door_b#5.state == close" id="25">
 						<then>
 							<action target="door_b#5" value="open" id="27"/>
 						</then>
@@ -2738,9 +2738,9 @@
 			</trigger>
 		</prop>
 		<prop name="button" x="192" y="464" width="16" height="16"id="2" state="off">
-			<trigger expression="button#1.state == on" id="26">
+			<trigger event="button#1.state == on" id="26">
 				<then>
-					<trigger expression="door_b2#.state == close" id="27">
+					<trigger event="door_b2#.state == close" id="27">
 						<then>
 							<action target="door_b#2" value="open" id="29"/>
 						</then>
@@ -2748,7 +2748,7 @@
 							<action target="door_b#"2 value="close" id="30"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#5.state == close" id="28">
+					<trigger event="door_b#5.state == close" id="28">
 						<then>
 							<action target="door_b#5" value="open" id="31"/>
 						</then>
@@ -2760,9 +2760,9 @@
 			</trigger>
 		</prop>
 		<prop name="button" x="64" y="464" width="16" height="16" id="3" state="off">
-			<trigger expression="button#3.state == on" id="29">
+			<trigger event="button#3.state == on" id="29">
 				<then>
-					<trigger expression="door_b#2.state == close" id="30">
+					<trigger event="door_b#2.state == close" id="30">
 						<then>
 							<action target="door_b#2" value="open" id="33"/>
 						</then>
@@ -2770,7 +2770,7 @@
 							<action target="door_b#2" value="close" id="34"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#3.state == close" id="31">
+					<trigger event="door_b#3.state == close" id="31">
 						<then>
 							<action target="door_b#3" value="open" id="35"/>
 						</then>
@@ -2782,9 +2782,9 @@
 			</trigger>
 		</prop>
 		<prop name="button" x="96" y="464" width="16" height="16" id="4" state="off">
-			<trigger expression="button#4.state == on" id="32">
+			<trigger event="button#4.state == on" id="32">
 				<then>
-					<trigger expression="door_b#4.state == close" id="33">
+					<trigger event="door_b#4.state == close" id="33">
 						<then>
 							<action target="door_b#4" value="open" id="37"/>
 						</then>
@@ -2792,7 +2792,7 @@
 							<action target="door_b#4" value="close" id="38"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#6.state == close" id="34">
+					<trigger event="door_b#6.state == close" id="34">
 						<then>
 							<action target="door_b#6" value="open" id="39"/>
 						</then>
@@ -2804,9 +2804,9 @@
 			</trigger>
 		</prop>
 		<prop name="button" x="160" y="464" width="16" height="16" id="5" state="off">
-			<trigger expression="button#5.state == on" id="35">
+			<trigger event="button#5.state == on" id="35">
 				<then>
-					<trigger expression="door_b#7.state == close" id="36">
+					<trigger event="door_b#7.state == close" id="36">
 						<then>
 							<action target="door_b#7" value="open" id="41"/>
 						</then>
@@ -2814,7 +2814,7 @@
 							<action target="door_b#7" value="close" id="42"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#5.state == close" id="37">
+					<trigger event="door_b#5.state == close" id="37">
 						<then>
 							<action target="door_b#5" value="open" id="43"/>
 						</then>
@@ -2826,9 +2826,9 @@
 			</trigger>
 		</prop>
 		<prop name="button" x="224" y="464" width="16" height="16" id="6" state="off">
-			<trigger expression="button#6.state == on" id="38">
+			<trigger event="button#6.state == on" id="38">
 				<then>
-					<trigger expression="door_b#4.state == close" id="39">
+					<trigger event="door_b#4.state == close" id="39">
 						<then>
 							<action target="door_b#4" value="open" id="45"/>
 						</then>
@@ -2836,7 +2836,7 @@
 							<action target="door_b#4" value="close" id="46"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#3.state == close" id="40">
+					<trigger event="door_b#3.state == close" id="40">
 						<then>
 							<action target="door_b#3" value="open" id="47"/>
 						</then>
@@ -2848,9 +2848,9 @@
 			</trigger>
 		</prop>
 		<prop name="button" x="704" y="496" width="16" height="16" id="7" state="off">
-			<trigger expression="button#7.state == on" id="41">
+			<trigger event="button#7.state == on" id="41">
 				<then>
-					<trigger expression="door_b#3.state == close" id="42">
+					<trigger event="door_b#3.state == close" id="42">
 						<then>
 							<action target="door_b#3" value="open" id="49"/>
 						</then>
@@ -2858,7 +2858,7 @@
 							<action target="door_b#3" value="close" id="50"/>
 						</else>
 					</trigger>
-					<trigger expression="door_b#7.state == close" id="43">
+					<trigger event="door_b#7.state == close" id="43">
 						<then>
 							<action target="door_b#7" value="open" id="51"/>
 						</then>
