@@ -90,9 +90,7 @@ void GameLevel::loadFromXml(const char* fileName) {
     TiXmlNode *root = doc.RootElement();
     TiXmlElement *tileMapLayer = root->FirstChildElement("layer");
 
-    std::string tmpStr = "Tiles";
-
-    if (tmpStr == tileMapLayer->Attribute("name")) {
+    if (std::string("Tiles") == tileMapLayer->Attribute("name")) {
 
         TiXmlElement *tileMapIterator = tileMapLayer->FirstChildElement("data");
         tileMapIterator = tileMapIterator->FirstChildElement("tile");
@@ -113,12 +111,26 @@ void GameLevel::loadFromXml(const char* fileName) {
                         ? nullptr // tile vide
                         : new Tile(tile, sf::Vector2f(j * 16, i * 16))); // copie du tile
 
-                std::cout << gid << "\t";
+                //                std::cout << gid << "\t";
                 tileMapIterator = tileMapIterator->NextSiblingElement("tile");
             }
-            std::cout << std::endl;
+            //            std::cout << std::endl;
         }
     }
+
+    TiXmlElement *objectGroup = root->FirstChildElement("objectgroup");
+    if (objectGroup != nullptr) {
+
+        for (
+                TiXmlElement *objNode = objectGroup->FirstChildElement();
+                objNode != nullptr;
+                objNode = objNode->NextSiblingElement()) {
+            auto obj = m_game->createGameObject(objNode);
+            if (obj != nullptr)
+                m_objects[obj->getName()] = obj;
+        }
+    }
+
 }
 
 void GameLevel::addListener(std::string target, GameObject* listener) {
@@ -313,16 +325,6 @@ void GameLevel::queryCollideWith(sf::Vector2f pos, float radius) {
                     auto tile = m_tileMap[i][j];
                     if (tile != nullptr) {
                         if (tile->collidesWithCircle(pos, radius)) {
-                            std::cout << "[" << i << "] [" << j << "]" << std::endl;
-
-                            sf::RectangleShape box(sf::Vector2f(tilesize.x, tilesize.y));
-                            box.move(i * tilesize.y, j * tilesize.x);
-                            box.setFillColor(sf::Color(0, 255, 0, 64));
-                            box.setOutlineColor(sf::Color::Green);
-                            box.setOutlineThickness(0.5);
-
-                            m_shadow.draw(box);
-
                             m_collideQuery.push_back(tile);
                         }
                     }
@@ -337,7 +339,6 @@ void GameLevel::queryCollideWith(sf::Vector2f pos, float radius) {
     }
 
     m_shadow.display();
-    std::cout << "DEBUG 1 " << m_collideQuery.size() << std::endl;
 }
 
 sf::Vector2i GameLevel::getMapSize() {
@@ -348,6 +349,13 @@ void GameLevel::update(sf::Time deltaTime) {
     // collision du professeur avec le golem en premier;
     auto pos = m_player->getPos();
     auto radius = m_player->getSize();
+
+    if (pos.x - radius < 0) pos.x = 0 + radius;
+    if (pos.x + radius >= m_size.x * m_tileSet.getTileSize().x - 1) pos.x = m_size.x * m_tileSet.getTileSize().x - radius - 1;
+    if (pos.y - radius < 0) pos.y = 0 + radius;
+    if (pos.y + radius >= m_size.y * m_tileSet.getTileSize().y - 1) pos.y = m_size.y * m_tileSet.getTileSize().y - radius - 1;
+
+    m_player->setPosition(pos);
 
     // puis avec le reste des tiles et objets
     queryCollideWith(pos, radius);

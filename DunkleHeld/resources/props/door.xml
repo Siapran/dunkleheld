@@ -32,7 +32,7 @@
 		<hitbox x="0" y="0" width="16" height="32" />
 		<hitbox x="32" y="0" width="16" height="32" />
 
-		<action name="door_close" state="closed">
+		<action name="door_close" state="close">
 			<animation> 4 3 2 1 0 </animation>
 		</action>
 	</state>

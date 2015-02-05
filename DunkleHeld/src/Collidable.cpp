@@ -75,7 +75,7 @@ bool Collidable::collidesBoxVSCircle(sf::FloatRect box, sf::Vector2f pos, float 
 
     // Early out of the radius is shorter than distance to closest point and
     // Circle not inside the AABB
-    return !(!inside && d >= r * r);
+    return !(!inside && d > r * r);
 }
 
 // comment expulser le cercle du rectangle
@@ -126,7 +126,7 @@ sf::Vector2f Collidable::resolveBoxVSCircle(sf::FloatRect box, sf::Vector2f pos,
 
     // Early out of the radius is shorter than distance to closest point and
     // Circle not inside the AABB
-    if (!inside && d >= r * r)
+    if (!inside && d > r * r)
         return sf::Vector2f();
 
     // Avoided sqrt until we needed

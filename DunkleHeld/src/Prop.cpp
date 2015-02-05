@@ -78,7 +78,8 @@ Prop::Prop(const char* fileName) {
             stateNode != nullptr;
             stateNode = stateNode->NextSiblingElement("state")) {
         std::string name = stateNode->Attribute("name");
-        PropState *state = &(m_states[name]);
+        PropState *state = new PropState;
+        m_states[name] = state;
         state->name = name;
 
         TiXmlElement *propertiesNode = stateNode->FirstChildElement("properties");
@@ -90,9 +91,11 @@ Prop::Prop(const char* fileName) {
             const char *tmp;
             if (tmp = propertiesNode->Attribute("damage")) state->damage = tmpstr == tmp;
             if (tmp = propertiesNode->Attribute("solid")) state->solid = tmpstr == tmp;
-            int depth = 0;
-            propertiesNode->Attribute("depth", &depth);
-            state->depth = depth;
+
+            if (const char *depth = propertiesNode->Attribute("depth")) {
+                state->depth = std::atoi(depth);
+            }
+
         }
 
         for (
@@ -183,28 +186,39 @@ Prop::Prop(const char* fileName) {
 
 }
 
-Prop::Prop(const Prop& orig) {
+Prop::Prop(const Prop* orig, GameLevel *level) :
+m_sprite(sf::seconds(0.1), false, true) {
+    m_level = level;
+    m_texture = orig->m_texture;
+    m_states = orig->m_states;
 
+    m_sprite.setFrameTime(orig->m_sprite.getFrameTime());
+
+    m_parent = nullptr;
+
+    depth = orig->depth;
 }
 
 void Prop::update(sf::Time deltaTime) {
-    
+    m_sprite.update(deltaTime);
 }
 
 void Prop::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+    target.draw(m_sprite);
+
+    //    sf::RectangleShape box(sf::Vector2f(16, 16));
+    //    box.move(m_position.x, m_position.y);
+    //    box.setFillColor(sf::Color(255, 0, 0, 64));
+    //    box.setOutlineColor(sf::Color::Red);
+    //    box.setOutlineThickness(0.5);
+    //    target.draw(box);
 
 }
 
 float Prop::getDepth() {
     if (ground) return -1;
-    if (dirty) {
-        depth = 0;
-        for (auto& box : m_states.at(m_currentState).hitBoxes)
-            if (box.top + box.height > depth)
-                depth = box.top + box.height;
-        dirty = false;
-    }
-    return depth;
+    //    return 9001;
+    return depth + m_position.y;
 }
 
 std::string Prop::getContext() {
@@ -212,6 +226,17 @@ std::string Prop::getContext() {
 }
 
 void Prop::loadFromXML(TiXmlElement* node) {
+    //    name = "pebbles" x = "80" y = "112" width = "16" height = "16" state = "frame3" id = "1"
+    std::string name = node->Attribute("name");
+    std::string state = node->Attribute("state");
+    std::string id = node->Attribute("id");
+    int x = 0, y = 0;
+    node->Attribute("x", &x);
+    node->Attribute("y", &y);
+    setPosition(x, y);
+    m_name = name + "#" + id;
+    setState(state);
+
 
 }
 
@@ -232,7 +257,12 @@ std::string Prop::getState() {
 }
 
 void Prop::setState(std::string stateName) {
-
+    m_currentState = stateName;
+    depth = m_states[stateName]->depth;
+    dirty = true;
+    ground = depth == 0;
+    m_states[stateName]->animation.setSpriteSheet(*m_texture);
+    m_sprite.play(m_states[stateName]->animation);
 }
 
 bool Prop::collidesWithCircle(sf::Vector2f pos, float radius) {
@@ -245,4 +275,11 @@ void Prop::onCollide(Actor* target) {
 
 sf::Vector2f Prop::resoleCollision(sf::Vector2f pos, float radius) {
     return sf::Vector2f();
+}
+
+void Prop::setPosition(float x, float y) {
+    m_position.x = x;
+    m_position.y = y;
+    m_sprite.setPosition(m_position);
+    dirty = true;
 }

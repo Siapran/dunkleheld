@@ -35,6 +35,8 @@ public:
     int getVar(std::string varName);
     bool isSet(std::string varName);
     
+    GameObject *createGameObject(TiXmlElement *node);
+    
 private:
 
     Game();

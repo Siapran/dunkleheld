@@ -65,8 +65,9 @@ void Game::processEvents() {
 }
 
 void Game::update(sf::Time deltaTime) {
-    m_level->update(deltaTime);
     m_player.update(deltaTime);
+    m_level->update(deltaTime);
+
 }
 
 void Game::render() {
@@ -119,4 +120,15 @@ void Game::setVar(std::string varName, int value) {
 
 bool Game::isSet(std::string varName) {
     return m_globalVars.find(varName) != m_globalVars.end();
+}
+
+GameObject* Game::createGameObject(TiXmlElement* node) {
+    GameObject *obj = nullptr;
+    if (std::string("prop") == node->Value()) {
+        if (const char *name = node->Attribute("name")) {
+            obj = new Prop(m_propSet[std::string(name)], m_level);
+            obj->loadFromXML(node);
+        }
+    }
+    return obj;
 }

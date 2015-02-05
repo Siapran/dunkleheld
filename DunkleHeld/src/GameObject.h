@@ -34,6 +34,8 @@ public:
     virtual void use(Actor *user) = 0;
     virtual void showDescription() = 0;
     virtual std::string getContext() = 0;
+    virtual std::string getName();
+
 
     void addChild(GameObject *child);
 

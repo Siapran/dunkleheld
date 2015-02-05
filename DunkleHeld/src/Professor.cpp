@@ -45,12 +45,12 @@ Professor::~Professor() {
 void Professor::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     target.draw(m_sprite);
 
-    sf::CircleShape circle(m_size);
-    circle.move(m_position.x - m_size, m_position.y - m_size);
-    circle.setFillColor(sf::Color(255, 0, 0, 64));
-    circle.setOutlineColor(sf::Color::Red);
-    circle.setOutlineThickness(0.5);
-    target.draw(circle);
+//    sf::CircleShape circle(m_size);
+//    circle.move(m_position.x - m_size, m_position.y - m_size);
+//    circle.setFillColor(sf::Color(255, 0, 0, 64));
+//    circle.setOutlineColor(sf::Color::Red);
+//    circle.setOutlineThickness(0.5);
+//    target.draw(circle);
 }
 
 void Professor::update(sf::Time deltaTime) {

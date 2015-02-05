@@ -75,15 +75,16 @@ int main(int argc, char** argv) {
     //                << " : " << Collidable::resolveBoxVSCircle(box.getGlobalBounds(), circle.getPosition() + sf::Vector2f(circle.getRadius(), circle.getRadius()), circle.getRadius()) << endl;
     //    }
 
-    string levelName = "resources/levels/bare/entrance.tmx";
+    string levelName = "resources/levels/finished/entrance.xml";
     if (argc == 2) {
         levelName = argv[1];
     }
 
     Game *game = Game::Instance();
     game->loadTileset();
-    game->loadLevel(levelName.c_str());
     game->loadProps();
+    game->loadLevel(levelName.c_str());
+
 
     game->runGame();
 

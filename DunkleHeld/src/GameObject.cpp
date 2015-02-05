@@ -60,8 +60,10 @@ void GameObject::evaluate() {
     }
 }
 
-
 void GameObject::setParent(GameObject* parent) {
     m_parent = parent;
 }
 
+std::string GameObject::getName() {
+    return m_name;
+}

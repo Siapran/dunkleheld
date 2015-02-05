@@ -93,14 +93,14 @@ void Tile::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     //    std::cout << "DEBUG " << m_gid << std::endl;
     target.draw(m_vertices, states);
 
-    for (const sf::FloatRect &hitbox : m_hitBoxes) {
-        sf::RectangleShape box(sf::Vector2f(hitbox.width, hitbox.height));
-        box.move(hitbox.left, hitbox.top);
-        box.setFillColor(sf::Color(255, 0, 0, 64));
-        box.setOutlineColor(sf::Color::Red);
-        box.setOutlineThickness(0.5);
-        target.draw(box);
-    }
+//    for (const sf::FloatRect &hitbox : m_hitBoxes) {
+//        sf::RectangleShape box(sf::Vector2f(hitbox.width, hitbox.height));
+//        box.move(hitbox.left, hitbox.top);
+//        box.setFillColor(sf::Color(255, 0, 0, 64));
+//        box.setOutlineColor(sf::Color::Red);
+//        box.setOutlineThickness(0.5);
+//        target.draw(box);
+//    }
 }
 
 float Tile::getDepth() {

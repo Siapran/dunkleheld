@@ -17,6 +17,8 @@
 #include "AnimatedSprite.h"
 #include "Collidable.h"
 
+class Game;
+
 struct PropState;
 struct PropAction;
 
@@ -24,7 +26,7 @@ class Prop : public GameObject, public Paintable, public Collidable {
 public:
 
     Prop(const char* fileName);
-    Prop(const Prop& orig);
+    Prop(const Prop* orig, GameLevel *level);
 
     virtual void loadFromXML(TiXmlElement* node);
 
@@ -32,7 +34,8 @@ public:
     virtual float getDepth();
 
     virtual void update(sf::Time deltaTime);
-    
+    void setPosition(float x, float y);
+
     void setState(std::string stateName);
     std::string getState();
     void doAction(std::string actionName);
@@ -52,7 +55,7 @@ private:
     AnimatedSprite m_sprite;
     sf::Texture *m_texture;
 
-    std::map<std::string, PropState> m_states; // nom état -> état
+    std::map<std::string, PropState *> m_states; // nom état -> état
     std::string m_currentState; // état actuel
     std::string m_currentAction; // éction en cours
 };
