@@ -18,6 +18,7 @@
 	</frames>
 
 	<state name="close">
+		<properties lightrad="0"/>
 		<description lang="fr">Ce mur est orné d'un bas relief en forme de flêche. Elle vous indique la voie à suivre.</description>
 		<animation> 0 </animation>
 
@@ -29,7 +30,7 @@
 	</state>
 
 	<state name="open">
-		<properties depth="0" solid="false"/>
+		<properties depth="0" solid="false" lightrad="2"/>
 		<description lang="fr">Le mur est ouvert, vous invitant à explorer les profondeurs du temple.</description>
 		<animation> 6 </animation>
 		<action name="door_b_close" state="closed">

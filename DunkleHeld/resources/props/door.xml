@@ -13,6 +13,7 @@
 	</frames>
 
 	<state name="close">
+		<properties lightrad="0"/>
 		<description lang="fr">Ce mur est orné d'un bas relief de crâne. Il vous observe silencieusement, comme si il attendait quelque chose de vous.</description>
 		<animation> 0 </animation>
 
@@ -24,7 +25,7 @@
 	</state>
 
 	<state name="open">
-		<properties depth="0" solid="false"/>
+		<properties depth="0" solid="false" lightrad="2"/>
 		<description lang="fr">Le mur est ouvert, vous invitant à explorer les profondeurs du temple.</description>
 		<animation> 5 </animation>
 

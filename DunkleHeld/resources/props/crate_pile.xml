@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <prop name="crate_pile" file="resources/props/crate_pile.png">
 
-	<hitbox x="5" y="17" width="22" height="10" />
+	<hitbox x="5" y="17" width="22" height="10" lightrad="0" />
 
 	<properties damage="false" depth="27" solid="true"/>
 

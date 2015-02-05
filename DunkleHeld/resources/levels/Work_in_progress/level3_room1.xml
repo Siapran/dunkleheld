@@ -2511,6 +2511,7 @@
 
 		<link x="368" y="768" width="32" height="16">
 			<destination file="transition" x1="112" y1="32" x2="112" y2="0"/>
+			<setvar scope="global" target="golem_state" value="inactive"/>
 		</link>
 		<link x="368" y="768" width="32" height="16">
 			<destination file="Exit" x1="112" y1="112" x2="112" y2="176"/>

@@ -4,7 +4,7 @@
 	<hitbox x="6" y="17" width="20" height="19" />
 	<hitbox x="12" y="36" width="8" height="5" />
 
-	<properties damage="false" depth="36" solid="true"/>
+	<properties damage="false" depth="36" solid="true" lightrad="3"/>
 
 	<frames xoff="0" yoff="0" xsize="32" ysize="48" t="100">
 		<frame id="0" x="0" y="0"/>
@@ -17,6 +17,7 @@
 	</frames>
 
 	<state name="off">
+		<properties lightrad="0"/>
 		<description lang="fr">On sens une aura s'en dégager. Que faut-il faire ?</description>
 		<animation> 0 </animation>
 		<action name="statue_a_blue" state="blue">
