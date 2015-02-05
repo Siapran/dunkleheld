@@ -251,7 +251,7 @@
 		
 		<link x="0"	y="144"	width="16"	height="48" id="1">
 			<trigger exp="has_crystal" id="666">
-				<then>
+				<then id="1">
 					<destination file="main_hall_phase2" x1="176" y1="160" x2="208" y2="144" id="1"/>
 				</then>
 				<else>
@@ -275,7 +275,7 @@
 			<trigger exp="switch#1.state == on" id="1">
 				<setvar scope="local" target="cyan1" value="switch#1.state == on" id="1" />
 				<trigger exp="(cyan1 & cyan2) & !cyan3" id="2">
-					<then>
+					<then id="2">
 						<setvar scope="global" name="door_mh" value="true" id="2"/>
 					</then>
 					<else>
@@ -286,7 +286,7 @@
 			<trigger exp="switch#1.state == off" id="3">
 				<setvar scope="local" target="cyan1" value="switch#1.state == off"  id="4"/>
 				<trigger exp="(cyan1 & cyan2) & !cyan3" id="4">
-					<then>
+					<then id="3">
 						<setvar scope="global" name="door_mh" value="true" id="5"/>
 					</then>
 					<else>
@@ -300,7 +300,7 @@
 			<trigger exp="switch#2.state == on" id="5">
 				<setvar scope="local" target="cyan2" value="switch#2.state == on"  id="7"/>
 				<trigger exp="(cyan1 & cyan2) & !cyan3" id="6">
-					<then>
+					<then id="4">
 						<setvar scope="global" name="door_mh" value="true" id="8"/>
 					</then>
 					<else>
@@ -311,7 +311,7 @@
 			<trigger exp="switch#2.state == off" id="7">
 				<setvar scope="local" target="cyan2" value="switch#2.state == off" id="10"/>
 				<trigger exp="(cyan1 & cyan2) & !cyan3" id="8">
-					<then>
+					<then id="5">
 						<setvar scope="global" name="door_mh" value="true"id="11"/>
 					</then>
 					<else>
@@ -325,7 +325,7 @@
 			<trigger exp="switch#3.state == on" id="9">
 				<setvar scope="local" target="cyan3" value="switch#3.state == on" id="13"/>
 				<trigger exp="(cyan1 & cyan2) & !cyan3" id="10">
-					<then>
+					<then id="6">
 						<setvar scope="global" name="door_mh" value="true"id="14"/>
 					</then>
 					<else>
@@ -336,7 +336,7 @@
 			<trigger exp="switch#3.state == off" id="11">
 				<setvar scope="local" target="cyan3" value="switch#3.state == off" id="16"/>
 				<trigger exp="(cyan1 & cyan2) & !cyan3" id="12">
-					<then>
+					<then id="7">
 						<setvar scope="global" name="door_mh" value="true"id="17"/>
 					</then>
 					<else>
@@ -347,7 +347,7 @@
 		</prop>
 
 		<examine name="writings"	x="112"	y="80"	width="16"	height="16" id="1">
-			<description lang="fr" id="1">L'intrus devra résoudre cette énigme s'il souhaite revoir le ciel.</descripion>
+			<description lang="fr" id="1">L'intrus devra résoudre cette énigme s'il souhaite revoir le ciel.</description>
 		</examine>
 
 		<prop name="statue_a"	x="48"	y="96"	width="32"	height="32"	state="blue" id="1"/>
@@ -365,7 +365,7 @@
 
 		<prop name="pressure_plate"	x="224" y="160" width="16"	height="16" state="off" id="1">
 			<trigger exp="pressure_plate#1.state==on" id="667">
-				<then>
+				<then id="8">
 					<action target="spikes#1" value="spikes_off" id="1"/>
 					<action target="spikes#2" value="spikes_off" id="2"/>
 					<action target="spikes#3" value="spikes_off" id="3"/>
