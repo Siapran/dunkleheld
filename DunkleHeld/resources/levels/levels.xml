@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<levels>
+	<level name="entrance"					file="resources/levels/finished/entrance.xml"/>
+	<level name="Exit" 						file="resources/levels/finished/Exit.xml"/>
+	<level name="level2-room1-phase1"		file="resources/levels/finished/level2-room1-phase1.xml"/>
+	<level name="level2-room2-phase1"		file="resources/levels/finished/level2-room2-phase1.xml"/>
+	<level name="level2-room3-phase1"		file="resources/levels/finished/level2-room3-phase1.xml"/>
+	<level name="level3_room1"				file="resources/levels/finished/level3_room1.xml"/>
+	<level name="main_hall_left_phase_1"	file="resources/levels/finished/main_hall_left_phase_1.xml"/>
+	<level name="main_hall_phase_1"			file="resources/levels/finished/main_hall_phase_1.xml"/>
+	<level name="main_hall_phase_2"			file="resources/levels/finished/main_hall_phase_2.xml"/>
+	<level name="main_hall_right_phase_2"	file="resources/levels/finished/main_hall_right_phase_2.xml"/>
+	<level name="pedestral_room"			file="resources/levels/finished/pedestral_room.xml"/>
+	<level name="transition"				file="resources/levels/finished/transition.xml"/>
+</levels>
