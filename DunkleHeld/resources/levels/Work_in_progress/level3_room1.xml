@@ -2652,7 +2652,7 @@
 			</trigger>
 		</prop>
 		<prop name="pressure_plate" x="368" y="32" width="16" height="16" id="9" state="off">
-			<<trigger expression="pressure_plate#9.state == on" id="18">
+			<trigger expression="pressure_plate#9.state == on" id="18">
 				<then>
 					<trigger expression="door_b#6.state == close" id="19">
 						<then>

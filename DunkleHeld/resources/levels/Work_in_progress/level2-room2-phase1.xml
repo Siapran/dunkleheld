@@ -267,7 +267,7 @@
 			</trigger></prop>
 
 		<examine name="writings" x="16" y="80" width="16" height="16" id="1">
-			<description lang="fr" id="1">Ne pas jeter de squelettes dans ce trou.</descripion>
+			<description lang="fr" id="1">Ne pas jeter de squelettes dans ce trou.</description>
 		</examine>
 
 		<prop name="pebbles" x="16" y="144" width="16" height="16" state="frame1" id="1"/>
