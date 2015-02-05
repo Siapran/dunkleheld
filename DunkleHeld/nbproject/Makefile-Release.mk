@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/Actor.o \
 	${OBJECTDIR}/src/AnimatedSprite.o \
 	${OBJECTDIR}/src/Animation.o \
+	${OBJECTDIR}/src/Collidable.o \
 	${OBJECTDIR}/src/Controller.o \
 	${OBJECTDIR}/src/Game.o \
 	${OBJECTDIR}/src/GameLevel.o \
@@ -94,6 +95,11 @@ ${OBJECTDIR}/src/Animation.o: src/Animation.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Animation.o src/Animation.cpp
+
+${OBJECTDIR}/src/Collidable.o: src/Collidable.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Collidable.o src/Collidable.cpp
 
 ${OBJECTDIR}/src/Controller.o: src/Controller.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
