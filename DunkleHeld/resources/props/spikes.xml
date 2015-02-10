@@ -23,7 +23,7 @@
 	
 	<state name="on">
 		<description lang="fr">Des pieux, faisons attention.</description>
-		<animation> 2 3 </animation>
+		<animation> 1 2 3 2 </animation>
 		<action name="spikes_off" state="off">
 			<animation> 2 1 0 </animation>
 		</action>

@@ -9,7 +9,6 @@
 		<frame id="2" x="2" y="0"/>
 		<frame id="3" x="3" y="0"/>
 		<frame id="4" x="4" y="0"/>
-		<frame id="5" x="5" y="0"/>
 	</frames>
 
 	<state name="close">
@@ -20,20 +19,20 @@
 		<hitbox x="0" y="0" width="48" height="32" />
 
 		<action name="door_open" state="open">
-			<animation> 1 2 3 4 5 </animation>
+			<animation> 1 2 3 4 </animation>
 		</action>
 	</state>
 
 	<state name="open">
 		<properties depth="0" solid="false" lightrad="2"/>
 		<description lang="fr">Le mur est ouvert, vous invitant à explorer les profondeurs du temple.</description>
-		<animation> 5 </animation>
+		<animation> 4 </animation>
 
 		<hitbox x="0" y="0" width="16" height="32" />
 		<hitbox x="32" y="0" width="16" height="32" />
 
 		<action name="door_close" state="close">
-			<animation> 4 3 2 1 0 </animation>
+			<animation> 3 2 1 0 </animation>
 		</action>
 	</state>
 

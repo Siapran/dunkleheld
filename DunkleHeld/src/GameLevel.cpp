@@ -371,4 +371,8 @@ void GameLevel::update(sf::Time deltaTime) {
     if (num != 0)
         m_player->move(total / num);
 
+    for (auto &obj : m_objects) {
+        obj.second->update(deltaTime);
+    }
+
 }
